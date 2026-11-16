@@ -1,0 +1,41 @@
+{
+  "id": "wi1gvpy7rw",
+  "name": {
+    "tr": "Hizmetler",
+    "en": "Services",
+    "ar": "الخدمات"
+  },
+  "description": {
+    "tr": "Kabulden teslime kadar ne yaptığımızı açıkça yazıyoruz.",
+    "en": "We spell out what we do from acceptance to delivery.",
+    "ar": "نكتب بوضوح ما نفعله من الاستلام حتى التسليم."
+  },
+  "keyword": {
+    "tr": "Vaatlerimiz",
+    "en": "Our promises",
+    "ar": "وعودنا"
+  },
+  "path": "hizmetler",
+  "icon": "work",
+  "category": "",
+  "status": "play",
+  "desing": {
+    "header": [],
+    "body": [
+      "d3481y",
+      "wehyed",
+      "f7u294"
+    ],
+    "footer": []
+  },
+  "index": 0,
+  "url": "",
+  "text": {},
+  "title": {
+    "tr": "Hizmetler",
+    "en": "Services",
+    "ar": "الخدمات"
+  },
+  "date": "2026-11-16T11:32:31.583Z",
+  "update": "2026-11-16T12:24:13.507Z"
+}

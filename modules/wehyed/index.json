@@ -1,0 +1,70 @@
+{
+  "name": "Kargo Desi Hesap — ölçü/ağırlık hesaplayıcı + bölge × desi ücret matrisi",
+  "description": "Solda giriş ve vurgu zeminli hesaplayıcı: en · boy · yükseklik (cm) ve ağırlık (kg) → desi (÷ `bolen`, varsayılan 3000), ücretlendirilen = desi ile kg'ın büyüğü; bölge çipleri; canlı tahmini ücret ve döküm satırı. Sağda kayıtlardan (bölge: `fiyat` taban, `desiUcret` ek desi başı, `sure` teslim) üretilen bölge × desi kademesi ücret matrisi; hesaplanan bölge satırı ve desi sütunu vurgulanır. JS yokken matris tek başına okunur; fiyatsız (eski) veride bölge listesi. body/hesaplayici-1/2/3'ün genel formül alanlarından farkı: kargoya özgü desi formülü + bölge seçimi ve sunucuda çizilen bölge × desi ücret matrisi (hesap sonucu matriste satır/sütun kesişimi olarak vurgulanır); kargo-takip-hero'nun takip numarası formundan ve module ailesinin metin/görsel tanıtımlarından tamamen farklı. Metinler dil sözlüğü, renkler desing + var(--mx-site-*), mantıksal CSS → RTL. Başlık ve metin yoksa blok basılmaz.",
+  "version": "1.0.0",
+  "icon": "package_2",
+  "category": "module",
+  "subCategory": "desi-zone-matrix",
+  "tags": [
+    "module",
+    "shipping",
+    "calculator",
+    "matrix",
+    "table",
+    "interactive",
+    "rtl",
+    "fabrika"
+  ],
+  "desing": {
+    "max": "1240px",
+    "bosluk": "clamp(56px, 8vw, 104px)",
+    "yuvarlak": "18px",
+    "ust": "",
+    "baslik": "",
+    "metin": "",
+    "img": "",
+    "img2": "",
+    "cta_ad": "",
+    "cta_url": "",
+    "cta2_ad": "",
+    "cta2_url": "",
+    "bg": "var(--mx-site-bg, #ffffff)",
+    "text": "var(--mx-site-text, #111318)",
+    "muted": "color-mix(in srgb, var(--mx-site-text, #111318) 68%, var(--mx-site-bg, #ffffff))",
+    "kartBg": "var(--mx-site-surface, #f6f7f9)",
+    "cizgi": "color-mix(in srgb, var(--mx-site-text, #111318) 12%, transparent)",
+    "accent": "var(--mx-site-primary, #2563eb)",
+    "accentInk": "color-mix(in srgb, var(--mx-site-primary, #2563eb) 70%, var(--mx-site-text, #111318))",
+    "accentText": "var(--mx-site-primary-contrast, #ffffff)",
+    "vurguBg": "var(--mx-site-primary, #2563eb)",
+    "vurguText": "var(--mx-site-primary-contrast, #ffffff)",
+    "paraBirimi": "",
+    "bolen": 3000,
+    "tabanDesi": 1,
+    "kademeler": [
+      1,
+      5,
+      10,
+      20,
+      30
+    ],
+    "bolgeAd": "",
+    "desiAd": "",
+    "sonucAd": "",
+    "hesapNot": "",
+    "bgcolor": "var(--mx-site-bg, #ffffff)",
+    "color": "var(--mx-site-text, #111318)"
+  },
+  "data": [],
+  "veri": {
+    "statik": true,
+    "dinamik": false,
+    "kaynak": "desing/data",
+    "alanlar": {
+      "ikon": "madde ikonu (Material Symbols)",
+      "baslik": "madde başlığı (dil sözlüğü, zorunlu)",
+      "metin": "madde metni (dil sözlüğü)",
+      "url": "madde bağlantısı"
+    }
+  }
+}

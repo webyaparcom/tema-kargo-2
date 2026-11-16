@@ -1,0 +1,46 @@
+{
+  "id": "kalitepolitikamiz",
+  "name": {
+    "tr": "Kalite Politikamız",
+    "en": "Quality Policy",
+    "ar": "سياسة الجودة"
+  },
+  "description": {
+    "tr": "Kalite politikamız",
+    "en": "Our quality policy",
+    "ar": "سياسة الجودة لدينا"
+  },
+  "keyword": {
+    "tr": "Kalite Politikamız",
+    "en": "quality policy, quality, continuous improvement",
+    "ar": "سياسة الجودة, الجودة, التحسين المستمر"
+  },
+  "path": "kalitepolitikamiz",
+  "icon": "verified",
+  "category": "",
+  "status": "play",
+  "desing": {
+    "header": [],
+    "body": [],
+    "footer": []
+  },
+  "index": 2,
+  "url": "",
+  "text": {
+    "tr": "<h2>Kalite Politikamız</h2>\n<p>Desi ölçümü kabulde yapılır, fiş üzerinde yazılır; hasar tutanağı teslimde tutulur.</p>",
+    "en": "<h2>Our quality policy</h2>\n<p>Volumetric weight is measured at acceptance and printed on the receipt; damage reports are made on delivery.</p>",
+    "ar": "<h2>سياسة الجودة لدينا</h2>\n<p>يُقاس الوزن الحجمي عند الاستلام ويُطبع على الإيصال، ويُحرَّر محضر الضرر عند التسليم.</p>"
+  },
+  "title": {
+    "tr": "Kalite Politikamız",
+    "en": "Quality Policy",
+    "ar": "سياسة الجودة"
+  },
+  "date": "2026-11-16T11:32:31.448Z",
+  "update": "2026-11-16T12:24:13.534Z",
+  "sablonIzi": "acedf6b7c400faec",
+  "sablonIziDil": {
+    "en": "587042c99dce90ca",
+    "ar": "a5348f544603b25e"
+  }
+}

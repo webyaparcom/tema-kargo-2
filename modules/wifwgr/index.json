@@ -1,0 +1,80 @@
+{
+  "name": "Tema3 Journal Menü",
+  "desing": {
+    "logo": "logo.png",
+    "max": "1200px",
+    "bgcolor": "#FFFFFF",
+    "color": "#111111",
+    "bordercolor": "#E5E5E5",
+    "bgAlt": "#F5F5F5",
+    "accent": "#E91E8C",
+    "badgecolor": "#FFFFFF",
+    "catDropBg": "#FFFFFF",
+    "catDropBorder": "#E5E5E5",
+    "topBarBg": "#FFFFFF",
+    "topBarColor": "#111111",
+    "navBg": "#111111",
+    "navColor": "#ffffff",
+    "navHover": "#E91E8C",
+    "searchBg": "#F5F5F5",
+    "searchBorder": "#E5E5E5",
+    "searchMin": "360px",
+    "searchMax": "560px",
+    "searchPlaceholder": {
+      "tr": "Aradığınız ürün, kategori veya markayı yazınız.",
+      "en": "Search products, categories or brands."
+    },
+    "searchButtonText": {
+      "tr": "Ara",
+      "en": "Search"
+    },
+    "searchAriaLabel": {
+      "tr": "Ara",
+      "en": "Search"
+    },
+    "menuAriaLabel": {
+      "tr": "Menü",
+      "en": "Menu"
+    },
+    "loginText": {
+      "tr": "Giriş Yap / Üye Ol",
+      "en": "Login / Register"
+    },
+    "cartText": {
+      "tr": "Sepetim",
+      "en": "My Cart"
+    },
+    "favText": {
+      "tr": "Favorilerim",
+      "en": "Favorites"
+    },
+    "currencyText": {
+      "tr": "TRY TR",
+      "en": "TRY TR"
+    },
+    "categoriesText": {
+      "tr": "Kategoriler",
+      "en": "Categories"
+    },
+    "closeText": {
+      "tr": "Kapat",
+      "en": "Close"
+    },
+    "urlsepet": "basket",
+    "page": "page",
+    "accountText": {
+      "tr": "Hesabım",
+      "en": "My Account"
+    },
+    "hesabimUrl": "hesabim"
+  },
+  "category": "menu",
+  "description": "Journal 3 tarzı e-ticaret header: koyu nav şeridi, kategori dropdown ve mobil panel. F3: giriş/hesabım bağlantıları üye durumuna göre (data-mx-uye-goster), sepet rozeti MxStore (data-mx-sepet-sayi).",
+  "version": "1.3.0",
+  "icon": "menu",
+  "veri": {
+    "statik": true,
+    "dinamik": false,
+    "kaynak": "desing/data"
+  }
+}

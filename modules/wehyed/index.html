@@ -1,0 +1,151 @@
+<section class="modulex-kargo-desi-hesap{{fbsinif}}" {{fbetiket}}>
+  <div class="modulex-kargo-desi-hesap-ic">
+    {{fbbas}}
+    {{fbgovde}}
+  </div>
+</section>
+
+<style>
+  /* kargo-desi-hesap — body/hesaplayici-1/2/3'ün genel formül alanlarından farkı: kargoya özgü desi formülü + bölge seçimi ve sunucuda çizilen bölge × desi ücret matrisi (hesap sonucu matriste satır/sütun kesişimi olarak vurgulanır); kargo-takip-hero'nun takip numarası formundan ve module ailesinin metin/görsel tanıtımlarından tamamen farklı. */
+  .modulex-kargo-desi-hesap { box-sizing: border-box; width: 100%; padding: --bosluk-- 20px; background: --bg--; color: --text--; font-size: 1rem; line-height: 1.6; font-family: var(--mx-font-sans, inherit); overflow-wrap: break-word; }
+  .modulex-kargo-desi-hesap *, .modulex-kargo-desi-hesap *::before, .modulex-kargo-desi-hesap *::after { box-sizing: border-box; }
+  /* ham/css.css «* { font-size: 14px }» kalıtımı keser — modül içinde boyut üstten gelsin (ikon yazı tipi hariç) */
+  .modulex-kargo-desi-hesap :where(*:not(.material-symbols-outlined)) { font-size: inherit; }
+  /* aynı «*» kuralı font-weight 400 · line-height 1.2 · font-family de basar — modül içinde kalıtım */
+  .modulex-kargo-desi-hesap :where(*:not(.material-symbols-outlined)) { font-weight: inherit; line-height: inherit; font-family: inherit; }
+  .modulex-kargo-desi-hesap :where(h2, h3, h4, p, ul, ol, li, figure, blockquote, dl, dd) { margin: 0; }
+  .modulex-kargo-desi-hesap :where(ul, ol) { padding: 0; list-style: none; }
+  .modulex-kargo-desi-hesap img { display: block; max-width: 100%; }
+  /* <img width height> öznitelik yüksekliği CSS aspect-ratio'yu ezer — sıfır özgüllükle auto (modül sınıfının height'ı yine kazanır) */
+  :where(.modulex-kargo-desi-hesap) img { height: auto; }
+  .modulex-kargo-desi-hesap [hidden] { display: none !important; }
+  .modulex-kargo-desi-hesap :where(a, button, summary, [data-cevir]) { cursor: pointer; }
+  .modulex-kargo-desi-hesap :where(a, button, summary, [tabindex]):focus-visible { outline: 3px solid --accent--; outline-offset: 3px; }
+  .modulex-kargo-desi-hesap-ic { max-width: --max--; margin-inline: auto; }
+  .modulex-kargo-desi-hesap-bas { display: grid; gap: 12px; margin-block-end: clamp(32px, 4vw, 52px); }
+  .modulex-kargo-desi-hesap--bassiz .modulex-kargo-desi-hesap-bas { display: none; }
+  .modulex-kargo-desi-hesap-ust { color: --accentInk--; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; }
+  .modulex-kargo-desi-hesap-baslik { font-family: var(--mx-font-heading, inherit); font-size: clamp(1.8rem, 3.4vw, 2.8rem); font-weight: 750; letter-spacing: -0.025em; line-height: 1.1; }
+  .modulex-kargo-desi-hesap-metin { color: --muted--; font-size: 1.05rem; line-height: 1.7; }
+  .modulex-kargo-desi-hesap-cta { display: flex; flex-wrap: wrap; gap: 12px; margin-block-start: 8px; }
+  .modulex-kargo-desi-hesap-dugme { display: inline-flex; align-items: center; gap: 8px; min-height: 48px; padding: 12px 22px; border: 2px solid --accent--; border-radius: 999px; background: --accent--; color: --accentText--; font-weight: 700; text-decoration: none; transition: transform 0.25s ease, background 0.25s ease, color 0.25s ease; }
+  .modulex-kargo-desi-hesap-dugme:hover { transform: translateY(-2px); }
+  .modulex-kargo-desi-hesap-dugme--ikincil { background: transparent; color: --text--; border-color: --cizgi--; }
+  .modulex-kargo-desi-hesap-dugme--ikincil:hover { border-color: --accent--; }
+  .modulex-kargo-desi-hesap-dugme .material-symbols-outlined { font-size: 20px; }
+
+  .modulex-kargo-desi-hesap-duzen { display: grid; grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.3fr); gap: clamp(24px, 4vw, 56px); align-items: start; }
+  .modulex-kargo-desi-hesap-sol { display: grid; gap: 22px; min-width: 0; }
+  .modulex-kargo-desi-hesap-giris { display: grid; gap: 14px; }
+  .modulex-kargo-desi-hesap-hesap { display: grid; gap: 18px; padding: clamp(20px, 3vw, 28px); border-radius: --yuvarlak--; background: --vurguBg--; color: --vurguText--; }
+  .modulex-kargo-desi-hesap-olculer { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; }
+  .modulex-kargo-desi-hesap-olcu { display: grid; align-content: start; gap: 6px; }
+  .modulex-kargo-desi-hesap-oet { padding: 0; font-size: 0.74rem; font-weight: 750; line-height: 1.3; }
+  .modulex-kargo-desi-hesap-ogirdi { width: 100%; min-height: 46px; padding: 8px 10px; border: 0; border-radius: 10px; background: color-mix(in srgb, --vurguText-- 16%, transparent); color: inherit; font: inherit; font-weight: 750; font-variant-numeric: tabular-nums; transition: box-shadow 0.2s ease; }
+  .modulex-kargo-desi-hesap-ogirdi:focus { outline: none; box-shadow: 0 0 0 2px --vurguText--; }
+  .modulex-kargo-desi-hesap-bsec { display: flex; flex-wrap: wrap; gap: 6px; min-width: 0; margin: 0; padding: 0; border: 0; }
+  .modulex-kargo-desi-hesap-bsec legend { margin-block-end: 8px; }
+  .modulex-kargo-desi-hesap-bcip { position: relative; cursor: pointer; }
+  .modulex-kargo-desi-hesap-bcip span { display: inline-block; padding: 7px 14px; border: 1.5px solid color-mix(in srgb, --vurguText-- 50%, transparent); border-radius: 999px; font-size: 0.88rem; font-weight: 700; transition: background 0.2s ease, color 0.2s ease; }
+  .modulex-kargo-desi-hesap-radyo { position: absolute; inline-size: 1px; block-size: 1px; opacity: 0; }
+  .modulex-kargo-desi-hesap-radyo:checked + span { background: --vurguText--; color: --vurguBg--; }
+  .modulex-kargo-desi-hesap-radyo:focus-visible + span { outline: 3px solid --vurguText--; outline-offset: 2px; }
+  .modulex-kargo-desi-hesap-sonuc { display: grid; gap: 2px; padding-block-start: 14px; border-block-start: 1px solid color-mix(in srgb, --vurguText-- 35%, transparent); }
+  .modulex-kargo-desi-hesap-setiket { font-size: 0.8rem; font-weight: 750; letter-spacing: 0.1em; text-transform: uppercase; }
+  .modulex-kargo-desi-hesap-tutar { font-size: clamp(2rem, 4vw, 2.8rem); font-weight: 850; line-height: 1.1; font-variant-numeric: tabular-nums; }
+  .modulex-kargo-desi-hesap-tutar.modulex-kargo-desi-hesap--tik { animation: modulex-kargo-desi-hesap-tik 0.4s ease; }
+  .modulex-kargo-desi-hesap-dokum { font-size: 0.86rem; font-variant-numeric: tabular-nums; }
+  .modulex-kargo-desi-hesap-hnot { margin-block-start: 6px; font-size: 0.78rem; }
+  .modulex-kargo-desi-hesap-tkap { min-width: 0; overflow-x: auto; border: 1px solid --cizgi--; border-radius: --yuvarlak--; }
+  .modulex-kargo-desi-hesap-matris { width: 100%; border-collapse: collapse; font-variant-numeric: tabular-nums; }
+  .modulex-kargo-desi-hesap-matris :is(th, td) { padding: 12px 14px; border-block-end: 1px solid --cizgi--; text-align: center; transition: background 0.2s ease, color 0.2s ease; }
+  .modulex-kargo-desi-hesap-matris thead th { background: --kartBg--; font-size: 0.85rem; font-weight: 800; white-space: nowrap; }
+  .modulex-kargo-desi-hesap-matris tbody th { min-width: 170px; text-align: start; font-weight: 500; }
+  .modulex-kargo-desi-hesap-matris tbody tr:last-child > * { border-block-end: 0; }
+  .modulex-kargo-desi-hesap-matris td { font-weight: 650; white-space: nowrap; }
+  .modulex-kargo-desi-hesap-kose { text-align: start; }
+  .modulex-kargo-desi-hesap-birim { color: --muted--; font-weight: 600; }
+  .modulex-kargo-desi-hesap-bad { display: flex; align-items: center; gap: 8px; font-weight: 750; }
+  .modulex-kargo-desi-hesap-bikon { color: --accentInk--; font-size: 20px; }
+  .modulex-kargo-desi-hesap-bkapsam { display: block; color: --muted--; font-size: 0.8rem; }
+  .modulex-kargo-desi-hesap-bsure { display: inline-flex; align-items: center; gap: 4px; margin-block-start: 4px; color: --accentInk--; font-size: 0.78rem; font-weight: 700; }
+  .modulex-kargo-desi-hesap-bsure .material-symbols-outlined { font-size: 15px; }
+  .modulex-kargo-desi-hesap-matris tr.modulex-kargo-desi-hesap--sec > *, .modulex-kargo-desi-hesap-matris .modulex-kargo-desi-hesap--kol { background: color-mix(in srgb, --accent-- 9%, transparent); }
+  .modulex-kargo-desi-hesap-matris tr.modulex-kargo-desi-hesap--sec > td.modulex-kargo-desi-hesap--kol { background: --accent--; color: --accentText--; font-weight: 850; }
+  .modulex-kargo-desi-hesap-bolgeler { display: grid; gap: 10px; }
+  .modulex-kargo-desi-hesap-bolge { display: grid; gap: 2px; padding: 16px 18px; border-inline-start: 4px solid --accent--; border-radius: 12px; background: --kartBg--; }
+  @keyframes modulex-kargo-desi-hesap-tik { from { opacity: 0.5; transform: scale(0.96); } to { opacity: 1; transform: none; } }
+  @media (max-width: 1024px) {
+    .modulex-kargo-desi-hesap-duzen { grid-template-columns: minmax(0, 1fr); }
+  }
+  @media (max-width: 768px) {
+    .modulex-kargo-desi-hesap-olculer { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .modulex-kargo-desi-hesap-matris :is(th, td) { padding: 10px; }
+    .modulex-kargo-desi-hesap-matris tbody th { min-width: 140px; }
+  }
+  .modulex-kargo-desi-hesap-bag { color: inherit; text-decoration: none; }
+  .modulex-kargo-desi-hesap-bag:hover { text-decoration: underline; text-underline-offset: 4px; }
+  .modulex-kargo-desi-hesap-mbaslik { font-size: 1.05rem; font-weight: 700; }
+  .modulex-kargo-desi-hesap-mmetin { color: --muted--; font-size: 0.95rem; }
+
+  :is([lang="ar"], [lang="fa"], [lang="he"], [lang="ur"]) .modulex-kargo-desi-hesap :is(.modulex-kargo-desi-hesap-baslik, .modulex-kargo-desi-hesap-ust, h3, h4, strong) { letter-spacing: 0; }
+  :is([lang="ar"], [lang="fa"], [lang="he"], [lang="ur"]) .modulex-kargo-desi-hesap-baslik { line-height: 1.35; }
+  @media (max-width: 768px) {
+    .modulex-kargo-desi-hesap { padding-inline: 16px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .modulex-kargo-desi-hesap *, .modulex-kargo-desi-hesap *::before, .modulex-kargo-desi-hesap *::after { animation: none !important; transition: none !important; }
+  }
+</style>
+<script>
+  (() => {
+    const P = "modulex-kargo-desi-hesap";
+    const az = !!(window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches);
+    const desiHesap = (s, P) => {
+        const f = s.querySelector("[data-hesap]");
+        if (!f) return;
+        s.classList.add(P + "--js");
+        f.hidden = false;
+        const dl = document.documentElement.lang || undefined;
+        const pb = f.dataset.para || "";
+        const para = (n) => { try { return new Intl.NumberFormat(dl, pb ? { style: "currency", currency: pb, maximumFractionDigits: n % 1 ? 2 : 0 } : { maximumFractionDigits: 2 }).format(n); } catch (x) { return String(n); } };
+        const sy = (n, k) => { try { return new Intl.NumberFormat(dl, { maximumFractionDigits: k }).format(n); } catch (x) { return String(n); } };
+        const bol = Number(f.dataset.bolen) || 3000;
+        const tab = Number(f.dataset.taban) || 0;
+        const tutar = f.querySelector("[data-tutar]");
+        const dokum = f.querySelector("[data-dokum]");
+        const kol = [...s.querySelectorAll("thead [data-desi]")];
+        const hucre = [...s.querySelectorAll("[data-k]")];
+        const satir = [...s.querySelectorAll("tr[data-b]")];
+        const hesap = () => {
+          const v = (n) => { const e = f.elements.namedItem(n); const x = parseFloat(String((e && e.value) || "").replace(",", ".")); return Number.isFinite(x) && x > 0 ? x : 0; };
+          const desi = (v("en") * v("boy") * v("yuk")) / bol;
+          const kg = v("kg");
+          const u = Math.max(desi, kg);
+          const r = f.querySelector('input[name="bolge"]:checked');
+          const bi = r ? r.value : "";
+          satir.forEach((t) => t.classList.toggle(P + "--sec", t.dataset.b === bi));
+          let k = kol.findIndex((h) => Number(h.dataset.desi) >= u);
+          if (k === -1) k = kol.length - 1;
+          hucre.forEach((h) => h.classList.toggle(P + "--kol", u > 0 && h.dataset.k === String(k)));
+          if (!tutar) return;
+          if (!r || !u) { tutar.textContent = "—"; if (dokum) dokum.textContent = ""; return; }
+          const ucret = Number(r.dataset.f) + Math.max(0, Math.ceil(u) - tab) * (Number(r.dataset.d) || 0);
+          tutar.textContent = para(ucret);
+          if (dokum) dokum.textContent = (f.dataset.desiAd || "") + " " + sy(desi, 1) + " · " + sy(kg, 1) + " kg → " + sy(Math.ceil(u), 0);
+          tutar.classList.remove(P + "--tik");
+          void tutar.offsetWidth;
+          tutar.classList.add(P + "--tik");
+        };
+        f.addEventListener("input", hesap);
+        f.addEventListener("change", hesap);
+        f.addEventListener("submit", (e) => e.preventDefault());
+        hesap();
+      };
+    document.querySelectorAll("." + P).forEach((s) => {
+      if (s.dataset.fbHazir) return;
+      s.dataset.fbHazir = "1";
+      desiHesap(s, P, az);
+    });
+  })();
+</script>

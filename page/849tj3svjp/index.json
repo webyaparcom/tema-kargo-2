@@ -1,0 +1,40 @@
+{
+  "id": "849tj3svjp",
+  "name": {
+    "tr": "Ücret hesapla",
+    "en": "Calculate price",
+    "ar": "احسب السعر"
+  },
+  "description": {
+    "tr": "Desi ve bölgeye göre kurgusal kargo ücreti.",
+    "en": "Fictional shipping price by volume and zone.",
+    "ar": "سعر شحن افتراضي حسب الحجم والمنطقة."
+  },
+  "keyword": {
+    "tr": "teklif",
+    "en": "quote",
+    "ar": "عرض سعر"
+  },
+  "path": "teklif-al",
+  "icon": "request_quote",
+  "category": "",
+  "status": "play",
+  "desing": {
+    "header": [],
+    "body": [
+      "wehyed",
+      "rktdzp"
+    ],
+    "footer": []
+  },
+  "index": 4,
+  "url": "",
+  "text": {},
+  "title": {
+    "tr": "Ücret hesapla",
+    "en": "Calculate price",
+    "ar": "احسب السعر"
+  },
+  "date": "2026-11-16T11:32:31.600Z",
+  "update": "2026-11-16T12:24:13.523Z"
+}

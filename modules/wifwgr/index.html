@@ -1,0 +1,1066 @@
+<div class="t3jHeaderWrap">
+
+  <div class="t3jMainHeader">
+
+    <div class="t3jMainInner">
+
+      <button class="t3jHamburger" type="button" onclick="t3jToggleMobile()" aria-label="{{menuAriaLabel}}">
+
+        <span class="material-symbols-outlined">menu</span>
+
+      </button>
+
+      <a href="/{{lang}}/" class="t3jLogoLink" aria-label="{{web-name}}">
+
+        <img src="/img/{{logo}}?v={{random}}" alt="{{web-name}}" class="t3jLogo" loading="lazy" />
+
+      </a>
+
+      <form method="get" action="/{{lang}}/search/?search=" class="t3jSearchBox">
+
+        <span class="material-symbols-outlined" aria-hidden="true">search</span>
+
+        <input name="search" type="search" placeholder="{{searchPlaceholder}}" aria-label="{{searchAriaLabel}}" />
+
+        <button type="submit">{{searchButtonText}}</button>
+
+      </form>
+
+      <div class="t3jActions">
+        {{langbar}}
+
+        <a href="/{{lang}}/login/" class="t3jIconBtn t3jAccountLink" aria-label="{{loginText}}" data-mx-uye-goster="misafir">
+
+          <span class="material-symbols-outlined">person</span>
+
+          <span class="t3jAccountLabel">{{loginText}}</span>
+
+        </a>
+
+        <a href="/{{lang}}/{{hesabimUrl}}/" class="t3jIconBtn t3jAccountLink" aria-label="{{accountText}}" data-mx-uye-goster="giris" style="display:none;">
+
+          <span class="material-symbols-outlined">account_circle</span>
+
+          <span class="t3jAccountLabel" data-mx-uye-ad>{{accountText}}</span>
+
+        </a>
+
+        <a href="/{{lang}}/favorilerim/" class="t3jIconBtn" aria-label="{{favText}}">
+
+          <span class="material-symbols-outlined">favorite</span>
+
+        </a>
+
+        <a href="/{{lang}}/{{urlsepet}}/" class="t3jIconBtn t3jCartLink" aria-label="{{cartText}}">
+
+          <span class="material-symbols-outlined">shopping_bag</span>
+
+          <span class="t3jCartLabel">{{cartText}}</span>
+
+          <span class="t3jCartBadge" id="t3jCartBadge-{{id}}" data-mx-sepet-sayi data-mx-bos="1" aria-live="polite">0</span>
+
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="t3jNavBar">
+
+    <div class="t3jNavInner">
+
+      <div class="t3jCatWrap">
+
+        <button class="t3jCatBtn" type="button" onclick="t3jToggleCat()" aria-expanded="false" aria-controls="t3jCatDrop">
+
+          <span class="material-symbols-outlined">menu</span>
+
+          <span class="t3jCatBtnText">{{categoriesText}}</span>
+
+          <span class="material-symbols-outlined t3jCatChevron">expand_more</span>
+
+        </button>
+
+        <div class="t3jCatDrop" id="t3jCatDrop">{{categoryMenuHtml}}</div>
+
+      </div>
+
+      <nav class="t3jSubNav" aria-label="{{menuAriaLabel}}">{{html}}</nav>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+
+<div class="t3jMobileOverlay" id="t3jMobileOverlay" onclick="t3jOverlayClick(event)">
+
+  <div class="t3jMobilePanel" id="t3jMobilePanel">
+
+    <div class="t3jMobileHead">
+
+      <img src="/img/{{logo}}?v={{random}}" alt="{{web-name}}" class="t3jMobileLogo" loading="lazy" />
+
+      <button class="t3jMobileClose" type="button" onclick="t3jToggleMobile()" aria-label="{{closeText}}">
+
+        <span class="material-symbols-outlined">close</span>
+
+      </button>
+
+    </div>
+
+    <form method="get" action="/{{lang}}/search/?search=" class="t3jMobileSearch">
+
+      <input name="search" type="search" placeholder="{{searchPlaceholder}}" aria-label="{{searchAriaLabel}}" />
+
+      <button type="submit"><span class="material-symbols-outlined">search</span></button>
+
+    </form>
+
+    <nav class="t3jMobileNav">{{mobileMenuHtml}}</nav>
+
+    <div class="t3jMobileActions">
+
+      <a href="/{{lang}}/{{urlsepet}}/"><span class="material-symbols-outlined">shopping_bag</span> {{cartText}}</a>
+
+      <a href="/{{lang}}/favorilerim/"><span class="material-symbols-outlined">favorite</span> {{favText}}</a>
+
+      <a href="/{{lang}}/login/" data-mx-uye-goster="misafir"><span class="material-symbols-outlined">person</span> {{loginText}}</a>
+
+      <a href="/{{lang}}/{{hesabimUrl}}/" data-mx-uye-goster="giris" style="display:none;"><span class="material-symbols-outlined">account_circle</span> {{accountText}}</a>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+
+<script>
+
+function t3jToggleMobile() {
+
+  var ov = document.getElementById("t3jMobileOverlay");
+
+  if (ov) { ov.classList.toggle("t3jOpen"); }
+
+}
+
+function t3jToggleCat() {
+
+  var d = document.getElementById("t3jCatDrop");
+
+  var btn = document.querySelector(".t3jCatBtn");
+
+  if (d) {
+
+    d.classList.toggle("t3jOpen");
+
+    if (btn) { btn.setAttribute("aria-expanded", d.classList.contains("t3jOpen") ? "true" : "false"); }
+
+  }
+
+}
+
+/* F3: hesap/sepet rozeti MxStore ile (data-mx-uye-goster, data-mx-sepet-sayi); eski ham sablonunda yedek yukleyici */
+
+window.addEventListener("load", function () {
+
+  if (!window.MxStore) { var s = document.createElement("script"); s.src = "/src/mx-store.js"; document.head.appendChild(s); }
+
+});
+
+function t3jOverlayClick(ev) {
+
+  if (ev.target && ev.target.id === "t3jMobileOverlay") { t3jToggleMobile(); }
+
+}
+
+</script>
+
+
+
+<style>
+
+  .t3jHeaderWrap {
+
+    width: 100%;
+
+    background: --bgcolor--;
+
+    position: relative;
+
+    z-index: 500;
+
+  }
+
+
+
+  .t3jMainHeader {
+
+    background: --bgcolor--;
+
+    border-bottom: 1px solid --bordercolor--;
+
+  }
+
+
+
+  .t3jMainInner {
+
+    max-width: --max--;
+
+    margin: 0 auto;
+
+    padding: 14px 20px;
+
+    display: grid;
+
+    grid-template-columns: auto minmax(--searchMin--, 1fr) auto;
+
+    align-items: center;
+
+    gap: 16px;
+
+  }
+
+
+
+  .t3jLogoLink {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    flex-shrink: 0;
+
+    cursor: pointer;
+
+    text-decoration: none;
+
+  }
+
+
+
+  .t3jLogo {
+
+    display: block;
+
+    max-height: 48px;
+
+    width: auto;
+
+    max-width: min(180px, 20vw);
+
+    object-fit: contain;
+
+  }
+
+  /* SVG logo korumasi (2026-09-13): intrinsic boyutu OLMAYAN bir SVG
+     (yalniz viewBox) `height:auto` ile flex icinde 0'a coker ve logo
+     GORUNMEZ. `max-height` yetmez -- ust sinirdir, olcu vermez. */
+  .t3jLogo[src*=".svg"] {
+    height: 60px;
+    width: auto;
+  }
+
+
+
+  .t3jSearchBox {
+
+    display: flex;
+
+    align-items: center;
+
+    width: 100%;
+
+    max-width: --searchMax--;
+
+    justify-self: center;
+
+    background: --searchBg--;
+
+    border: 1px solid --searchBorder--;
+
+    border-radius: 4px;
+
+    overflow: hidden;
+
+    transition: box-shadow 0.2s ease;
+
+  }
+
+
+
+  .t3jSearchBox:focus-within {
+
+    box-shadow: 0 0 0 2px color-mix(in srgb, --accent-- 25%, transparent);
+
+  }
+
+
+
+  .t3jSearchBox .material-symbols-outlined {
+
+    margin-left: 12px;
+
+    color: color-mix(in srgb, --color-- 45%, transparent);
+
+    font-size: 20px;
+
+    flex-shrink: 0;
+
+  }
+
+
+
+  .t3jSearchBox input {
+
+    flex: 1;
+
+    min-width: 0;
+
+    padding: 10px 12px;
+
+    border: none;
+
+    outline: none;
+
+    background: transparent;
+
+    font-size: 14px;
+
+    color: --color--;
+
+    height: 38px;
+
+    box-sizing: border-box;
+
+  }
+
+
+
+  .t3jSearchBox button {
+
+    background: --navBg--;
+
+    color: --navColor--;
+
+    border: none;
+
+    padding: 0 18px;
+
+    height: 38px;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.04em;
+
+    text-transform: uppercase;
+
+    cursor: pointer;
+
+    flex-shrink: 0;
+
+    transition: background 0.2s ease, color 0.2s ease;
+
+  }
+
+
+
+  .t3jSearchBox button:hover {
+
+    background: --accent--;
+
+    color: --badgecolor--;
+
+  }
+
+
+
+  .t3jActions {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 4px;
+
+    flex-shrink: 0;
+
+    justify-self: end;
+
+  }
+
+
+
+  .t3jIconBtn {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 6px;
+
+    padding: 8px 10px;
+
+    color: --color--;
+
+    text-decoration: none;
+
+    cursor: pointer;
+
+    border-radius: 4px;
+
+    position: relative;
+
+    transition: color 0.2s ease, background 0.2s ease;
+
+  }
+
+
+
+  .t3jIconBtn:hover {
+
+    color: --accent--;
+
+    background: color-mix(in srgb, --accent-- 8%, transparent);
+
+  }
+
+
+
+  .t3jIconBtn .material-symbols-outlined { font-size: 22px; }
+
+
+
+  .t3jAccountLabel,
+
+  .t3jCartLabel {
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    white-space: nowrap;
+
+  }
+
+
+
+  .t3jCartBadge[data-mx-bos] {
+
+    display: none;
+
+  }
+
+  .t3jCartBadge {
+
+    position: absolute;
+
+    top: 2px;
+
+    right: 2px;
+
+    background: --accent--;
+
+    color: --badgecolor--;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    min-width: 16px;
+
+    height: 16px;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 0 3px;
+
+  }
+
+
+
+  .t3jHamburger {
+
+    display: none;
+
+    background: none;
+
+    border: none;
+
+    cursor: pointer;
+
+    color: --navColor--;
+
+    padding: 8px 10px;
+
+    flex-shrink: 0;
+
+    align-items: center;
+
+    justify-content: center;
+
+  }
+
+  .t3jHamburger .material-symbols-outlined { font-size: 24px; }
+
+
+
+  .t3jNavBar {
+
+    background: --navBg--;
+
+    color: --navColor--;
+
+    box-shadow: 0 2px 8px color-mix(in srgb, --navBg-- 25%, transparent);
+
+  }
+
+  .t3jNavInner {
+
+    max-width: --max--;
+
+    margin: 0 auto;
+
+    padding: 0 12px 0 20px;
+
+    display: flex;
+
+    align-items: stretch;
+
+    gap: 8px;
+
+    min-height: 48px;
+
+  }
+
+
+
+  .t3jCatWrap { position: relative; flex-shrink: 0; }
+
+  .t3jCatBtn {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 6px;
+
+    height: 100%;
+
+    min-height: 48px;
+
+    background: color-mix(in srgb, --navColor-- 10%, transparent);
+
+    color: --navColor--;
+
+    border: none;
+
+    padding: 0 16px;
+
+    cursor: pointer;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.03em;
+
+    text-transform: uppercase;
+
+    transition: background 0.2s ease, color 0.2s ease;
+
+  }
+
+  .t3jCatBtn:hover,
+
+  .t3jCatBtn:focus-visible {
+
+    background: color-mix(in srgb, --navColor-- 18%, transparent);
+
+    outline: none;
+
+  }
+
+  .t3jCatChevron { font-size: 18px; transition: transform 0.2s ease; }
+
+  .t3jCatWrap:hover .t3jCatChevron { transform: rotate(180deg); }
+
+
+
+  .t3jCatDrop {
+
+    display: none;
+
+    position: absolute;
+
+    top: 100%;
+
+    left: 0;
+
+    z-index: 610;
+
+    min-width: 240px;
+
+    background: --catDropBg--;
+
+    border: 1px solid --catDropBorder--;
+
+    border-radius: 0 0 8px 8px;
+
+    box-shadow:
+      0 12px 32px color-mix(in srgb, --navBg-- 35%, transparent),
+      0 4px 14px color-mix(in srgb, --navBg-- 22%, transparent);
+
+    padding: 6px 0;
+
+    animation: t3jDropIn 0.22s ease;
+
+  }
+
+  .t3jCatDrop.t3jOpen { display: block; }
+
+  .t3jCatWrap:hover .t3jCatDrop { display: block; }
+
+  .t3jCatDrop a {
+
+    display: block;
+
+    padding: 11px 18px;
+
+    color: --color--;
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    font-weight: 500;
+
+    cursor: pointer;
+
+    transition: background 0.15s ease, color 0.15s ease;
+
+  }
+
+  .t3jCatDrop a:hover {
+
+    background: --bgAlt--;
+
+    color: --accent--;
+
+    padding-left: 22px;
+
+  }
+
+
+
+  .t3jSubNav {
+
+    display: flex;
+
+    align-items: stretch;
+
+    gap: 0;
+
+    flex: 1;
+
+    min-width: 0;
+
+    overflow-x: auto;
+
+    scrollbar-width: none;
+
+  }
+
+  .t3jSubNav::-webkit-scrollbar { display: none; }
+
+  .t3jSubNav a {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    padding: 0 14px;
+
+    color: --navColor-- !important;
+
+    text-decoration: none;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    letter-spacing: 0.06em;
+
+    text-transform: uppercase;
+
+    white-space: nowrap;
+
+    cursor: pointer;
+
+    border-bottom: 2px solid transparent;
+
+    transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+
+  }
+
+  .t3jSubNav a:hover {
+
+    color: --navHover-- !important;
+
+    border-bottom-color: --navHover--;
+
+    background: color-mix(in srgb, --navColor-- 6%, transparent);
+
+  }
+
+  .t3jNavActive,
+
+  .t3jSubNav .t3jNavActive {
+
+    color: --navHover-- !important;
+
+    border-bottom-color: --navHover--;
+
+  }
+
+
+
+  @keyframes t3jDropIn {
+
+    from { opacity: 0; transform: translateY(-8px); }
+
+    to { opacity: 1; transform: translateY(0); }
+
+  }
+
+
+
+  .t3jMobileOverlay {
+
+    display: none;
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 9999;
+
+    background: color-mix(in srgb, --navBg-- 55%, transparent);
+
+    backdrop-filter: blur(2px);
+
+  }
+
+  .t3jMobileOverlay.t3jOpen { display: block; }
+
+  .t3jMobilePanel {
+
+    width: min(320px, 88vw);
+
+    height: 100%;
+
+    background: --bgcolor--;
+
+    padding: 16px;
+
+    overflow-y: auto;
+
+    box-shadow: 4px 0 24px color-mix(in srgb, --navBg-- 30%, transparent);
+
+    animation: t3jSlideIn 0.28s ease;
+
+  }
+
+  @keyframes t3jSlideIn {
+
+    from { transform: translateX(-100%); }
+
+    to { transform: translateX(0); }
+
+  }
+
+  .t3jMobileHead {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 16px;
+
+    padding-bottom: 12px;
+
+    border-bottom: 1px solid --bordercolor--;
+
+  }
+
+  .t3jMobileLogo { max-height: 40px; }
+
+  /* SVG logo korumasi (2026-09-13, P5): intrinsic boyutu OLMAYAN bir SVG
+     (yalniz viewBox) flex icinde 0'a coker ve logo GORUNMEZ. max-height
+     yetmez -- ust sinirdir, olcu vermez. Bu varyant (mobil/ikincil logo)
+     ilk P0 taramasinda KACIRILDI -- dosya basina yalniz ilk logo sinifi
+     aranmisti. */
+  .t3jMobileLogo[src*=".svg"] {
+    height: 40px;
+    width: auto;
+  }
+
+  .t3jMobileClose {
+
+    background: none;
+
+    border: none;
+
+    cursor: pointer;
+
+    color: --color--;
+
+    padding: 4px;
+
+  }
+
+  .t3jMobileSearch {
+
+    display: flex;
+
+    gap: 8px;
+
+    margin-bottom: 16px;
+
+  }
+
+  .t3jMobileSearch input {
+
+    flex: 1;
+
+    padding: 11px 12px;
+
+    border: 1px solid --bordercolor--;
+
+    border-radius: 4px;
+
+    font-size: 14px;
+
+    color: --color--;
+
+    background: --bgcolor--;
+
+  }
+
+  .t3jMobileSearch button {
+
+    background: --navBg--;
+
+    color: --navColor--;
+
+    border: none;
+
+    padding: 0 14px;
+
+    border-radius: 4px;
+
+    cursor: pointer;
+
+  }
+
+  .t3jMobileNav { display: flex; flex-direction: column; }
+
+  .t3jMobileNav a {
+
+    padding: 13px 4px;
+
+    color: --color--;
+
+    text-decoration: none;
+
+    border-bottom: 1px solid --bordercolor--;
+
+    cursor: pointer;
+
+    font-weight: 500;
+
+    font-size: 14px;
+
+    transition: color 0.15s ease;
+
+  }
+
+  .t3jMobileNav a:hover { color: --accent--; padding-left: 8px; }
+
+  .t3jMobileNav .t3jMobileActive { color: --accent--; font-weight: 700; }
+  .t3jMobileCatLabel {
+    display: block;
+    margin-top: 12px;
+    padding: 8px 4px 4px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: color-mix(in srgb, --color-- 55%, transparent);
+  }
+
+  .t3jMobileActions {
+
+    margin-top: 20px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 4px;
+
+    padding-top: 12px;
+
+    border-top: 1px solid --bordercolor--;
+
+  }
+
+  .t3jMobileActions a {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    color: --color--;
+
+    text-decoration: none;
+
+    cursor: pointer;
+
+    padding: 10px 4px;
+
+    font-size: 14px;
+
+    border-radius: 4px;
+
+    transition: background 0.15s ease, color 0.15s ease;
+
+  }
+
+  .t3jMobileActions a:hover {
+
+    background: color-mix(in srgb, --accent-- 8%, transparent);
+
+    color: --accent--;
+
+  }
+
+
+
+  @media (max-width: 1100px) {
+
+    .t3jAccountLabel,
+
+    .t3jCartLabel { display: none; }
+
+  }
+
+
+
+  @media (max-width: 1024px) {
+
+    .t3jHamburger { display: flex; }
+
+    .t3jSearchBox { display: none; }
+
+    .t3jMainInner {
+
+      grid-template-columns: auto 1fr auto;
+
+    }
+
+  }
+
+
+
+  @media (max-width: 768px) {
+
+    .t3jSubNav { display: none; }
+
+    .t3jNavInner { padding: 0 14px; min-height: 44px; }
+
+    .t3jCatBtn { min-height: 44px; padding: 0 12px; font-size: 12px; }
+
+    .t3jCatWrap:hover .t3jCatDrop { display: none; }
+
+    .t3jCatDrop.t3jOpen { display: block; }
+
+    [class*="t3j"] { box-sizing: border-box; max-width: 100%; }
+
+  }
+
+
+
+  @media (prefers-reduced-motion: reduce) {
+
+    .t3jHeaderWrap, .t3jHeaderWrap * {
+
+      animation: none !important;
+
+      transition: none !important;
+
+    }
+
+  }
+
+  /* Mobil uygulama kuralı (12 Kas 2026): dokunma hedefleri >= 48px (yalnız <=1024px; masaüstü aynı). Çekmece zaten SOLDA. */
+  @media (max-width: 1024px) {
+    .t3jHamburger,
+    .t3jIconBtn,
+    .t3jMobileClose,
+    .t3jMobileSearch button,
+    .t3jCatBtn {
+      min-width: 48px;
+      min-height: 48px;
+      box-sizing: border-box;
+    }
+
+    .t3jIconBtn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .t3jMobileSearch input {
+      min-height: 48px;
+      box-sizing: border-box;
+    }
+
+    .t3jMobileActions a,
+    .t3jMobileNav a {
+      display: flex;
+      align-items: center;
+      min-height: 48px;
+      box-sizing: border-box;
+    }
+
+    .wm-langbar li a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 48px;
+      min-height: 48px;
+    }
+  }
+</style>
+

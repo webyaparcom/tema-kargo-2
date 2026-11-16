@@ -1,0 +1,134 @@
+<section class="modulex-yorum-vaka-metrik{{fbsinif}}" {{fbetiket}}>
+  <div class="modulex-yorum-vaka-metrik-ic">
+    {{fbbas}}
+    {{fbgovde}}
+  </div>
+</section>
+
+<style>
+  /* yorum-vaka-metrik — Sayısal kanıt + insan sözü aynı kartta: yorum-puan-dagilim puanları toplar, burada her yorumun kendi iş sonucu (ör. %240 trafik) sayaçla öne çıkar; yorum-bento'nun boyut hiyerarşisi yerine sabit iki bölmeli bilet. */
+  .modulex-yorum-vaka-metrik { box-sizing: border-box; width: 100%; padding: --bosluk-- 20px; background: --bg--; color: --text--; font-size: 1rem; line-height: 1.6; font-family: var(--mx-font-sans, inherit); overflow-wrap: break-word; }
+  .modulex-yorum-vaka-metrik *, .modulex-yorum-vaka-metrik *::before, .modulex-yorum-vaka-metrik *::after { box-sizing: border-box; }
+  /* ham/css.css «* { font-size: 14px }» kalıtımı keser — modül içinde boyut üstten gelsin (ikon yazı tipi hariç) */
+  .modulex-yorum-vaka-metrik :where(*:not(.material-symbols-outlined)) { font-size: inherit; }
+  /* aynı «*» kuralı font-weight 400 · line-height 1.2 · font-family de basar — modül içinde kalıtım */
+  .modulex-yorum-vaka-metrik :where(*:not(.material-symbols-outlined)) { font-weight: inherit; line-height: inherit; font-family: inherit; }
+  .modulex-yorum-vaka-metrik :where(h2, h3, h4, p, ul, ol, li, figure, blockquote, dl, dd) { margin: 0; }
+  .modulex-yorum-vaka-metrik :where(ul, ol) { padding: 0; list-style: none; }
+  .modulex-yorum-vaka-metrik img { display: block; max-width: 100%; }
+  /* <img width height> öznitelik yüksekliği CSS aspect-ratio'yu ezer — sıfır özgüllükle auto (modül sınıfının height'ı yine kazanır) */
+  :where(.modulex-yorum-vaka-metrik) img { height: auto; }
+  .modulex-yorum-vaka-metrik [hidden] { display: none !important; }
+  .modulex-yorum-vaka-metrik :where(a, button, summary, [data-cevir]) { cursor: pointer; }
+  .modulex-yorum-vaka-metrik :where(a, button, summary, [tabindex]):focus-visible { outline: 3px solid --accent--; outline-offset: 3px; }
+  .modulex-yorum-vaka-metrik-ic { max-width: --max--; margin-inline: auto; }
+  .modulex-yorum-vaka-metrik-bas { display: grid; gap: 12px; margin-block-end: clamp(32px, 4vw, 52px); }
+  .modulex-yorum-vaka-metrik--bassiz .modulex-yorum-vaka-metrik-bas { display: none; }
+  .modulex-yorum-vaka-metrik-ust { color: --accentInk--; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; }
+  .modulex-yorum-vaka-metrik-baslik { font-family: var(--mx-font-heading, inherit); font-size: clamp(1.8rem, 3.4vw, 2.8rem); font-weight: 750; letter-spacing: -0.025em; line-height: 1.1; }
+  .modulex-yorum-vaka-metrik-metin { color: --muted--; font-size: 1.05rem; line-height: 1.7; }
+  .modulex-yorum-vaka-metrik-bas { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 10px 48px; align-items: end; }
+  .modulex-yorum-vaka-metrik-ust { grid-column: 1 / -1; }
+  .modulex-yorum-vaka-metrik-cta { display: flex; flex-wrap: wrap; gap: 12px; margin-block-start: 8px; }
+  .modulex-yorum-vaka-metrik-dugme { display: inline-flex; align-items: center; gap: 8px; min-height: 48px; padding: 12px 22px; border: 2px solid --accent--; border-radius: 999px; background: --accent--; color: --accentText--; font-weight: 700; text-decoration: none; transition: transform 0.25s ease, background 0.25s ease, color 0.25s ease; }
+  .modulex-yorum-vaka-metrik-dugme:hover { transform: translateY(-2px); }
+  .modulex-yorum-vaka-metrik-dugme--ikincil { background: transparent; color: --text--; border-color: --cizgi--; }
+  .modulex-yorum-vaka-metrik-dugme--ikincil:hover { border-color: --accent--; }
+  .modulex-yorum-vaka-metrik-dugme .material-symbols-outlined { font-size: 20px; }
+
+  .modulex-yorum-vaka-metrik-ad { font-weight: 700; }
+  .modulex-yorum-vaka-metrik-kisi { display: grid; gap: 2px; min-width: 0; }
+  .modulex-yorum-vaka-metrik-unvan { color: --muted--; font-size: 0.88rem; line-height: 1.45; }
+  .modulex-yorum-vaka-metrik-puan { display: flex; gap: 2px; color: --yildiz--; }
+  .modulex-yorum-vaka-metrik-puan .material-symbols-outlined { font-size: 20px; font-variation-settings: "FILL" 1; }
+  .modulex-yorum-vaka-metrik-yildiz--bos { opacity: 0.3; }
+  .modulex-yorum-vaka-metrik-avatar { flex: none; width: 52px; height: 52px; border-radius: 50%; object-fit: cover; }
+  .modulex-yorum-vaka-metrik-harf { display: inline-grid; place-items: center; background: color-mix(in srgb, --accent-- 18%, --kartBg--); color: --accentInk--; font-weight: 800; letter-spacing: 0.02em; }
+  .modulex-yorum-vaka-metrik-yazar { display: flex; align-items: center; gap: 12px; }
+
+  .modulex-yorum-vaka-metrik-liste { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px; }
+  .modulex-yorum-vaka-metrik-vaka { display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 3fr); overflow: hidden; border-radius: --yuvarlak--; background: --kartBg--; transition: transform 0.35s ease, box-shadow 0.35s ease; }
+  .modulex-yorum-vaka-metrik-vaka:hover { transform: translateY(-3px); box-shadow: 0 24px 40px -30px color-mix(in srgb, --text-- 75%, transparent); }
+  .modulex-yorum-vaka-metrik-vaka:first-child { grid-column: 1 / -1; grid-template-columns: minmax(0, 1fr) minmax(0, 2fr); }
+  .modulex-yorum-vaka-metrik-sonuc { display: grid; align-content: center; gap: 10px; padding: clamp(22px, 3vw, 38px); background: --vurguBg--; color: --vurguText--; }
+  .modulex-yorum-vaka-metrik-sonuc::after { content: ""; display: block; width: 100%; height: 4px; margin-block-start: 6px; border-radius: 99px; background: currentColor; opacity: 0.4; transform-origin: 0 50%; transition: transform 1.2s cubic-bezier(0.2, 0.8, 0.2, 1); }
+  [dir="rtl"] .modulex-yorum-vaka-metrik-sonuc::after { transform-origin: 100% 50%; }
+  .modulex-yorum-vaka-metrik--hazir:not(.modulex-yorum-vaka-metrik--gor) .modulex-yorum-vaka-metrik-sonuc::after { transform: scaleX(0); }
+  .modulex-yorum-vaka-metrik-sayi { display: flex; flex-wrap: wrap; align-items: baseline; font-size: clamp(2.6rem, 5.4vw, 4.2rem); font-weight: 850; letter-spacing: -0.04em; line-height: 1; font-variant-numeric: tabular-nums; }
+  .modulex-yorum-vaka-metrik-vaka:first-child .modulex-yorum-vaka-metrik-sayi { font-size: clamp(3.2rem, 8vw, 6.2rem); }
+  .modulex-yorum-vaka-metrik-ek { font-size: 0.55em; font-weight: 750; letter-spacing: 0; }
+  .modulex-yorum-vaka-metrik-setiket { font-size: 0.95rem; font-weight: 650; line-height: 1.45; }
+  .modulex-yorum-vaka-metrik-sonuc--kimlik { justify-items: start; }
+  .modulex-yorum-vaka-metrik-monogram { font-size: clamp(3rem, 6vw, 4.6rem); font-weight: 900; letter-spacing: -0.04em; line-height: 1; }
+  .modulex-yorum-vaka-metrik-slogo { width: min(100%, 180px); height: auto; max-height: 80px; object-fit: contain; }
+  .modulex-yorum-vaka-metrik-soz { display: grid; align-content: center; gap: 16px; padding: clamp(22px, 3vw, 38px); }
+  .modulex-yorum-vaka-metrik-kbaslik { font-size: 1.1rem; font-weight: 750; }
+  .modulex-yorum-vaka-metrik-alinti { line-height: 1.7; }
+  .modulex-yorum-vaka-metrik-vaka:first-child .modulex-yorum-vaka-metrik-alinti { font-family: var(--mx-font-heading, inherit); font-size: clamp(1.2rem, 2.2vw, 1.55rem); font-weight: 500; line-height: 1.5; }
+  .modulex-yorum-vaka-metrik-avatar { width: 44px; height: 44px; font-size: 0.85rem; }
+  :is([lang="ar"], [lang="fa"], [lang="he"], [lang="ur"]) .modulex-yorum-vaka-metrik-sayi { letter-spacing: 0; }
+  @media (max-width: 1024px) {
+    .modulex-yorum-vaka-metrik-vaka { grid-template-columns: minmax(0, 1fr); }
+  }
+  @media (max-width: 768px) {
+    .modulex-yorum-vaka-metrik-liste { grid-template-columns: minmax(0, 1fr); }
+    .modulex-yorum-vaka-metrik-vaka:first-child { grid-template-columns: minmax(0, 1fr); }
+  }
+
+  :is([lang="ar"], [lang="fa"], [lang="he"], [lang="ur"]) .modulex-yorum-vaka-metrik :is(.modulex-yorum-vaka-metrik-baslik, .modulex-yorum-vaka-metrik-ust, h3, h4, strong) { letter-spacing: 0; }
+  :is([lang="ar"], [lang="fa"], [lang="he"], [lang="ur"]) .modulex-yorum-vaka-metrik-baslik { line-height: 1.35; }
+  @media (max-width: 1024px) {
+    .modulex-yorum-vaka-metrik-bas { grid-template-columns: minmax(0, 1fr); }
+  }
+  @media (max-width: 768px) {
+    .modulex-yorum-vaka-metrik { padding-inline: 16px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .modulex-yorum-vaka-metrik *, .modulex-yorum-vaka-metrik *::before, .modulex-yorum-vaka-metrik *::after { animation: none !important; transition: none !important; }
+  }
+</style>
+<script>
+  (() => {
+    const P = "modulex-yorum-vaka-metrik";
+    const az = !!(window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches);
+    const gozlem = (s, P, az) => {
+        const gor = () => s.classList.add(P + "--gor");
+        s.classList.add(P + "--hazir");
+        if (az || !("IntersectionObserver" in window)) { gor(); return; }
+        const io = new IntersectionObserver((gs) => {
+          gs.forEach((g) => { if (g.isIntersecting) { gor(); io.disconnect(); } });
+        }, { threshold: 0.15 });
+        io.observe(s);
+      };
+    const sayac = (s, P, az) => {
+        const el = [...s.querySelectorAll("[data-hedef]")];
+        if (!el.length || az || !("IntersectionObserver" in window)) return;
+        const dl = document.documentElement.lang || undefined;
+        const oynat = () => el.forEach((e) => {
+          const h = Number(e.dataset.hedef);
+          const od = Number(e.dataset.ondalik) || 0;
+          const son = e.textContent;
+          if (!Number.isFinite(h)) return;
+          let f;
+          try { f = new Intl.NumberFormat(dl, { minimumFractionDigits: od, maximumFractionDigits: od }); } catch (x) { return; }
+          const t0 = performance.now();
+          const adim = (t) => {
+            const p = Math.min(1, (t - t0) / 1300);
+            e.textContent = p < 1 ? f.format(h * (1 - Math.pow(1 - p, 3))) : son;
+            if (p < 1) requestAnimationFrame(adim);
+          };
+          requestAnimationFrame(adim);
+        });
+        const io = new IntersectionObserver((gs) => {
+          gs.forEach((g) => { if (g.isIntersecting) { oynat(); io.disconnect(); } });
+        }, { threshold: 0.3 });
+        io.observe(s);
+      };
+    document.querySelectorAll("." + P).forEach((s) => {
+      if (s.dataset.fbHazir) return;
+      s.dataset.fbHazir = "1";
+      gozlem(s, P, az);
+      sayac(s, P, az);
+    });
+  })();
+</script>

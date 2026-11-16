@@ -1,0 +1,161 @@
+<section class="modulex-iletisim-kapsama-kontrol{{fbsinif}}" {{fbetiket}}>
+  <div class="modulex-iletisim-kapsama-kontrol-ic">
+    {{fbbas}}
+    {{fbgovde}}
+  </div>
+</section>
+
+<style>
+  /* iletisim-kapsama-kontrol — iletisim-telefon-odak tek numara manşetidir; bu modül acil hattı bant olarak verir ve ASIL etkileşimi bölge eşlemesidir (data-bolge · data-kod, aksan/İ-ı duyarsız arama, {bolge}/{sure} kalıplı ileti). Hiçbir contact modülünde kapsama sorgusu yok. */
+  .modulex-iletisim-kapsama-kontrol { box-sizing: border-box; width: 100%; padding: --bosluk-- 20px; background: --bg--; color: --text--; font-size: 1rem; line-height: 1.6; font-family: var(--mx-font-sans, inherit); overflow-wrap: break-word; }
+  .modulex-iletisim-kapsama-kontrol *, .modulex-iletisim-kapsama-kontrol *::before, .modulex-iletisim-kapsama-kontrol *::after { box-sizing: border-box; }
+  /* ham/css.css «* { font-size: 14px }» kalıtımı keser — modül içinde boyut üstten gelsin (ikon yazı tipi hariç) */
+  .modulex-iletisim-kapsama-kontrol :where(*:not(.material-symbols-outlined)) { font-size: inherit; }
+  /* aynı «*» kuralı font-weight 400 · line-height 1.2 · font-family de basar — modül içinde kalıtım */
+  .modulex-iletisim-kapsama-kontrol :where(*:not(.material-symbols-outlined)) { font-weight: inherit; line-height: inherit; font-family: inherit; }
+  .modulex-iletisim-kapsama-kontrol :where(h2, h3, h4, p, ul, ol, li, figure, blockquote, dl, dd) { margin: 0; }
+  .modulex-iletisim-kapsama-kontrol :where(ul, ol) { padding: 0; list-style: none; }
+  .modulex-iletisim-kapsama-kontrol img { display: block; max-width: 100%; }
+  /* <img width height> öznitelik yüksekliği CSS aspect-ratio'yu ezer — sıfır özgüllükle auto (modül sınıfının height'ı yine kazanır) */
+  :where(.modulex-iletisim-kapsama-kontrol) img { height: auto; }
+  .modulex-iletisim-kapsama-kontrol [hidden] { display: none !important; }
+  .modulex-iletisim-kapsama-kontrol :where(a, button, summary, [data-cevir]) { cursor: pointer; }
+  .modulex-iletisim-kapsama-kontrol :where(a, button, summary, [tabindex]):focus-visible { outline: 3px solid --accent--; outline-offset: 3px; }
+  .modulex-iletisim-kapsama-kontrol-ic { max-width: --max--; margin-inline: auto; }
+  .modulex-iletisim-kapsama-kontrol-bas { display: grid; gap: 12px; margin-block-end: clamp(32px, 4vw, 52px); }
+  .modulex-iletisim-kapsama-kontrol--bassiz .modulex-iletisim-kapsama-kontrol-bas { display: none; }
+  .modulex-iletisim-kapsama-kontrol-ust { color: --accentInk--; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; }
+  .modulex-iletisim-kapsama-kontrol-baslik { font-family: var(--mx-font-heading, inherit); font-size: clamp(1.8rem, 3.4vw, 2.8rem); font-weight: 750; letter-spacing: -0.025em; line-height: 1.1; }
+  .modulex-iletisim-kapsama-kontrol-metin { color: --muted--; font-size: 1.05rem; line-height: 1.7; }
+  .modulex-iletisim-kapsama-kontrol-cta { display: flex; flex-wrap: wrap; gap: 12px; margin-block-start: 8px; }
+  .modulex-iletisim-kapsama-kontrol-dugme { display: inline-flex; align-items: center; gap: 8px; min-height: 48px; padding: 12px 22px; border: 2px solid --accent--; border-radius: 999px; background: --accent--; color: --accentText--; font-weight: 700; text-decoration: none; transition: transform 0.25s ease, background 0.25s ease, color 0.25s ease; }
+  .modulex-iletisim-kapsama-kontrol-dugme:hover { transform: translateY(-2px); }
+  .modulex-iletisim-kapsama-kontrol-dugme--ikincil { background: transparent; color: --text--; border-color: --cizgi--; }
+  .modulex-iletisim-kapsama-kontrol-dugme--ikincil:hover { border-color: --accent--; }
+  .modulex-iletisim-kapsama-kontrol-dugme .material-symbols-outlined { font-size: 20px; }
+
+  .modulex-iletisim-kapsama-kontrol-acil { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; align-items: center; gap: 16px 22px; margin-block-end: clamp(28px, 4vw, 48px); padding: clamp(16px, 2.6vw, 26px) clamp(18px, 3vw, 32px); border-radius: --yuvarlak--; background: --vurguBg--; color: --vurguText--; }
+  .modulex-iletisim-kapsama-kontrol-sinyal { position: relative; display: inline-grid; place-items: center; width: 60px; height: 60px; border-radius: 50%; background: color-mix(in srgb, --vurguText-- 16%, transparent); }
+  .modulex-iletisim-kapsama-kontrol-sinyal::before, .modulex-iletisim-kapsama-kontrol-sinyal::after { content: ""; position: absolute; inset: 0; border: 2px solid --vurguText--; border-radius: 50%; opacity: 0; animation: modulex-iletisim-kapsama-kontrol-dalga 2.4s ease-out infinite; }
+  .modulex-iletisim-kapsama-kontrol-sinyal::after { animation-delay: 1.2s; }
+  @keyframes modulex-iletisim-kapsama-kontrol-dalga { 0% { opacity: 0.6; transform: scale(1); } 100% { opacity: 0; transform: scale(1.7); } }
+  .modulex-iletisim-kapsama-kontrol-sinyal .material-symbols-outlined { font-size: 30px; }
+  .modulex-iletisim-kapsama-kontrol-acilyazi { display: grid; gap: 2px; min-width: 0; }
+  .modulex-iletisim-kapsama-kontrol-aciletk { font-size: 0.85rem; font-weight: 750; letter-spacing: 0.1em; text-transform: uppercase; }
+  .modulex-iletisim-kapsama-kontrol-acilno { color: inherit; font-family: var(--mx-font-heading, inherit); font-size: clamp(1.6rem, 4vw, 2.5rem); font-weight: 800; line-height: 1.15; text-decoration: none; overflow-wrap: anywhere; }
+  .modulex-iletisim-kapsama-kontrol-aciara { display: inline-flex; align-items: center; gap: 8px; min-height: 52px; padding: 12px 24px; border-radius: 999px; background: --vurguText--; color: --vurguBg--; font-weight: 800; text-decoration: none; transition: transform 0.2s ease, box-shadow 0.2s ease; }
+  .modulex-iletisim-kapsama-kontrol-aciara:hover { transform: translateY(-2px); box-shadow: 0 10px 24px -12px color-mix(in srgb, --text-- 70%, transparent); }
+  .modulex-iletisim-kapsama-kontrol-govde { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(24px, 4vw, 64px); align-items: start; }
+  .modulex-iletisim-kapsama-kontrol-govde--tek { grid-template-columns: minmax(0, 1fr); }
+  .modulex-iletisim-kapsama-kontrol-sol { display: grid; gap: 16px; min-width: 0; }
+  .modulex-iletisim-kapsama-kontrol-kanallar { display: grid; gap: 14px; margin-block-start: 8px; }
+  .modulex-iletisim-kapsama-kontrol-ksat { display: flex; align-items: center; gap: 14px; min-width: 0; }
+  .modulex-iletisim-kapsama-kontrol-kgovde { display: grid; gap: 2px; min-width: 0; }
+  .modulex-iletisim-kapsama-kontrol-kapsam { display: grid; gap: 16px; padding: clamp(20px, 3vw, 32px); border: 1px solid --cizgi--; border-radius: --yuvarlak--; background: --kartBg--; transition: border-color 0.3s ease, box-shadow 0.3s ease; }
+  .modulex-iletisim-kapsama-kontrol--var .modulex-iletisim-kapsama-kontrol-kapsam { border-color: --accent--; box-shadow: 0 0 0 3px color-mix(in srgb, --accent-- 22%, transparent); }
+  .modulex-iletisim-kapsama-kontrol-kbaslik { font-size: 1.25rem; font-weight: 750; }
+  .modulex-iletisim-kapsama-kontrol-sorgu { display: grid; gap: 8px; }
+  .modulex-iletisim-kapsama-kontrol:not(.modulex-iletisim-kapsama-kontrol--ajs) .modulex-iletisim-kapsama-kontrol-sorgu { display: none; }
+  .modulex-iletisim-kapsama-kontrol-setk { font-size: 0.9rem; font-weight: 650; }
+  .modulex-iletisim-kapsama-kontrol-ssatir { display: flex; gap: 8px; }
+  .modulex-iletisim-kapsama-kontrol-sgirdi { flex: 1; min-width: 0; min-height: 50px; padding: 12px 16px; border: 1.5px solid color-mix(in srgb, --text-- 28%, transparent); border-radius: 12px; background: --bg--; color: --text--; font: inherit; font-size: 1.05rem; transition: border-color 0.2s ease, box-shadow 0.2s ease; }
+  .modulex-iletisim-kapsama-kontrol-sgirdi:focus { outline: none; border-color: --accent--; box-shadow: 0 0 0 3px color-mix(in srgb, --accent-- 28%, transparent); }
+  .modulex-iletisim-kapsama-kontrol-sdugme { display: inline-flex; flex: none; align-items: center; gap: 8px; min-height: 50px; padding: 10px 18px; border: 0; border-radius: 12px; background: --accent--; color: --accentText--; font: inherit; font-weight: 750; transition: transform 0.2s ease; }
+  .modulex-iletisim-kapsama-kontrol-sdugme:hover { transform: translateY(-1px); }
+  .modulex-iletisim-kapsama-kontrol-sonuc { min-height: 1.5em; font-weight: 700; }
+  .modulex-iletisim-kapsama-kontrol-sonuc:empty { display: none; }
+  .modulex-iletisim-kapsama-kontrol--var .modulex-iletisim-kapsama-kontrol-sonuc { color: --accentInk--; }
+  .modulex-iletisim-kapsama-kontrol--yok .modulex-iletisim-kapsama-kontrol-sonuc { padding: 10px 14px; border-inline-start: 3px solid --accent--; background: color-mix(in srgb, --accent-- 8%, transparent); }
+  .modulex-iletisim-kapsama-kontrol-bolgeler { display: flex; flex-wrap: wrap; gap: 8px; }
+  .modulex-iletisim-kapsama-kontrol-bolge { display: inline-flex; flex-wrap: wrap; align-items: center; gap: 4px 8px; min-height: 40px; padding: 6px 14px; border: 1px solid --cizgi--; border-radius: 999px; background: --bg--; font-size: 0.92rem; transition: border-color 0.25s ease, background 0.25s ease, color 0.25s ease, transform 0.25s ease; }
+  .modulex-iletisim-kapsama-kontrol-bolge .material-symbols-outlined { color: --accentInk--; font-size: 18px; }
+  .modulex-iletisim-kapsama-kontrol-bad { font-weight: 700; }
+  .modulex-iletisim-kapsama-kontrol-bkod, .modulex-iletisim-kapsama-kontrol-bsure { color: --muted--; font-size: 0.82rem; font-variant-numeric: tabular-nums; }
+  .modulex-iletisim-kapsama-kontrol-bolge.modulex-iletisim-kapsama-kontrol--eslesti { border-color: --accent--; background: --accent--; color: --accentText--; transform: scale(1.04); }
+  .modulex-iletisim-kapsama-kontrol-bolge.modulex-iletisim-kapsama-kontrol--eslesti :is(.material-symbols-outlined, .modulex-iletisim-kapsama-kontrol-bkod, .modulex-iletisim-kapsama-kontrol-bsure) { color: inherit; }
+  @media (max-width: 1024px) {
+    .modulex-iletisim-kapsama-kontrol-govde { grid-template-columns: minmax(0, 1fr); }
+  }
+  @media (max-width: 768px) {
+    .modulex-iletisim-kapsama-kontrol-acil { grid-template-columns: auto minmax(0, 1fr); }
+    .modulex-iletisim-kapsama-kontrol-aciara { grid-column: 1 / -1; justify-content: center; }
+    .modulex-iletisim-kapsama-kontrol-ssatir { flex-direction: column; }
+    .modulex-iletisim-kapsama-kontrol-sdugme { justify-content: center; }
+  }
+  .modulex-iletisim-kapsama-kontrol-kikon { flex: none; display: inline-grid; place-items: center; width: 48px; height: 48px; border-radius: 14px; background: color-mix(in srgb, --accent-- 14%, transparent); color: --accentInk--; font-size: 24px; }
+  .modulex-iletisim-kapsama-kontrol-ketiket { display: block; color: --muted--; font-size: 0.82rem; font-weight: 650; letter-spacing: 0.06em; text-transform: uppercase; }
+  .modulex-iletisim-kapsama-kontrol-deger { color: inherit; font-weight: 650; text-decoration: none; overflow-wrap: anywhere; transition: color 0.2s ease; }
+  a.modulex-iletisim-kapsama-kontrol-deger:hover { color: --accentInk--; text-decoration: underline; text-underline-offset: 4px; }
+  .modulex-iletisim-kapsama-kontrol-eylem { display: inline-flex; align-items: center; gap: 6px; color: --accentInk--; font-weight: 700; text-decoration: none; transition: gap 0.2s ease; }
+  .modulex-iletisim-kapsama-kontrol-eylem:hover { gap: 10px; }
+  .modulex-iletisim-kapsama-kontrol-eylem .material-symbols-outlined { font-size: 18px; }
+  .modulex-iletisim-kapsama-kontrol-kopya { display: none; align-items: center; gap: 6px; min-height: 36px; padding: 6px 12px; border: 1px solid --cizgi--; border-radius: 999px; background: transparent; color: --text--; font: inherit; font-size: 0.85rem; font-weight: 650; transition: border-color 0.2s ease, background 0.2s ease; }
+  .modulex-iletisim-kapsama-kontrol--kjs .modulex-iletisim-kapsama-kontrol-kopya { display: inline-flex; }
+  .modulex-iletisim-kapsama-kontrol-kopya:hover { border-color: --accent--; }
+  .modulex-iletisim-kapsama-kontrol-kopya .material-symbols-outlined { font-size: 18px; }
+  .modulex-iletisim-kapsama-kontrol--kopyalandi { background: color-mix(in srgb, --accent-- 14%, transparent); }
+  .modulex-iletisim-kapsama-kontrol-sosyal { display: grid; gap: 10px; }
+  .modulex-iletisim-kapsama-kontrol-sbaslik { color: --muted--; font-size: 0.9rem; font-weight: 650; }
+  .modulex-iletisim-kapsama-kontrol-sliste { display: flex; flex-wrap: wrap; gap: 8px; }
+  .modulex-iletisim-kapsama-kontrol-cip { display: inline-flex; align-items: center; gap: 6px; min-height: 40px; padding: 8px 14px; border: 1px solid --cizgi--; border-radius: 999px; color: inherit; font-weight: 650; text-decoration: none; transition: border-color 0.2s ease, transform 0.2s ease; }
+  .modulex-iletisim-kapsama-kontrol-cip:hover { border-color: --accent--; transform: translateY(-2px); }
+  .modulex-iletisim-kapsama-kontrol-cikon { font-size: 18px; }
+  .modulex-iletisim-kapsama-kontrol-harita { position: relative; overflow: hidden; min-height: 280px; border-radius: --yuvarlak--; background: --kartBg--; }
+  .modulex-iletisim-kapsama-kontrol-iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+  .modulex-iletisim-kapsama-kontrol-hdesen { position: absolute; inset: 0; display: grid; place-items: center; background-color: color-mix(in srgb, --accent-- 8%, --kartBg--); background-image: linear-gradient(color-mix(in srgb, --text-- 7%, transparent) 1px, transparent 1px), linear-gradient(90deg, color-mix(in srgb, --text-- 7%, transparent) 1px, transparent 1px), radial-gradient(circle at 30% 40%, color-mix(in srgb, --accent-- 18%, transparent) 0 18%, transparent 19%); background-size: 36px 36px, 36px 36px, 100% 100%; }
+  .modulex-iletisim-kapsama-kontrol-pin { color: --accentInk--; font-size: 56px; animation: modulex-iletisim-kapsama-kontrol-zipla 2.4s ease-in-out infinite; }
+  @keyframes modulex-iletisim-kapsama-kontrol-zipla { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+  .modulex-iletisim-kapsama-kontrol-hyol { position: absolute; inset-block-end: 16px; inset-inline-start: 16px; display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 10px 16px; border-radius: 999px; background: --bg--; color: --text--; font-weight: 700; text-decoration: none; box-shadow: 0 6px 20px color-mix(in srgb, --text-- 16%, transparent); transition: transform 0.2s ease; }
+  .modulex-iletisim-kapsama-kontrol-hyol:hover { transform: translateY(-2px); }
+  .modulex-iletisim-kapsama-kontrol-hyol .material-symbols-outlined { font-size: 18px; color: --accentInk--; }
+
+  :is([lang="ar"], [lang="fa"], [lang="he"], [lang="ur"]) .modulex-iletisim-kapsama-kontrol :is(.modulex-iletisim-kapsama-kontrol-baslik, .modulex-iletisim-kapsama-kontrol-ust, h3, h4, strong) { letter-spacing: 0; }
+  :is([lang="ar"], [lang="fa"], [lang="he"], [lang="ur"]) .modulex-iletisim-kapsama-kontrol-baslik { line-height: 1.35; }
+  @media (max-width: 768px) {
+    .modulex-iletisim-kapsama-kontrol { padding-inline: 16px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .modulex-iletisim-kapsama-kontrol *, .modulex-iletisim-kapsama-kontrol *::before, .modulex-iletisim-kapsama-kontrol *::after { animation: none !important; transition: none !important; }
+  }
+</style>
+<script>
+  (() => {
+    const P = "modulex-iletisim-kapsama-kontrol";
+    const az = !!(window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches);
+    const kapsam = (s, P) => {
+        const f = s.querySelector("form[data-kapsam]");
+        if (!f) return;
+        s.classList.add(P + "--ajs");
+        const dl = document.documentElement.lang || undefined;
+        const nz = (v) => String(v || "").normalize("NFD").replace(/[̀-ͯ]/g, "").toLocaleLowerCase(dl).replace(/ı/g, "i").replace(/\s+/g, " ").trim();
+        const B = [...s.querySelectorAll("[data-bolge]")];
+        const g = f.querySelector("input");
+        const sonuc = f.querySelector("[role=status]");
+        const bak = (e) => {
+          if (e) e.preventDefault();
+          const q = nz(g.value);
+          B.forEach((x) => x.classList.remove(P + "--eslesti"));
+          s.classList.remove(P + "--var", P + "--yok");
+          if (q.length < 2) { if (sonuc) sonuc.textContent = ""; return; }
+          const es = B.filter((x) => {
+            const ad = nz(x.dataset.bolge);
+            const kod = String(x.dataset.kod || "").split(/[\s,;]+/).filter(Boolean).map(nz);
+            return kod.some((k) => k === q || (q.length >= 3 && k.startsWith(q))) || ad === q || ad.includes(q) || (ad.length >= 3 && q.includes(ad));
+          });
+          es.forEach((x) => x.classList.add(P + "--eslesti"));
+          const adlar = es.map((x) => x.dataset.bolge).join(", ");
+          const sure = (es.find((x) => x.dataset.sure) || { dataset: {} }).dataset.sure || "";
+          const m = (es.length ? f.dataset.var : f.dataset.yok) || (es.length ? adlar : "");
+          if (sonuc) sonuc.textContent = m.split("{bolge}").join(adlar || g.value.trim()).split("{sure}").join(sure);
+          s.classList.add(es.length ? P + "--var" : P + "--yok");
+        };
+        f.addEventListener("submit", bak);
+        g.addEventListener("input", () => { if (!g.value.trim()) bak(); });
+      };
+    document.querySelectorAll("." + P).forEach((s) => {
+      if (s.dataset.fbHazir) return;
+      s.dataset.fbHazir = "1";
+      kapsam(s, P, az);
+    });
+  })();
+</script>

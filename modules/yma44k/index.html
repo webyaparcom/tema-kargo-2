@@ -1,0 +1,157 @@
+<section class="modulex-kargo-takip-hero{{fbsinif}}" {{fbetiket}}>
+  <div class="modulex-kargo-takip-hero-ic">
+    {{fbbas}}
+    {{fbgovde}}
+  </div>
+</section>
+
+<style>
+  /* kargo-takip-hero — Hero ailesinde giriş alanı yok; acilis-hizmet-secici bağlantı satırıdır. takip-sorgu-* (ayrı bölüm, sonuç tablosu) ve eticaret-kargo-takip (sipariş akışı) modüllerinden farkı: h1'li açılış iskeleti, kapsül arama çubuğu, yerel geçmiş çipleri ve teslimat aşamalarını anlatan durak hattı; sorgu kargo firmasının kendi takip sayfasına yönlendirir. */
+  .modulex-kargo-takip-hero { box-sizing: border-box; width: 100%; padding: --bosluk-- 20px; background: --bg--; color: --text--; font-size: 1rem; line-height: 1.6; font-family: var(--mx-font-sans, inherit); overflow-wrap: break-word; }
+  .modulex-kargo-takip-hero *, .modulex-kargo-takip-hero *::before, .modulex-kargo-takip-hero *::after { box-sizing: border-box; }
+  /* ham/css.css «* { font-size: 14px }» kalıtımı keser — modül içinde boyut üstten gelsin (ikon yazı tipi hariç) */
+  .modulex-kargo-takip-hero :where(*:not(.material-symbols-outlined)) { font-size: inherit; }
+  /* aynı «*» kuralı font-weight 400 · line-height 1.2 · font-family de basar — modül içinde kalıtım */
+  .modulex-kargo-takip-hero :where(*:not(.material-symbols-outlined)) { font-weight: inherit; line-height: inherit; font-family: inherit; }
+  .modulex-kargo-takip-hero :where(h2, h3, h4, p, ul, ol, li, figure, blockquote, dl, dd) { margin: 0; }
+  .modulex-kargo-takip-hero :where(ul, ol) { padding: 0; list-style: none; }
+  .modulex-kargo-takip-hero img { display: block; max-width: 100%; }
+  /* <img width height> öznitelik yüksekliği CSS aspect-ratio'yu ezer — sıfır özgüllükle auto (modül sınıfının height'ı yine kazanır) */
+  :where(.modulex-kargo-takip-hero) img { height: auto; }
+  .modulex-kargo-takip-hero [hidden] { display: none !important; }
+  .modulex-kargo-takip-hero :where(a, button, summary, [data-cevir]) { cursor: pointer; }
+  .modulex-kargo-takip-hero :where(a, button, summary, [tabindex]):focus-visible { outline: 3px solid --accent--; outline-offset: 3px; }
+  .modulex-kargo-takip-hero-ic { max-width: --max--; margin-inline: auto; }
+  .modulex-kargo-takip-hero-bas { display: grid; gap: 12px; margin-block-end: clamp(32px, 4vw, 52px); }
+  .modulex-kargo-takip-hero--bassiz .modulex-kargo-takip-hero-bas { display: none; }
+  .modulex-kargo-takip-hero-ust { color: --accentInk--; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; }
+  .modulex-kargo-takip-hero-baslik { font-family: var(--mx-font-heading, inherit); font-size: clamp(1.8rem, 3.4vw, 2.8rem); font-weight: 750; letter-spacing: -0.025em; line-height: 1.1; }
+  .modulex-kargo-takip-hero-metin { color: --muted--; font-size: 1.05rem; line-height: 1.7; }
+  .modulex-kargo-takip-hero-cta { display: flex; flex-wrap: wrap; gap: 12px; margin-block-start: 8px; }
+  .modulex-kargo-takip-hero-dugme { display: inline-flex; align-items: center; gap: 8px; min-height: 48px; padding: 12px 22px; border: 2px solid --accent--; border-radius: 999px; background: --accent--; color: --accentText--; font-weight: 700; text-decoration: none; transition: transform 0.25s ease, background 0.25s ease, color 0.25s ease; }
+  .modulex-kargo-takip-hero-dugme:hover { transform: translateY(-2px); }
+  .modulex-kargo-takip-hero-dugme--ikincil { background: transparent; color: --text--; border-color: --cizgi--; }
+  .modulex-kargo-takip-hero-dugme--ikincil:hover { border-color: --accent--; }
+  .modulex-kargo-takip-hero-dugme .material-symbols-outlined { font-size: 20px; }
+
+  .modulex-kargo-takip-hero-duzen { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr); gap: clamp(28px, 5vw, 72px); align-items: center; }
+  .modulex-kargo-takip-hero-duzen--tek { grid-template-columns: minmax(0, 1fr); max-width: 900px; }
+  .modulex-kargo-takip-hero-yazi { display: grid; gap: 20px; justify-items: start; min-width: 0; }
+  .modulex-kargo-takip-hero-takip { display: grid; gap: 8px; inline-size: 100%; max-width: 660px; }
+  .modulex-kargo-takip-hero-tetiket { font-size: 0.92rem; font-weight: 700; }
+  .modulex-kargo-takip-hero-cubuk { display: flex; align-items: center; gap: 10px; padding: 8px; padding-inline-start: 18px; border: 2px solid color-mix(in srgb, --text-- 22%, transparent); border-radius: 999px; background-color: --bg--; box-shadow: 0 24px 48px -36px color-mix(in srgb, --text-- 70%, transparent); transition: border-color 0.25s ease, box-shadow 0.25s ease; }
+  .modulex-kargo-takip-hero-cubuk:focus-within { border-color: --accent--; box-shadow: 0 0 0 4px color-mix(in srgb, --accent-- 22%, transparent); }
+  .modulex-kargo-takip-hero-cikon { flex: none; color: --accentInk--; font-size: 26px; }
+  .modulex-kargo-takip-hero-tgirdi { flex: 1; min-width: 0; min-height: 48px; border: 0; background: transparent; color: --text--; font: inherit; font-size: 1.12rem; font-weight: 700; letter-spacing: 0.06em; font-variant-numeric: tabular-nums; outline: none; }
+  .modulex-kargo-takip-hero-tgirdi::placeholder { color: --muted--; font-weight: 500; letter-spacing: 0.02em; }
+  .modulex-kargo-takip-hero-sorgula { flex: none; }
+  .modulex-kargo-takip-hero-gecmis { display: flex; flex-wrap: wrap; gap: 8px; }
+  .modulex-kargo-takip-hero-gno { display: inline-flex; align-items: center; gap: 6px; min-height: 36px; padding: 4px 12px; border: 1px solid --cizgi--; border-radius: 999px; background-color: --kartBg--; color: --text--; font: inherit; font-size: 0.85rem; font-weight: 650; font-variant-numeric: tabular-nums; transition: border-color 0.2s ease; }
+  .modulex-kargo-takip-hero-gno:hover { border-color: --accent--; }
+  .modulex-kargo-takip-hero-gno .material-symbols-outlined { color: --accentInk--; font-size: 18px; }
+  .modulex-kargo-takip-hero-medya { position: relative; margin: 0; }
+  .modulex-kargo-takip-hero-gorsel { inline-size: 100%; aspect-ratio: 1 / 1; object-fit: cover; border-radius: 999px 999px --yuvarlak-- --yuvarlak--; }
+  .modulex-kargo-takip-hero-rozet { position: absolute; inset-block-end: 20px; inset-inline-start: 20px; display: flex; align-items: center; gap: 10px; padding: 12px 18px; border-radius: 14px; background-color: --bg--; color: --text--; box-shadow: 0 20px 40px -26px color-mix(in srgb, --text-- 70%, transparent); }
+  .modulex-kargo-takip-hero-rikon { color: --accentInk--; font-size: 26px; }
+  .modulex-kargo-takip-hero-rdeger { font-size: 1.35rem; font-weight: 800; line-height: 1; }
+  .modulex-kargo-takip-hero-rmetin { color: --muted--; font-size: 0.85rem; }
+  .modulex-kargo-takip-hero-hatkap { grid-column: 1 / -1; display: grid; gap: 6px; margin-block-start: clamp(12px, 3vw, 28px); padding: clamp(20px, 3vw, 30px); border-radius: --yuvarlak--; background-color: --kartBg--; }
+  .modulex-kargo-takip-hero-yol { position: relative; display: block; block-size: 30px; border-block-end: 2px dashed --cizgi--; }
+  .modulex-kargo-takip-hero-arac { position: absolute; inset-block-end: 2px; inset-inline-start: 0; color: --accentInk--; font-size: 26px; animation: modulex-kargo-takip-hero-yol 7s ease-in-out infinite alternate; }
+  @keyframes modulex-kargo-takip-hero-yol { from { inset-inline-start: 0%; } to { inset-inline-start: calc(100% - 28px); } }
+  .modulex-kargo-takip-hero-hat { display: grid; grid-auto-flow: column; grid-auto-columns: minmax(0, 1fr); gap: 14px; padding-block-start: 14px; }
+  .modulex-kargo-takip-hero-durak { position: relative; display: grid; justify-items: start; gap: 10px; }
+  .modulex-kargo-takip-hero-dnokta { display: inline-grid; place-items: center; inline-size: 48px; block-size: 48px; border: 2px solid --cizgi--; border-radius: 50%; background-color: --bg--; color: --accentInk--; font-weight: 800; transition: transform 0.25s ease, background-color 0.25s ease; }
+  .modulex-kargo-takip-hero-durak:hover .modulex-kargo-takip-hero-dnokta { transform: scale(1.08); }
+  .modulex-kargo-takip-hero-durak--son .modulex-kargo-takip-hero-dnokta { border-color: --accent--; background-color: --accent--; color: --accentText--; }
+  .modulex-kargo-takip-hero-dikon { font-size: 24px; }
+  .modulex-kargo-takip-hero-dyazi { display: grid; gap: 2px; }
+  .modulex-kargo-takip-hero-dmetin { font-weight: 750; line-height: 1.3; }
+  .modulex-kargo-takip-hero-ddeger { color: --muted--; font-size: 0.9rem; font-weight: 600; }
+  @media (max-width: 1024px) {
+    .modulex-kargo-takip-hero-duzen { grid-template-columns: minmax(0, 1fr); }
+    .modulex-kargo-takip-hero-medya { max-width: 420px; }
+  }
+  @media (max-width: 768px) {
+    .modulex-kargo-takip-hero-cubuk { padding-inline-start: 12px; gap: 6px; }
+    .modulex-kargo-takip-hero-cikon { display: none; }
+    .modulex-kargo-takip-hero-sorgula { padding-inline: 16px; }
+    .modulex-kargo-takip-hero-yol { display: none; }
+    .modulex-kargo-takip-hero-hat { grid-auto-flow: row; gap: 18px; padding-block-start: 0; }
+    .modulex-kargo-takip-hero-durak { grid-template-columns: 48px minmax(0, 1fr); align-items: center; }
+    .modulex-kargo-takip-hero-durak:not(:last-child)::after { content: ""; position: absolute; inset-block-start: 52px; inset-inline-start: 23px; block-size: calc(100% - 38px); border-inline-start: 2px dashed --cizgi--; }
+  }
+  .modulex-kargo-takip-hero-h1 { font-family: var(--mx-font-heading, inherit); font-size: clamp(2.3rem, 5.2vw, 4.2rem); font-weight: 800; letter-spacing: -0.03em; line-height: 1.05; text-wrap: balance; }
+  .modulex-kargo-takip-hero-metin { color: --muted--; font-size: clamp(1.02rem, 1.3vw, 1.18rem); line-height: 1.7; max-width: 62ch; }
+  .modulex-kargo-takip-hero-ogeler { display: flex; flex-wrap: wrap; gap: 14px 30px; }
+  .modulex-kargo-takip-hero-oge { display: flex; align-items: center; gap: 10px; }
+  .modulex-kargo-takip-hero-oikon { color: --accentInk--; font-size: 22px; }
+  .modulex-kargo-takip-hero-odeger { font-size: 1.45rem; font-weight: 800; line-height: 1; font-variant-numeric: tabular-nums; }
+  .modulex-kargo-takip-hero-ometin { color: --muted--; font-size: 0.95rem; }
+  .modulex-kargo-takip-hero-obag { color: inherit; text-underline-offset: 3px; }
+  .modulex-kargo-takip-hero-gir { animation: modulex-kargo-takip-hero-gir 0.8s cubic-bezier(0.2, 0.7, 0.2, 1) both; }
+  @keyframes modulex-kargo-takip-hero-gir { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
+  :is([lang="ar"], [lang="fa"], [lang="he"], [lang="ur"]) .modulex-kargo-takip-hero-h1 { letter-spacing: 0; line-height: 1.3; }
+
+  :is([lang="ar"], [lang="fa"], [lang="he"], [lang="ur"]) .modulex-kargo-takip-hero :is(.modulex-kargo-takip-hero-baslik, .modulex-kargo-takip-hero-ust, h3, h4, strong) { letter-spacing: 0; }
+  :is([lang="ar"], [lang="fa"], [lang="he"], [lang="ur"]) .modulex-kargo-takip-hero-baslik { line-height: 1.35; }
+  @media (max-width: 768px) {
+    .modulex-kargo-takip-hero { padding-inline: 16px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .modulex-kargo-takip-hero *, .modulex-kargo-takip-hero *::before, .modulex-kargo-takip-hero *::after { animation: none !important; transition: none !important; }
+  }
+</style>
+<script>
+  (() => {
+    const P = "modulex-kargo-takip-hero";
+    const az = !!(window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches);
+    const takip = (s, P) => {
+        s.querySelectorAll("form[data-takip]").forEach((f) => {
+          const desen = f.dataset.takip;
+          const g = f.querySelector("input:not([type=hidden])");
+          if (!desen || !g || desen.indexOf("{no}") === -1) return;
+          const kutu = f.querySelector("[data-gecmis]");
+          const ANAHTAR = "fb-takip:" + desen;
+          const oku = () => { try { const v = JSON.parse(localStorage.getItem(ANAHTAR) || "[]"); return Array.isArray(v) ? v.filter((x) => typeof x === "string" && x).slice(0, 3) : []; } catch (x) { return []; } };
+          const git = (no) => {
+            const u = desen.split("{no}").join(encodeURIComponent(no));
+            if (f.dataset.yeni) window.open(u, "_blank", "noopener"); else location.href = u;
+          };
+          const ciz = () => {
+            if (!kutu) return;
+            const L = oku();
+            kutu.replaceChildren(...L.map((no) => {
+              const b = document.createElement("button");
+              b.type = "button";
+              b.className = P + "-gno";
+              const i = document.createElement("span");
+              i.className = "material-symbols-outlined";
+              i.setAttribute("aria-hidden", "true");
+              i.textContent = "history";
+              const t = document.createElement("bdi");
+              t.textContent = no;
+              b.append(i, t);
+              b.addEventListener("click", () => { g.value = no; git(no); });
+              return b;
+            }));
+            kutu.hidden = !L.length;
+          };
+          f.addEventListener("submit", (e) => {
+            const no = g.value.trim();
+            e.preventDefault();
+            if (!no) { g.value = ""; f.reportValidity(); return; }
+            try { localStorage.setItem(ANAHTAR, JSON.stringify([no].concat(oku().filter((x) => x !== no)).slice(0, 3))); } catch (x) { /* özel kip */ }
+            ciz();
+            git(no);
+          });
+          ciz();
+        });
+      };
+    document.querySelectorAll("." + P).forEach((s) => {
+      if (s.dataset.fbHazir) return;
+      s.dataset.fbHazir = "1";
+      takip(s, P, az);
+    });
+  })();
+</script>
