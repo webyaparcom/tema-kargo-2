@@ -1,0 +1,54 @@
+{
+  "order": false,
+  "user": false,
+  "description": {
+    "tr": "Menzil Kargo: takip numarasıyla anlık durum, desi ile ücret hesabı ve adresten alım. Demo site; içerik kurgusaldır.",
+    "en": "Menzil Cargo: live status by tracking number, price by volumetric weight and pick-up from your address. Demo site; content is fictional.",
+    "ar": "منزل للشحن: حالة فورية برقم التتبع، وحساب السعر بالوزن الحجمي، واستلام من عنوانك. موقع تجريبي؛ المحتوى افتراضي."
+  },
+  "keyword": {
+    "tr": "kargo takip, desi hesaplama, kargo ücreti, adresten alım, kurye",
+    "en": "parcel tracking, volumetric weight, shipping price, address pick-up, courier",
+    "ar": "تتبع الشحنات، الوزن الحجمي، سعر الشحن، الاستلام من العنوان، مندوب توصيل"
+  },
+  "category": "Kurumsal",
+  "name": "Menzil Kargo",
+  "domain": "kargo-2.webyapar.com",
+  "langs": {
+    "tr": true,
+    "en": true,
+    "ar": true,
+    "de": false,
+    "ru": false,
+    "es": false,
+    "fr": false,
+    "it": false,
+    "ja": false,
+    "zh": false,
+    "ko": false,
+    "pt": false
+  },
+  "logo": "logo.png",
+  "multi": false,
+  "publishMode": "static",
+  "font": {
+    "body": "noto-sans",
+    "heading": "poppins",
+    "ar": {
+      "body": "noto-naskh-arabic",
+      "heading": "noto-kufi-arabic"
+    }
+  },
+  "colorScheme": "auto",
+  "theme_color": "#0F766E",
+  "seo": {
+    "noindex": true
+  },
+  "cssTokens": {
+    "--mx-radius-sm": "7px",
+    "--mx-radius-md": "12px",
+    "--mx-radius-lg": "17px",
+    "--mx-radius-xl": "23px"
+  },
+  "icon": "icon.png"
+}

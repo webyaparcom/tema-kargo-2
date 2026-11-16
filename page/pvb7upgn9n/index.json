@@ -1,0 +1,40 @@
+{
+  "id": "pvb7upgn9n",
+  "name": {
+    "tr": "Gönderi yardımı",
+    "en": "Shipment help",
+    "ar": "مساعدة الشحن"
+  },
+  "description": {
+    "tr": "Takip, iade, hasar ve adres değişikliği için adım adım yardım.",
+    "en": "Step-by-step help for tracking, returns, damage and address changes.",
+    "ar": "مساعدة خطوة بخطوة للتتبع والإرجاع والضرر وتغيير العنوان."
+  },
+  "keyword": {
+    "tr": "sss, soru cevap",
+    "en": "faq, questions",
+    "ar": "أسئلة وأجوبة"
+  },
+  "path": "sorular",
+  "icon": "help",
+  "category": "",
+  "status": "play",
+  "desing": {
+    "header": [],
+    "body": [
+      "rktdzp",
+      "f7u294"
+    ],
+    "footer": []
+  },
+  "index": 2,
+  "url": "",
+  "text": {},
+  "title": {
+    "tr": "Gönderi yardımı",
+    "en": "Shipment help",
+    "ar": "مساعدة الشحن"
+  },
+  "date": "2026-11-16T11:32:31.591Z",
+  "update": "2026-11-16T12:24:13.516Z"
+}

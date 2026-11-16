@@ -1,0 +1,166 @@
+{
+  "data": [
+    {
+      "id": "wi1gvpy7rw",
+      "name": {
+        "tr": "Hizmetler",
+        "en": "Services",
+        "ar": "الخدمات"
+      },
+      "description": {
+        "tr": "Kabulden teslime kadar ne yaptığımızı açıkça yazıyoruz.",
+        "en": "We spell out what we do from acceptance to delivery.",
+        "ar": "نكتب بوضوح ما نفعله من الاستلام حتى التسليم."
+      },
+      "path": "hizmetler",
+      "icon": "work",
+      "category": "",
+      "status": "play",
+      "desing": {
+        "header": [],
+        "body": [
+          "d3481y",
+          "wehyed",
+          "f7u294"
+        ],
+        "footer": []
+      },
+      "index": 0
+    },
+    {
+      "name": {
+        "tr": "Şube ağı",
+        "en": "Branch network",
+        "ar": "شبكة الفروع"
+      },
+      "status": "play",
+      "id": "hakkimizda",
+      "path": "hakkimizda",
+      "category": "",
+      "url": "",
+      "index": 1,
+      "icon": "info",
+      "desing": {
+        "header": [],
+        "body": [
+          "ylzsbl",
+          "gzyfl8"
+        ],
+        "footer": []
+      },
+      "pathnext": "",
+      "description": {
+        "tr": "Gaziantep merkezli kurgusal kargo ağı: şubeler ve iş ortakları.",
+        "en": "A fictional Gaziantep-based parcel network: branches and partners.",
+        "ar": "شبكة شحن افتراضية مقرها غازي عنتاب: الفروع والشركاء."
+      }
+    },
+    {
+      "id": "pvb7upgn9n",
+      "name": {
+        "tr": "Gönderi yardımı",
+        "en": "Shipment help",
+        "ar": "مساعدة الشحن"
+      },
+      "description": {
+        "tr": "Takip, iade, hasar ve adres değişikliği için adım adım yardım.",
+        "en": "Step-by-step help for tracking, returns, damage and address changes.",
+        "ar": "مساعدة خطوة بخطوة للتتبع والإرجاع والضرر وتغيير العنوان."
+      },
+      "path": "sorular",
+      "icon": "help",
+      "category": "",
+      "status": "play",
+      "desing": {
+        "header": [],
+        "body": [
+          "rktdzp",
+          "f7u294"
+        ],
+        "footer": []
+      },
+      "index": 2
+    },
+    {
+      "id": "yhbdguayn0",
+      "name": {
+        "tr": "İş ortakları",
+        "en": "Partners",
+        "ar": "الشركاء"
+      },
+      "description": {
+        "tr": "İş ortaklarımız ve müşteri yorumlarımız (kurgusal).",
+        "en": "Our partners and customer reviews (fictional).",
+        "ar": "شركاؤنا وتقييمات عملائنا (افتراضية)."
+      },
+      "path": "referanslar",
+      "icon": "stars",
+      "category": "",
+      "status": "play",
+      "desing": {
+        "header": [],
+        "body": [
+          "gzyfl8",
+          "wu3h4c"
+        ],
+        "footer": []
+      },
+      "index": 3
+    },
+    {
+      "id": "849tj3svjp",
+      "name": {
+        "tr": "Ücret hesapla",
+        "en": "Calculate price",
+        "ar": "احسب السعر"
+      },
+      "description": {
+        "tr": "Desi ve bölgeye göre kurgusal kargo ücreti.",
+        "en": "Fictional shipping price by volume and zone.",
+        "ar": "سعر شحن افتراضي حسب الحجم والمنطقة."
+      },
+      "path": "teklif-al",
+      "icon": "request_quote",
+      "category": "",
+      "status": "play",
+      "desing": {
+        "header": [],
+        "body": [
+          "wehyed",
+          "rktdzp"
+        ],
+        "footer": []
+      },
+      "index": 4
+    },
+    {
+      "name": {
+        "tr": "Takip ve şubeler",
+        "en": "Tracking & branches",
+        "ar": "التتبع والفروع"
+      },
+      "status": "play",
+      "id": "iletisim",
+      "path": "iletisim",
+      "category": "",
+      "url": "",
+      "index": 5,
+      "icon": "call",
+      "desing": {
+        "header": [],
+        "body": [
+          "f7u294",
+          "k8mp01"
+        ],
+        "footer": []
+      },
+      "pathnext": "",
+      "description": {
+        "tr": "Adres, telefon ve çalışma saatleri.",
+        "en": "Address, phone and opening hours.",
+        "ar": "العنوان والهاتف وساعات العمل."
+      }
+    }
+  ],
+  "desc": []
+}

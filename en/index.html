@@ -1,0 +1,902 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
+  <title>Menzil Kargo</title>
+  <meta name="description" content="Menzil Cargo: live status by tracking number, price by volumetric weight and pick-up from your address. Demo site; content is fictional." />
+  <meta name="keywords" content="parcel tracking, volumetric weight, shipping price, address pick-up, courier" />
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="canonical" href="https://kargo-2.webyapar.com/en/" />
+  <link rel="alternate" hreflang="tr" href="https://kargo-2.webyapar.com/tr/" />
+  <link rel="alternate" hreflang="en" href="https://kargo-2.webyapar.com/en/" />
+  <link rel="alternate" hreflang="ar" href="https://kargo-2.webyapar.com/ar/" />
+  <link rel="alternate" hreflang="x-default" href="https://kargo-2.webyapar.com/tr/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Menzil Kargo" />
+  <meta property="og:description" content="Menzil Cargo: live status by tracking number, price by volumetric weight and pick-up from your address. Demo site; content is fictional." />
+  <meta property="og:url" content="https://kargo-2.webyapar.com/en/" />
+  <meta property="og:image" content="https://kargo-2.webyapar.com/img/logo.png" />
+  <meta property="og:image:alt" content="Menzil Kargo" />
+  <meta property="og:site_name" content="Menzil Kargo" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:locale:alternate" content="tr_TR" />
+  <meta property="og:locale:alternate" content="ar_SA" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Menzil Kargo" />
+  <meta name="twitter:description" content="Menzil Cargo: live status by tracking number, price by volumetric weight and pick-up from your address. Demo site; content is fictional." />
+  <meta name="twitter:image" content="https://kargo-2.webyapar.com/img/logo.png" />
+
+  <meta name="theme-color" content="#0F766E" />
+  <meta name="mx-api-base" content="none" />
+  <link rel="manifest" href="/manifest.json" />
+  <link rel="preload" href="/src/fonts/noto-sans/noto-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="/src/fonts/noto-sans/noto-sans-latin-500-normal.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="/src/fonts/noto-sans/noto-sans-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="/src/fonts/noto-sans/noto-sans-latin-ext-400-normal.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="/src/fonts/noto-sans/noto-sans-latin-ext-500-normal.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="/src/fonts/noto-sans/noto-sans-latin-ext-700-normal.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="stylesheet" href="/src/fonts/noto-sans.css?v=c2jr5" />
+  <link rel="stylesheet" href="/src/fonts/poppins.css?v=c2jr5" />
+  <link rel="stylesheet" href="/src/fonts/noto-naskh-arabic.css?v=c2jr5" />
+  <link rel="stylesheet" href="/src/fonts/noto-kufi-arabic.css?v=c2jr5" />
+  <link rel="stylesheet" href="/src/rubik.css?v=c2jr5" />
+  <link rel="stylesheet" href="/src/css.css?v=c2jr5" />
+  <link rel="stylesheet" href="/src/mx-ds.css?v=c2jr5" />
+  
+  <link rel="stylesheet" href="/src/mx-ui.css?v=c2jr5" />
+  <link rel="preload" href="/src/material-symbols-outlined.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="stylesheet" href="/src/material-symbols-outlined.css?v=c2jr5" />
+  
+  <link rel="stylesheet" href="/src/cookie.css?v=c2jr5" />
+  <link rel="stylesheet" href="/src/swiper-bundle.min.css?v=c2jr5" />
+  <link rel="shortcut icon" href="/img/icon.png?v=c2jr5" type="image/png" />
+  <link rel="apple-touch-icon" href="/img/icon.png" />
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://kargo-2.webyapar.com/#website",
+      "url": "https://kargo-2.webyapar.com/",
+      "name": "Menzil Kargo",
+      "description": "Menzil Cargo: live status by tracking number, price by volumetric weight and pick-up from your address. Demo site; content is fictional.",
+      "inLanguage": "en",
+      "publisher": {
+        "@id": "https://kargo-2.webyapar.com/#organization"
+      }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://kargo-2.webyapar.com/#organization",
+      "name": "Menzil Kargo",
+      "url": "https://kargo-2.webyapar.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://kargo-2.webyapar.com/img/logo.png"
+      },
+      "image": "https://kargo-2.webyapar.com/img/logo.png",
+      "description": "Menzil Cargo: live status by tracking number, price by volumetric weight and pick-up from your address. Demo site; content is fictional."
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://kargo-2.webyapar.com/en/#webpage",
+      "url": "https://kargo-2.webyapar.com/en/",
+      "name": "Menzil Kargo",
+      "description": "Menzil Cargo: live status by tracking number, price by volumetric weight and pick-up from your address. Demo site; content is fictional.",
+      "inLanguage": "en",
+      "isPartOf": {
+        "@id": "https://kargo-2.webyapar.com/#website"
+      },
+      "about": {
+        "@id": "https://kargo-2.webyapar.com/#organization"
+      },
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://kargo-2.webyapar.com/img/logo.png"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://kargo-2.webyapar.com/en/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "My tracking number shows nothing",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Make sure you typed the number without spaces. It may take 30 minutes for the record to appear after acceptance. If it is still missing, send a photo of the receipt to the customer line."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "\"Recipient not at address\" note",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The parcel waits at the delivery branch for two days. Pick a new delivery day from the link in the SMS. Or collect it at the branch with ID."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "The parcel arrived damaged",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Show the parcel to the courier before accepting it. The courier fills in the damage report with you. Your claim is opened the same day with the report number."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "I need to change the address",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "If the parcel is not yet out for delivery, the change is free. Send the tracking number and new address to the customer line. If it is already out, it is redirected the next day."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "I want to send a return",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Get the return code from the shop. Seal the box and drop it at the nearest branch. Quote the code; the fee is charged to the shop."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How is volumetric weight calculated?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Multiply length, width and height in centimetres. Divide the result by 3000; that is the volumetric weight. The greater of volumetric weight and kilograms is charged."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+  
+<link rel="stylesheet" href="style.css?v=c2jr5">
+</head>
+
+<body>
+  <a class="mx-skip-link" href="#content">Skip to content</a>
+  <script>
+    (function () {
+      window.user = window.user || { id: null, email: null, name: null, isLoggedIn: false, loginMethod: null };
+      var emptySnapshot = { empty: true, forEach: function () {} };
+      var emptyDoc = { exists: false, data: function () { return null; } };
+      if (typeof window.dataAddWeb !== "function") window.dataAddWeb = function () { return Promise.resolve(); };
+      if (typeof window.dataDeleteWeb !== "function") window.dataDeleteWeb = function () { return Promise.resolve(); };
+      if (typeof window.dataUpdateWeb !== "function") window.dataUpdateWeb = function () { return Promise.resolve(); };
+      if (typeof window.dataGetWeb !== "function") window.dataGetWeb = function () { return Promise.resolve(emptyDoc); };
+      if (typeof window.dataListWeb !== "function") window.dataListWeb = function () { return Promise.resolve(emptySnapshot); };
+      if (typeof window.authStateListenerWeb !== "function") {
+        window.authStateListenerWeb = function (cb) {
+          if (typeof cb === "function") setTimeout(function () { cb(null); }, 0);
+        };
+      }
+    })();
+  </script>
+  <div id="header"><div class="h0000-db" id="db-k8db01" role="region" aria-label="Demo site notice" data-tone="info" style="--db-bg:var(--mx-site-text, #1b1b1b);--db-fg:var(--mx-site-bg, #ffffff)">
+  <span class="material-symbols-outlined h0000-db-icon" aria-hidden="true">info</span>
+  <p class="h0000-db-text">This is a demo site — the content is fictional and no payment is taken</p>
+  <a class="h0000-db-cta" href="https://webyapar.com/temalar" target="_blank" rel="noopener noreferrer">
+    <span>Get this theme</span><span class="mx-visually-hidden"> (opens in a new tab)</span>
+    <span class="material-symbols-outlined mx-flip h0000-db-arrow" aria-hidden="true">arrow_forward</span>
+  </a>
+  
+</div>
+<script defer src="https://webyapar.com/api/portal/tema-hata.js"></script>
+
+<script>
+  
+  (function () {
+    var kok = document.getElementById("db-k8db01");
+    if (!kok) {
+      return;
+    }
+    var itilenler = [];
+    var gorulen = [];
+
+    function ustaTasi() {
+      var govde = document.body;
+      if (!govde || kok.parentNode === govde) {
+        return;
+      }
+      var ilk = document.getElementById("header");
+      if (ilk && ilk.parentNode === govde) {
+        govde.insertBefore(kok, ilk);
+      } else {
+        govde.insertBefore(kok, govde.firstChild);
+      }
+    }
+
+    function adayMi(el) {
+      if (el === kok || kok.contains(el) || el.nodeType !== 1) {
+        return false;
+      }
+      var cs = window.getComputedStyle(el);
+      if ((cs.position !== "fixed" && cs.position !== "sticky") || cs.display === "none") {
+        return false;
+      }
+      
+      return parseFloat(cs.top) === 0 && el.offsetHeight > 0 && el.offsetHeight <= 200;
+    }
+
+    function it() {
+      var h = kok.offsetHeight;
+      document.documentElement.style.setProperty("--mx-demo-bandi-h", h + "px");
+      var liste = document.querySelectorAll("#header *, body > *");
+      for (var i = 0; i < liste.length; i++) {
+        var el = liste[i];
+        if (gorulen.indexOf(el) !== -1) {
+          continue;
+        }
+        if (adayMi(el)) {
+          gorulen.push(el);
+          itilenler.push(el);
+        }
+      }
+      for (var j = 0; j < itilenler.length; j++) {
+        itilenler[j].style.top = h + "px";
+      }
+    }
+
+    ustaTasi();
+    it();
+    window.addEventListener("load", function () {
+      ustaTasi();
+      it();
+      setTimeout(it, 400);
+      setTimeout(it, 1500);
+    });
+    window.addEventListener("resize", it);
+    if (window.ResizeObserver) {
+      new window.ResizeObserver(it).observe(kok);
+    }
+  })();
+</script>
+<div class="h0001">
+
+  <div class="h0001body">
+    <a href="/en/"><img src="/img/logo.png?v=lynem" class="h0001-logo" alt="Menzil Kargo Logo" loading="lazy" /></a>
+
+
+    <div class="h0001right">
+      <div class="h0001languages ">
+        <ul>
+          <li class="wm-lang-item"><a href="/tr/" hreflang="tr" lang="tr" title="Türkçe">tr</a></li><li class="wm-lang-item wm-lang-active"><a href="/en/" hreflang="en" lang="en" aria-current="true" title="English">en</a></li><li class="wm-lang-item"><a href="/ar/" hreflang="ar" lang="ar" title="العربية">ar</a></li>
+        </ul>
+      </div>
+      <div class="h0001contactlist">
+    <a href="tel:+903420520505" class="mobil-closed" target="_blank" rel="noopener noreferrer">
+     <div class="material-symbols-outlined h0001-icon" style="color:#0F766E">call</div>
+     <div>
+      <div  class="h0001-title">Customer line</div>
+      <div  class="h0001-spot" style="color:#0F766E">+90 342 052 05 05</div>
+     </div>
+    </a>
+    
+    <a href="mailto:gonderi@menzilkargo.example" class="mobil-closed" target="_blank" rel="noopener noreferrer">
+     <div class="material-symbols-outlined h0001-icon" style="color:#0F766E">mail</div>
+     <div>
+      <div  class="h0001-title">Email us</div>
+      <div  class="h0001-spot" style="color:#334155">gonderi@menzilkargo.example</div>
+     </div>
+    </a>
+    
+    <a href="tel:+903420520505" class="mobil-closed" target="_blank" rel="noopener noreferrer">
+     <div class="material-symbols-outlined h0001-icon" style="color:#0F766E">schedule</div>
+     <div>
+      <div  class="h0001-title">Branches</div>
+      <div  class="h0001-spot" style="color:#334155">Mon–Sat 08:30 – 20:00 · Sun 10:00 – 16:00</div>
+     </div>
+    </a>
+    </div>
+    </div>
+
+
+    <button type="button" class="h0001-mobile-toggle" onclick="menu3_toggle()" aria-label="Open or close menu" style="cursor: pointer;">
+      <span class="material-symbols-outlined" aria-hidden="true">menu</span>
+    </button>
+  </div>
+  
+  <div class="h0001menuoverlay" id="menu-3-overlay" onclick="menu3_toggle()" aria-hidden="true" style="cursor: pointer;"></div>
+  <div class="h0001menubody" id="menu-3-drawer">
+    <div class="h0001menu" id="menu-3-root">
+      
+      <div class="h0001menulistbody">
+        <div class="h0001menulist"><a class="h0001menulist-menu" href="/en/">Home </a><div class="h0001menulist-menu " >
+
+      <a href="/en/hizmetler/">
+       Services
+      </a>
+     
+                    </div>
+    <div class="h0001menulist-menu " >
+
+      <a href="/en/hakkimizda/">
+       Branch network
+      </a>
+     
+                    </div>
+    <div class="h0001menulist-menu " >
+
+      <a href="/en/sorular/">
+       Shipment help
+      </a>
+     
+                    </div>
+    <div class="h0001menulist-menu " >
+
+      <a href="/en/referanslar/">
+       Partners
+      </a>
+     
+                    </div>
+    <div class="h0001menulist-menu " >
+
+      <a href="/en/teklif-al/">
+       Calculate price
+      </a>
+     
+                    </div>
+    <div class="h0001menulist-menu " >
+
+      <a href="/en/iletisim/">
+       Tracking & branches
+      </a>
+     
+                    </div>
+    </div>
+      </div>
+      
+      <div class="h0001menudrawer-right">
+        <div class="h0001menudrawer-languages ">
+          <ul><li class="wm-lang-item"><a href="/tr/" hreflang="tr" lang="tr" title="Türkçe">tr</a></li><li class="wm-lang-item wm-lang-active"><a href="/en/" hreflang="en" lang="en" aria-current="true" title="English">en</a></li><li class="wm-lang-item"><a href="/ar/" hreflang="ar" lang="ar" title="العربية">ar</a></li></ul>
+        </div>
+        <div class="h0001menudrawer-contactlist">
+    <a href="tel:+903420520505" class="mobil-closed" target="_blank" rel="noopener noreferrer">
+     <div class="material-symbols-outlined h0001-icon" style="color:#0F766E">call</div>
+     <div>
+      <div  class="h0001-title">Customer line</div>
+      <div  class="h0001-spot" style="color:#0F766E">+90 342 052 05 05</div>
+     </div>
+    </a>
+    
+    <a href="mailto:gonderi@menzilkargo.example" class="mobil-closed" target="_blank" rel="noopener noreferrer">
+     <div class="material-symbols-outlined h0001-icon" style="color:#0F766E">mail</div>
+     <div>
+      <div  class="h0001-title">Email us</div>
+      <div  class="h0001-spot" style="color:#334155">gonderi@menzilkargo.example</div>
+     </div>
+    </a>
+    
+    <a href="tel:+903420520505" class="mobil-closed" target="_blank" rel="noopener noreferrer">
+     <div class="material-symbols-outlined h0001-icon" style="color:#0F766E">schedule</div>
+     <div>
+      <div  class="h0001-title">Branches</div>
+      <div  class="h0001-spot" style="color:#334155">Mon–Sat 08:30 – 20:00 · Sun 10:00 – 16:00</div>
+     </div>
+    </a>
+    </div>
+      </div>
+      <button type="button" class="h0001menuclose" onclick="menu3_toggle()" aria-label="Close menu" style="cursor: pointer;">
+        <span class="material-symbols-outlined" aria-hidden="true">close</span>
+      </button>
+    </div>
+  </div>
+</div>
+
+<script>
+  if (typeof menu3_toggle === "undefined") {
+    function menu3_close() {
+      var root = document.getElementById("menu-3-root");
+      var overlay = document.getElementById("menu-3-overlay");
+      var drawer = document.getElementById("menu-3-drawer");
+      var menuBtn = document.querySelector(".h0001-mobile-toggle");
+      if (!root || !root.classList.contains("h0001menu-open")) {
+        return;
+      }
+      root.classList.remove("h0001menu-open");
+      if (overlay) {
+        overlay.classList.remove("h0001menu-open");
+        overlay.setAttribute("aria-hidden", "true");
+      }
+      if (drawer) {
+        drawer.classList.remove("h0001menu-open");
+        drawer.style.transform = "";
+      }
+      if (menuBtn) {
+        menuBtn.setAttribute("aria-expanded", "false");
+      }
+      document.body.style.overflow = "";
+    }
+
+    function menu3_toggle() {
+      var root = document.getElementById("menu-3-root");
+      var overlay = document.getElementById("menu-3-overlay");
+      var drawer = document.getElementById("menu-3-drawer");
+      var menuBtn = document.querySelector(".h0001-mobile-toggle");
+      if (!root) {
+        return;
+      }
+      var isOpen = root.classList.contains("h0001menu-open");
+      if (isOpen) {
+        menu3_close();
+        if (menuBtn) {
+          menuBtn.setAttribute("aria-expanded", "false");
+        }
+      } else {
+        root.classList.add("h0001menu-open");
+        if (overlay) {
+          overlay.classList.add("h0001menu-open");
+          overlay.setAttribute("aria-hidden", "false");
+        }
+        if (drawer) {
+          drawer.classList.add("h0001menu-open");
+        }
+        if (menuBtn) {
+          menuBtn.setAttribute("aria-expanded", "true");
+        }
+        document.body.style.overflow = "hidden";
+      }
+    }
+  }
+
+  
+  setTimeout(function() {
+    var drawer = document.getElementById("menu-3-drawer");
+    if (drawer) {
+      drawer.addEventListener("click", function(e) {
+        var link = e.target.closest("a[href]");
+        if (link) {
+          menu3_close();
+        }
+      });
+    }
+  }, 100);
+
+  
+  setTimeout(function() {
+    var drawer = document.getElementById("menu-3-drawer");
+    if (!drawer) {
+      return;
+    }
+    var touchStartX = 0;
+    var touchStartY = 0;
+    var touchDeltaX = 0;
+    var isHorizontalSwipe = false;
+
+    drawer.addEventListener("touchstart", function(e) {
+      var root = document.getElementById("menu-3-root");
+      if (!root || !root.classList.contains("h0001menu-open")) {
+        return;
+      }
+      touchStartX = e.touches[0].clientX;
+      touchStartY = e.touches[0].clientY;
+      touchDeltaX = 0;
+      isHorizontalSwipe = false;
+      drawer.style.transition = "none";
+    }, { passive: true });
+
+    drawer.addEventListener("touchmove", function(e) {
+      var root = document.getElementById("menu-3-root");
+      if (!root || !root.classList.contains("h0001menu-open")) {
+        return;
+      }
+      var x = e.touches[0].clientX;
+      var y = e.touches[0].clientY;
+      touchDeltaX = x - touchStartX;
+      var deltaY = Math.abs(y - touchStartY);
+      var yon = document.documentElement.getAttribute("dir") === "rtl" ? 1 : -1;
+      var kapanma = touchDeltaX * yon;
+      if (kapanma > 15 && kapanma > deltaY) {
+        isHorizontalSwipe = true;
+      }
+      if (isHorizontalSwipe && kapanma > 0) {
+        e.preventDefault();
+        drawer.style.transform = "translateX(" + touchDeltaX + "px)";
+      }
+    }, { passive: false });
+
+    drawer.addEventListener("touchend", function() {
+      var root = document.getElementById("menu-3-root");
+      if (!root || !root.classList.contains("h0001menu-open")) {
+        return;
+      }
+      drawer.style.transition = "";
+      var yonSon = document.documentElement.getAttribute("dir") === "rtl" ? 1 : -1;
+      if (touchDeltaX * yonSon > 80) {
+        menu3_close();
+      } else {
+        drawer.style.transform = "";
+      }
+    }, { passive: true });
+  }, 100);
+</script></div>
+  <div id="content"><section class="b0000-kargo-takip-hero" aria-labelledby="b0000-kargo-takip-hero-yma44k-b">
+  <div class="b0000-kargo-takip-hero-ic">
+    
+    <div class="b0000-kargo-takip-hero-duzen"><div class="b0000-kargo-takip-hero-yazi b0000-kargo-takip-hero-gir"><p class="b0000-kargo-takip-hero-ust">Parcel tracking · Gaziantep</p><h1 class="b0000-kargo-takip-hero-h1" id="b0000-kargo-takip-hero-yma44k-b">Where is your parcel? Enter the number</h1><p class="b0000-kargo-takip-hero-metin">See your parcel's latest stop with the 12-digit tracking number; calculate the price by volumetric weight right away.</p><form class="b0000-kargo-takip-hero-takip" role="search" action="/en/iletisim" method="get" data-takip="/en/iletisim?takip={no}"><label class="b0000-kargo-takip-hero-tetiket" for="b0000-kargo-takip-hero-yma44k-no">Tracking number</label><div class="b0000-kargo-takip-hero-cubuk"><span class="b0000-kargo-takip-hero-cikon mx-flip material-symbols-outlined" aria-hidden="true">local_shipping</span><input class="b0000-kargo-takip-hero-tgirdi" id="b0000-kargo-takip-hero-yma44k-no" name="takip" type="text" required autocomplete="off" autocapitalize="characters" spellcheck="false" dir="ltr" placeholder="e.g. MZ2026 1116 0042" /><button type="submit" class="b0000-kargo-takip-hero-dugme b0000-kargo-takip-hero-sorgula"><span class="material-symbols-outlined" aria-hidden="true">search</span>Track</button></div><div class="b0000-kargo-takip-hero-gecmis" data-gecmis hidden></div></form><div class="b0000-kargo-takip-hero-cta"><a class="b0000-kargo-takip-hero-dugme" href="/en/teklif-al/">Calculate price<span class="material-symbols-outlined mx-flip" aria-hidden="true">arrow_forward</span></a><a class="b0000-kargo-takip-hero-dugme b0000-kargo-takip-hero-dugme--ikincil" href="/en/iletisim/">Find a branch</a></div></div><figure class="b0000-kargo-takip-hero-medya"><img class="b0000-kargo-takip-hero-gorsel" src="/img/lojistik-hero-filo.webp" alt="Cargo vans waiting at the loading bay" width="1000" height="1000" loading="eager" fetchpriority="high" decoding="async" /><p class="b0000-kargo-takip-hero-rozet"><span class="b0000-kargo-takip-hero-rikon material-symbols-outlined" aria-hidden="true">schedule</span><strong class="b0000-kargo-takip-hero-rdeger">20:00</strong><span class="b0000-kargo-takip-hero-rmetin">last drop-off time</span></p></figure><div class="b0000-kargo-takip-hero-hatkap"><span class="b0000-kargo-takip-hero-yol" aria-hidden="true"><span class="b0000-kargo-takip-hero-arac material-symbols-outlined mx-flip">local_shipping</span></span><ol class="b0000-kargo-takip-hero-hat" role="list"><li class="b0000-kargo-takip-hero-durak"><span class="b0000-kargo-takip-hero-dnokta"><span class="b0000-kargo-takip-hero-dikon material-symbols-outlined" aria-hidden="true">inventory_2</span></span><span class="b0000-kargo-takip-hero-dyazi"><strong class="b0000-kargo-takip-hero-dmetin">Accepted</strong><span class="b0000-kargo-takip-hero-ddeger">Branch</span></span></li><li class="b0000-kargo-takip-hero-durak"><span class="b0000-kargo-takip-hero-dnokta"><span class="b0000-kargo-takip-hero-dikon material-symbols-outlined" aria-hidden="true">warehouse</span></span><span class="b0000-kargo-takip-hero-dyazi"><strong class="b0000-kargo-takip-hero-dmetin">Hub</strong><span class="b0000-kargo-takip-hero-ddeger">Baspinar</span></span></li><li class="b0000-kargo-takip-hero-durak"><span class="b0000-kargo-takip-hero-dnokta"><span class="b0000-kargo-takip-hero-dikon material-symbols-outlined" aria-hidden="true">local_shipping</span></span><span class="b0000-kargo-takip-hero-dyazi"><strong class="b0000-kargo-takip-hero-dmetin">In transit</strong><span class="b0000-kargo-takip-hero-ddeger">Line truck</span></span></li><li class="b0000-kargo-takip-hero-durak"><span class="b0000-kargo-takip-hero-dnokta"><span class="b0000-kargo-takip-hero-dikon material-symbols-outlined" aria-hidden="true">storefront</span></span><span class="b0000-kargo-takip-hero-dyazi"><strong class="b0000-kargo-takip-hero-dmetin">Delivery branch</strong><span class="b0000-kargo-takip-hero-ddeger">Arrival</span></span></li><li class="b0000-kargo-takip-hero-durak b0000-kargo-takip-hero-durak--son"><span class="b0000-kargo-takip-hero-dnokta"><span class="b0000-kargo-takip-hero-dikon material-symbols-outlined" aria-hidden="true">where_to_vote</span></span><span class="b0000-kargo-takip-hero-dyazi"><strong class="b0000-kargo-takip-hero-dmetin">Delivered</strong><span class="b0000-kargo-takip-hero-ddeger">Signed</span></span></li></ol></div></div>
+  </div>
+</section>
+
+
+<script>
+  (() => {
+    const P = "b0000-kargo-takip-hero";
+    const az = !!(window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches);
+    const takip = (s, P) => {
+        s.querySelectorAll("form[data-takip]").forEach((f) => {
+          const desen = f.dataset.takip;
+          const g = f.querySelector("input:not([type=hidden])");
+          if (!desen || !g || desen.indexOf("{no}") === -1) return;
+          const kutu = f.querySelector("[data-gecmis]");
+          const ANAHTAR = "fb-takip:" + desen;
+          const oku = () => { try { const v = JSON.parse(localStorage.getItem(ANAHTAR) || "[]"); return Array.isArray(v) ? v.filter((x) => typeof x === "string" && x).slice(0, 3) : []; } catch (x) { return []; } };
+          const git = (no) => {
+            const u = desen.split("{no}").join(encodeURIComponent(no));
+            if (f.dataset.yeni) window.open(u, "_blank", "noopener"); else location.href = u;
+          };
+          const ciz = () => {
+            if (!kutu) return;
+            const L = oku();
+            kutu.replaceChildren(...L.map((no) => {
+              const b = document.createElement("button");
+              b.type = "button";
+              b.className = P + "-gno";
+              const i = document.createElement("span");
+              i.className = "material-symbols-outlined";
+              i.setAttribute("aria-hidden", "true");
+              i.textContent = "history";
+              const t = document.createElement("bdi");
+              t.textContent = no;
+              b.append(i, t);
+              b.addEventListener("click", () => { g.value = no; git(no); });
+              return b;
+            }));
+            kutu.hidden = !L.length;
+          };
+          f.addEventListener("submit", (e) => {
+            const no = g.value.trim();
+            e.preventDefault();
+            if (!no) { g.value = ""; f.reportValidity(); return; }
+            try { localStorage.setItem(ANAHTAR, JSON.stringify([no].concat(oku().filter((x) => x !== no)).slice(0, 3))); } catch (x) {  }
+            ciz();
+            git(no);
+          });
+          ciz();
+        });
+      };
+    document.querySelectorAll("." + P).forEach((s) => {
+      if (s.dataset.fbHazir) return;
+      s.dataset.fbHazir = "1";
+      takip(s, P, az);
+    });
+  })();
+</script>
+<section class="b0001-kargo-desi-hesap" aria-labelledby="b0001-kargo-desi-hesap-wehyed-b">
+  <div class="b0001-kargo-desi-hesap-ic">
+    
+    <div class="b0001-kargo-desi-hesap-duzen"><div class="b0001-kargo-desi-hesap-sol"><div class="b0001-kargo-desi-hesap-giris"><p class="b0001-kargo-desi-hesap-ust">Volumetric weight and price</p><h2 class="b0001-kargo-desi-hesap-baslik" id="b0001-kargo-desi-hesap-wehyed-b">Measure the box, see the price now</h2><p class="b0001-kargo-desi-hesap-metin">Length × width × height ÷ 3000 = volumetric weight. The greater of volumetric weight and kilograms is charged; the table shows VAT-inclusive prices by zone.</p></div><form class="b0001-kargo-desi-hesap-hesap" data-hesap hidden data-bolen="3000" data-taban="1" data-para="TRY" data-desi-ad="vol. kg"><div class="b0001-kargo-desi-hesap-olculer"><label class="b0001-kargo-desi-hesap-olcu"><span class="b0001-kargo-desi-hesap-oet">Width (cm):</span><input class="b0001-kargo-desi-hesap-ogirdi" type="number" name="en" min="0" step="1" inputmode="decimal" value="30" /></label><label class="b0001-kargo-desi-hesap-olcu"><span class="b0001-kargo-desi-hesap-oet">Depth (cm):</span><input class="b0001-kargo-desi-hesap-ogirdi" type="number" name="boy" min="0" step="1" inputmode="decimal" value="20" /></label><label class="b0001-kargo-desi-hesap-olcu"><span class="b0001-kargo-desi-hesap-oet">Height (cm):</span><input class="b0001-kargo-desi-hesap-ogirdi" type="number" name="yuk" min="0" step="1" inputmode="decimal" value="15" /></label><label class="b0001-kargo-desi-hesap-olcu"><span class="b0001-kargo-desi-hesap-oet">Weight (kg):</span><input class="b0001-kargo-desi-hesap-ogirdi" type="number" name="kg" min="0" step="0.1" inputmode="decimal" value="2" /></label></div><fieldset class="b0001-kargo-desi-hesap-bsec"><legend class="b0001-kargo-desi-hesap-oet">Destination zone</legend><label class="b0001-kargo-desi-hesap-bcip"><input class="b0001-kargo-desi-hesap-radyo" type="radio" name="bolge" value="0" checked data-f="85" data-d="6" /><span>Within the city</span></label><label class="b0001-kargo-desi-hesap-bcip"><input class="b0001-kargo-desi-hesap-radyo" type="radio" name="bolge" value="1" data-f="110" data-d="9" /><span>Neighbouring provinces</span></label><label class="b0001-kargo-desi-hesap-bcip"><input class="b0001-kargo-desi-hesap-radyo" type="radio" name="bolge" value="2" data-f="135" data-d="12" /><span>Region</span></label><label class="b0001-kargo-desi-hesap-bcip"><input class="b0001-kargo-desi-hesap-radyo" type="radio" name="bolge" value="3" data-f="165" data-d="15" /><span>Nationwide</span></label><label class="b0001-kargo-desi-hesap-bcip"><input class="b0001-kargo-desi-hesap-radyo" type="radio" name="bolge" value="4" data-f="195" data-d="18" /><span>Remote area</span></label></fieldset><div class="b0001-kargo-desi-hesap-sonuc"><p class="b0001-kargo-desi-hesap-setiket">Estimated price</p><p class="b0001-kargo-desi-hesap-tutar" data-tutar aria-live="polite">—</p><p class="b0001-kargo-desi-hesap-dokum" data-dokum></p><p class="b0001-kargo-desi-hesap-hnot">VAT included, fictional tariff; the final price is printed on the receipt from the volume measured at acceptance.</p></div></form><div class="b0001-kargo-desi-hesap-cta"><a class="b0001-kargo-desi-hesap-dugme" href="/en/teklif-al/">Create shipment<span class="material-symbols-outlined mx-flip" aria-hidden="true">arrow_forward</span></a></div></div><div class="b0001-kargo-desi-hesap-tkap"><table class="b0001-kargo-desi-hesap-matris" aria-labelledby="b0001-kargo-desi-hesap-wehyed-b"><thead><tr><th scope="col" class="b0001-kargo-desi-hesap-kose">Destination zone</th><th scope="col" data-k="0" data-desi="1"><bdi>1</bdi> <span class="b0001-kargo-desi-hesap-birim">vol. kg</span></th><th scope="col" data-k="1" data-desi="5"><bdi>5</bdi> <span class="b0001-kargo-desi-hesap-birim">vol. kg</span></th><th scope="col" data-k="2" data-desi="10"><bdi>10</bdi> <span class="b0001-kargo-desi-hesap-birim">vol. kg</span></th><th scope="col" data-k="3" data-desi="20"><bdi>20</bdi> <span class="b0001-kargo-desi-hesap-birim">vol. kg</span></th><th scope="col" data-k="4" data-desi="30"><bdi>30</bdi> <span class="b0001-kargo-desi-hesap-birim">vol. kg</span></th><th scope="col" data-k="5" data-desi="50"><bdi>50</bdi> <span class="b0001-kargo-desi-hesap-birim">vol. kg</span></th></tr></thead><tbody><tr data-b="0"><th scope="row"><span class="b0001-kargo-desi-hesap-bad"><span class="b0001-kargo-desi-hesap-bikon material-symbols-outlined" aria-hidden="true">location_city</span>Within the city</span><span class="b0001-kargo-desi-hesap-bkapsam">Gaziantep central districts</span><span class="b0001-kargo-desi-hesap-bsure"><span class="material-symbols-outlined" aria-hidden="true">schedule</span>Same day</span></th><td data-k="0"><bdi>TRY 85</bdi></td><td data-k="1"><bdi>TRY 109</bdi></td><td data-k="2"><bdi>TRY 139</bdi></td><td data-k="3"><bdi>TRY 199</bdi></td><td data-k="4"><bdi>TRY 259</bdi></td><td data-k="5"><bdi>TRY 379</bdi></td></tr><tr data-b="1"><th scope="row"><span class="b0001-kargo-desi-hesap-bad"><span class="b0001-kargo-desi-hesap-bikon material-symbols-outlined" aria-hidden="true">near_me</span>Neighbouring provinces</span><span class="b0001-kargo-desi-hesap-bkapsam">Kilis, Osmaniye, Sanliurfa, Adiyaman, Hatay</span><span class="b0001-kargo-desi-hesap-bsure"><span class="material-symbols-outlined" aria-hidden="true">schedule</span>1 business day</span></th><td data-k="0"><bdi>TRY 110</bdi></td><td data-k="1"><bdi>TRY 146</bdi></td><td data-k="2"><bdi>TRY 191</bdi></td><td data-k="3"><bdi>TRY 281</bdi></td><td data-k="4"><bdi>TRY 371</bdi></td><td data-k="5"><bdi>TRY 551</bdi></td></tr><tr data-b="2"><th scope="row"><span class="b0001-kargo-desi-hesap-bad"><span class="b0001-kargo-desi-hesap-bikon material-symbols-outlined" aria-hidden="true">map</span>Region</span><span class="b0001-kargo-desi-hesap-bkapsam">South-east and eastern Mediterranean</span><span class="b0001-kargo-desi-hesap-bsure"><span class="material-symbols-outlined" aria-hidden="true">schedule</span>2 business days</span></th><td data-k="0"><bdi>TRY 135</bdi></td><td data-k="1"><bdi>TRY 183</bdi></td><td data-k="2"><bdi>TRY 243</bdi></td><td data-k="3"><bdi>TRY 363</bdi></td><td data-k="4"><bdi>TRY 483</bdi></td><td data-k="5"><bdi>TRY 723</bdi></td></tr><tr data-b="3"><th scope="row"><span class="b0001-kargo-desi-hesap-bad"><span class="b0001-kargo-desi-hesap-bikon material-symbols-outlined" aria-hidden="true">public</span>Nationwide</span><span class="b0001-kargo-desi-hesap-bkapsam">Metropolitan areas and provincial centres</span><span class="b0001-kargo-desi-hesap-bsure"><span class="material-symbols-outlined" aria-hidden="true">schedule</span>2 business days</span></th><td data-k="0"><bdi>TRY 165</bdi></td><td data-k="1"><bdi>TRY 225</bdi></td><td data-k="2"><bdi>TRY 300</bdi></td><td data-k="3"><bdi>TRY 450</bdi></td><td data-k="4"><bdi>TRY 600</bdi></td><td data-k="5"><bdi>TRY 900</bdi></td></tr><tr data-b="4"><th scope="row"><span class="b0001-kargo-desi-hesap-bad"><span class="b0001-kargo-desi-hesap-bikon material-symbols-outlined" aria-hidden="true">terrain</span>Remote area</span><span class="b0001-kargo-desi-hesap-bkapsam">Mountain villages and islands</span><span class="b0001-kargo-desi-hesap-bsure"><span class="material-symbols-outlined" aria-hidden="true">schedule</span>4 business days</span></th><td data-k="0"><bdi>TRY 195</bdi></td><td data-k="1"><bdi>TRY 267</bdi></td><td data-k="2"><bdi>TRY 357</bdi></td><td data-k="3"><bdi>TRY 537</bdi></td><td data-k="4"><bdi>TRY 717</bdi></td><td data-k="5"><bdi>TRY 1,077</bdi></td></tr></tbody></table></div></div>
+  </div>
+</section>
+
+
+<script>
+  (() => {
+    const P = "b0001-kargo-desi-hesap";
+    const az = !!(window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches);
+    const desiHesap = (s, P) => {
+        const f = s.querySelector("[data-hesap]");
+        if (!f) return;
+        s.classList.add(P + "--js");
+        f.hidden = false;
+        const dl = document.documentElement.lang || undefined;
+        const pb = f.dataset.para || "";
+        const para = (n) => { try { return new Intl.NumberFormat(dl, pb ? { style: "currency", currency: pb, maximumFractionDigits: n % 1 ? 2 : 0 } : { maximumFractionDigits: 2 }).format(n); } catch (x) { return String(n); } };
+        const sy = (n, k) => { try { return new Intl.NumberFormat(dl, { maximumFractionDigits: k }).format(n); } catch (x) { return String(n); } };
+        const bol = Number(f.dataset.bolen) || 3000;
+        const tab = Number(f.dataset.taban) || 0;
+        const tutar = f.querySelector("[data-tutar]");
+        const dokum = f.querySelector("[data-dokum]");
+        const kol = [...s.querySelectorAll("thead [data-desi]")];
+        const hucre = [...s.querySelectorAll("[data-k]")];
+        const satir = [...s.querySelectorAll("tr[data-b]")];
+        const hesap = () => {
+          const v = (n) => { const e = f.elements.namedItem(n); const x = parseFloat(String((e && e.value) || "").replace(",", ".")); return Number.isFinite(x) && x > 0 ? x : 0; };
+          const desi = (v("en") * v("boy") * v("yuk")) / bol;
+          const kg = v("kg");
+          const u = Math.max(desi, kg);
+          const r = f.querySelector('input[name="bolge"]:checked');
+          const bi = r ? r.value : "";
+          satir.forEach((t) => t.classList.toggle(P + "--sec", t.dataset.b === bi));
+          let k = kol.findIndex((h) => Number(h.dataset.desi) >= u);
+          if (k === -1) k = kol.length - 1;
+          hucre.forEach((h) => h.classList.toggle(P + "--kol", u > 0 && h.dataset.k === String(k)));
+          if (!tutar) return;
+          if (!r || !u) { tutar.textContent = "—"; if (dokum) dokum.textContent = ""; return; }
+          const ucret = Number(r.dataset.f) + Math.max(0, Math.ceil(u) - tab) * (Number(r.dataset.d) || 0);
+          tutar.textContent = para(ucret);
+          if (dokum) dokum.textContent = (f.dataset.desiAd || "") + " " + sy(desi, 1) + " · " + sy(kg, 1) + " kg → " + sy(Math.ceil(u), 0);
+          tutar.classList.remove(P + "--tik");
+          void tutar.offsetWidth;
+          tutar.classList.add(P + "--tik");
+        };
+        f.addEventListener("input", hesap);
+        f.addEventListener("change", hesap);
+        f.addEventListener("submit", (e) => e.preventDefault());
+        hesap();
+      };
+    document.querySelectorAll("." + P).forEach((s) => {
+      if (s.dataset.fbHazir) return;
+      s.dataset.fbHazir = "1";
+      desiHesap(s, P, az);
+    });
+  })();
+</script>
+<section class="b0002-deger-vaat-manset" aria-labelledby="b0002-deger-vaat-manset-d3481y-b">
+  <div class="b0002-deger-vaat-manset-ic">
+    
+    <div class="b0002-deger-vaat-manset-gazete"><header class="b0002-deger-vaat-manset-kunye"><p class="b0002-deger-vaat-manset-ust">Menzil Cargo · on the back of the receipt</p><h2 class="b0002-deger-vaat-manset-baslik" id="b0002-deger-vaat-manset-d3481y-b">Five promises for your parcel</h2><p class="b0002-deger-vaat-manset-metin">We spell out what we do from acceptance to delivery.</p></header><div class="b0002-deger-vaat-manset-sayfa"><article class="b0002-deger-vaat-manset-lead"><p class="b0002-deger-vaat-manset-etiket">Headline</p><h3 class="b0002-deger-vaat-manset-lbaslik">Volume is measured at acceptance and printed on the receipt</h3><img class="b0002-deger-vaat-manset-gorsel" src="/img/lojistik-kamyonet.webp" alt="" width="1000" height="560" loading="lazy" decoding="async" /><p class="b0002-deger-vaat-manset-lmetin">We measure your box in front of you; no &quot;volume difference&quot; invoice turns up later.</p></article><ol class="b0002-deger-vaat-manset-kenar"><li class="b0002-deger-vaat-manset-haber" style="--i: 1"><span class="b0002-deger-vaat-manset-hno" aria-hidden="true">02</span><div class="b0002-deger-vaat-manset-hyazi"><span class="b0002-deger-vaat-manset-ikon material-symbols-outlined" aria-hidden="true">sms</span><h3 class="b0002-deger-vaat-manset-kbaslik">An SMS at every stop</h3><p class="b0002-deger-vaat-manset-kmetin">A text message at acceptance, transfer, delivery and handover.</p></div></li><li class="b0002-deger-vaat-manset-haber" style="--i: 2"><span class="b0002-deger-vaat-manset-hno" aria-hidden="true">03</span><div class="b0002-deger-vaat-manset-hyazi"><span class="b0002-deger-vaat-manset-ikon material-symbols-outlined" aria-hidden="true">schedule</span><h3 class="b0002-deger-vaat-manset-kbaslik">Drop-off until 20:00</h3><p class="b0002-deger-vaat-manset-kmetin">Parcels dropped off in the evening leave the next morning.</p></div></li><li class="b0002-deger-vaat-manset-haber" style="--i: 3"><span class="b0002-deger-vaat-manset-hno" aria-hidden="true">04</span><div class="b0002-deger-vaat-manset-hyazi"><span class="b0002-deger-vaat-manset-ikon material-symbols-outlined" aria-hidden="true">verified_user</span><h3 class="b0002-deger-vaat-manset-kbaslik">Damage report at the door</h3><p class="b0002-deger-vaat-manset-kmetin">The courier records damage with you; a claim is opened the same day.</p></div></li><li class="b0002-deger-vaat-manset-haber" style="--i: 4"><span class="b0002-deger-vaat-manset-hno" aria-hidden="true">05</span><div class="b0002-deger-vaat-manset-hyazi"><span class="b0002-deger-vaat-manset-ikon material-symbols-outlined" aria-hidden="true">assignment_return</span><h3 class="b0002-deger-vaat-manset-kbaslik">Returns with one code</h3><p class="b0002-deger-vaat-manset-kmetin">Just quote the shop's return code at the branch.</p></div></li></ol></div></div>
+  </div>
+</section>
+
+
+<script>
+  (() => {
+    const P = "b0002-deger-vaat-manset";
+    const az = !!(window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches);
+    const gozlem = (s, P, az) => {
+        const gor = () => s.classList.add(P + "--gor");
+        s.classList.add(P + "--hazir");
+        if (az || !("IntersectionObserver" in window)) { gor(); return; }
+        const io = new IntersectionObserver((gs) => {
+          gs.forEach((g) => { if (g.isIntersecting) { gor(); io.disconnect(); } });
+        }, { threshold: 0.15 });
+        io.observe(s);
+      };
+    document.querySelectorAll("." + P).forEach((s) => {
+      if (s.dataset.fbHazir) return;
+      s.dataset.fbHazir = "1";
+      gozlem(s, P, az);
+    });
+  })();
+</script>
+<section class="b0003-sayac-sube-harita" aria-labelledby="b0003-sayac-sube-harita-ylzsbl-b">
+  <div class="b0003-sayac-sube-harita-ic">
+    <header class="b0003-sayac-sube-harita-bas"><p class="b0003-sayac-sube-harita-ust">Branch network</p><h2 class="b0003-sayac-sube-harita-baslik" id="b0003-sayac-sube-harita-ylzsbl-b">24 points in and around Gaziantep</h2><p class="b0003-sayac-sube-harita-metin">Tap a pin to see branch counts and closing times. Fictional demo figures.</p></header>
+    <div class="b0003-sayac-sube-harita-duzen"><div class="b0003-sayac-sube-harita-harita"><svg class="b0003-sayac-sube-harita-hat" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true" focusable="false"><polyline class="b0003-sayac-sube-harita-yol" points="14,32 38,66 60,26 84,60 26,86 70,84" /><polyline class="b0003-sayac-sube-harita-akis" points="14,32 38,66 60,26 84,60 26,86 70,84" /></svg><button type="button" class="b0003-sayac-sube-harita-pin" data-sec="0" aria-pressed="true" aria-controls="b0003-sayac-sube-harita-ylzsbl-p0" aria-label="Sahinbey branches" style="--x: 14%; --y: 32%; --b: 1.250"><span class="b0003-sayac-sube-harita-pin-ic" aria-hidden="true"><span class="b0003-sayac-sube-harita-nabiz"></span><span class="b0003-sayac-sube-harita-pin-ikon material-symbols-outlined" aria-hidden="true">storefront</span></span><span class="b0003-sayac-sube-harita-pin-yazi" aria-hidden="true">9</span></button><button type="button" class="b0003-sayac-sube-harita-pin" data-sec="1" aria-pressed="false" aria-controls="b0003-sayac-sube-harita-ylzsbl-p1" aria-label="Sehitkamil branches" style="--x: 38%; --y: 66%; --b: 1.150"><span class="b0003-sayac-sube-harita-pin-ic" aria-hidden="true"><span class="b0003-sayac-sube-harita-nabiz"></span><span class="b0003-sayac-sube-harita-pin-ikon material-symbols-outlined" aria-hidden="true">warehouse</span></span><span class="b0003-sayac-sube-harita-pin-yazi" aria-hidden="true">7</span></button><button type="button" class="b0003-sayac-sube-harita-pin" data-sec="2" aria-pressed="false" aria-controls="b0003-sayac-sube-harita-ylzsbl-p2" aria-label="Nizip branches" style="--x: 60%; --y: 26%; --b: 0.950"><span class="b0003-sayac-sube-harita-pin-ic" aria-hidden="true"><span class="b0003-sayac-sube-harita-nabiz"></span><span class="b0003-sayac-sube-harita-pin-ikon material-symbols-outlined" aria-hidden="true">storefront</span></span><span class="b0003-sayac-sube-harita-pin-yazi" aria-hidden="true">3</span></button><button type="button" class="b0003-sayac-sube-harita-pin" data-sec="3" aria-pressed="false" aria-controls="b0003-sayac-sube-harita-ylzsbl-p3" aria-label="Oguzeli branches" style="--x: 84%; --y: 60%; --b: 0.900"><span class="b0003-sayac-sube-harita-pin-ic" aria-hidden="true"><span class="b0003-sayac-sube-harita-nabiz"></span><span class="b0003-sayac-sube-harita-pin-ikon material-symbols-outlined" aria-hidden="true">storefront</span></span><span class="b0003-sayac-sube-harita-pin-yazi" aria-hidden="true">2</span></button><button type="button" class="b0003-sayac-sube-harita-pin" data-sec="4" aria-pressed="false" aria-controls="b0003-sayac-sube-harita-ylzsbl-p4" aria-label="Islahiye branches" style="--x: 26%; --y: 86%; --b: 0.900"><span class="b0003-sayac-sube-harita-pin-ic" aria-hidden="true"><span class="b0003-sayac-sube-harita-nabiz"></span><span class="b0003-sayac-sube-harita-pin-ikon material-symbols-outlined" aria-hidden="true">storefront</span></span><span class="b0003-sayac-sube-harita-pin-yazi" aria-hidden="true">2</span></button><button type="button" class="b0003-sayac-sube-harita-pin" data-sec="5" aria-pressed="false" aria-controls="b0003-sayac-sube-harita-ylzsbl-p5" aria-label="Kilis agency" style="--x: 70%; --y: 84%; --b: 0.850"><span class="b0003-sayac-sube-harita-pin-ic" aria-hidden="true"><span class="b0003-sayac-sube-harita-nabiz"></span><span class="b0003-sayac-sube-harita-pin-ikon material-symbols-outlined" aria-hidden="true">handshake</span></span><span class="b0003-sayac-sube-harita-pin-yazi" aria-hidden="true">1</span></button></div><div class="b0003-sayac-sube-harita-paneller"><div class="b0003-sayac-sube-harita-panel" data-secim="0" id="b0003-sayac-sube-harita-ylzsbl-p0"><span class="b0003-sayac-sube-harita-panel-no">01 / 06</span><span class="b0003-sayac-sube-harita-sayi"><span data-hedef="9" data-ondalik="0">9</span></span><h3 class="b0003-sayac-sube-harita-etiket"><span class="b0003-sayac-sube-harita-ikon material-symbols-outlined" aria-hidden="true">storefront</span>Sahinbey branches</h3><p class="b0003-sayac-sube-harita-not">Close at 20:00 · Sunday 10:00–16:00</p></div><div class="b0003-sayac-sube-harita-panel" data-secim="1" id="b0003-sayac-sube-harita-ylzsbl-p1"><span class="b0003-sayac-sube-harita-panel-no">02 / 06</span><span class="b0003-sayac-sube-harita-sayi"><span data-hedef="7" data-ondalik="0">7</span></span><h3 class="b0003-sayac-sube-harita-etiket"><span class="b0003-sayac-sube-harita-ikon material-symbols-outlined" aria-hidden="true">warehouse</span>Sehitkamil branches</h3><p class="b0003-sayac-sube-harita-not">Close at 20:00 · incl. Baspinar hub</p></div><div class="b0003-sayac-sube-harita-panel" data-secim="2" id="b0003-sayac-sube-harita-ylzsbl-p2"><span class="b0003-sayac-sube-harita-panel-no">03 / 06</span><span class="b0003-sayac-sube-harita-sayi"><span data-hedef="3" data-ondalik="0">3</span></span><h3 class="b0003-sayac-sube-harita-etiket"><span class="b0003-sayac-sube-harita-ikon material-symbols-outlined" aria-hidden="true">storefront</span>Nizip branches</h3><p class="b0003-sayac-sube-harita-not">Close at 19:00</p></div><div class="b0003-sayac-sube-harita-panel" data-secim="3" id="b0003-sayac-sube-harita-ylzsbl-p3"><span class="b0003-sayac-sube-harita-panel-no">04 / 06</span><span class="b0003-sayac-sube-harita-sayi"><span data-hedef="2" data-ondalik="0">2</span></span><h3 class="b0003-sayac-sube-harita-etiket"><span class="b0003-sayac-sube-harita-ikon material-symbols-outlined" aria-hidden="true">storefront</span>Oguzeli branches</h3><p class="b0003-sayac-sube-harita-not">Close at 18:30</p></div><div class="b0003-sayac-sube-harita-panel" data-secim="4" id="b0003-sayac-sube-harita-ylzsbl-p4"><span class="b0003-sayac-sube-harita-panel-no">05 / 06</span><span class="b0003-sayac-sube-harita-sayi"><span data-hedef="2" data-ondalik="0">2</span></span><h3 class="b0003-sayac-sube-harita-etiket"><span class="b0003-sayac-sube-harita-ikon material-symbols-outlined" aria-hidden="true">storefront</span>Islahiye branches</h3><p class="b0003-sayac-sube-harita-not">Close at 18:30</p></div><div class="b0003-sayac-sube-harita-panel" data-secim="5" id="b0003-sayac-sube-harita-ylzsbl-p5"><span class="b0003-sayac-sube-harita-panel-no">06 / 06</span><span class="b0003-sayac-sube-harita-sayi"><span data-hedef="1" data-ondalik="0">1</span></span><h3 class="b0003-sayac-sube-harita-etiket"><span class="b0003-sayac-sube-harita-ikon material-symbols-outlined" aria-hidden="true">handshake</span>Kilis agency</h3><p class="b0003-sayac-sube-harita-not">Close at 18:00</p></div></div></div>
+  </div>
+</section>
+
+
+<script>
+  (() => {
+    const P = "b0003-sayac-sube-harita";
+    const az = !!(window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches);
+    const secim = (s, P) => {
+        const c = [...s.querySelectorAll("[data-sec]")];
+        const p = [...s.querySelectorAll("[data-secim]")];
+        if (!c.length) return;
+        s.classList.add(P + "--js");
+        const sec = (n) => {
+          c.forEach((x) => x.setAttribute("aria-pressed", String(x.dataset.sec === n)));
+          p.forEach((x) => { x.hidden = x.dataset.secim !== n; });
+        };
+        sec(c[0].dataset.sec);
+        c.forEach((x) => x.addEventListener("click", () => sec(x.dataset.sec)));
+      };
+    document.querySelectorAll("." + P).forEach((s) => {
+      if (s.dataset.fbHazir) return;
+      s.dataset.fbHazir = "1";
+      secim(s, P, az);
+    });
+  })();
+</script>
+<section class="b0004-yorum-vaka-metrik" aria-labelledby="b0004-yorum-vaka-metrik-wu3h4c-b">
+  <div class="b0004-yorum-vaka-metrik-ic">
+    <header class="b0004-yorum-vaka-metrik-bas"><p class="b0004-yorum-vaka-metrik-ust">Shipper files</p><h2 class="b0004-yorum-vaka-metrik-baslik" id="b0004-yorum-vaka-metrik-wu3h4c-b">Businesses growing parcel by parcel</h2><p class="b0004-yorum-vaka-metrik-metin">Fictional demo cases; people and company names are examples.</p></header>
+    <ul class="b0004-yorum-vaka-metrik-liste"><li class="b0004-yorum-vaka-metrik-vaka"><div class="b0004-yorum-vaka-metrik-sonuc"><p class="b0004-yorum-vaka-metrik-sayi"><span class="b0004-yorum-vaka-metrik-deger" data-hedef="400" data-ondalik="0">400</span><span class="b0004-yorum-vaka-metrik-ek">parcels</span></p><p class="b0004-yorum-vaka-metrik-setiket">shipped per day</p></div><figure class="b0004-yorum-vaka-metrik-soz"><h3 class="b0004-yorum-vaka-metrik-kbaslik">Zero delays in the holiday rush</h3><blockquote class="b0004-yorum-vaka-metrik-alinti"><p>We went from 40 to 400 parcels a day; with the volume on the receipt we never had an invoice surprise.</p></blockquote><figcaption class="b0004-yorum-vaka-metrik-yazar"><span class="b0004-yorum-vaka-metrik-avatar b0004-yorum-vaka-metrik-harf" aria-hidden="true">EY</span><span class="b0004-yorum-vaka-metrik-kisi"><strong class="b0004-yorum-vaka-metrik-ad">Elif Y.</strong><span class="b0004-yorum-vaka-metrik-unvan">Founder · Fistik Kutusu (online shop)</span></span></figcaption><p class="b0004-yorum-vaka-metrik-puan" role="img" aria-label="5/5"><span class="material-symbols-outlined" aria-hidden="true">star</span><span class="material-symbols-outlined" aria-hidden="true">star</span><span class="material-symbols-outlined" aria-hidden="true">star</span><span class="material-symbols-outlined" aria-hidden="true">star</span><span class="material-symbols-outlined" aria-hidden="true">star</span></p></figure></li><li class="b0004-yorum-vaka-metrik-vaka"><div class="b0004-yorum-vaka-metrik-sonuc"><p class="b0004-yorum-vaka-metrik-sayi"><span class="b0004-yorum-vaka-metrik-deger" data-hedef="2" data-ondalik="0">2</span><span class="b0004-yorum-vaka-metrik-ek">days</span></p><p class="b0004-yorum-vaka-metrik-setiket">pallet to Istanbul</p></div><figure class="b0004-yorum-vaka-metrik-soz"><h3 class="b0004-yorum-vaka-metrik-kbaslik">Pallets on a single line item</h3><blockquote class="b0004-yorum-vaka-metrik-alinti"><p>They fixed our weekly pallet shipments to a set day; our customers now know the delivery day in advance.</p></blockquote><figcaption class="b0004-yorum-vaka-metrik-yazar"><span class="b0004-yorum-vaka-metrik-avatar b0004-yorum-vaka-metrik-harf" aria-hidden="true">KT</span><span class="b0004-yorum-vaka-metrik-kisi"><strong class="b0004-yorum-vaka-metrik-ad">Kemal T.</strong><span class="b0004-yorum-vaka-metrik-unvan">Warehouse lead · Zeugma Textiles</span></span></figcaption><p class="b0004-yorum-vaka-metrik-puan" role="img" aria-label="5/5"><span class="material-symbols-outlined" aria-hidden="true">star</span><span class="material-symbols-outlined" aria-hidden="true">star</span><span class="material-symbols-outlined" aria-hidden="true">star</span><span class="material-symbols-outlined" aria-hidden="true">star</span><span class="material-symbols-outlined" aria-hidden="true">star</span></p></figure></li><li class="b0004-yorum-vaka-metrik-vaka"><div class="b0004-yorum-vaka-metrik-sonuc"><p class="b0004-yorum-vaka-metrik-sayi"><span class="b0004-yorum-vaka-metrik-deger" data-hedef="6" data-ondalik="0">6</span><span class="b0004-yorum-vaka-metrik-ek">hours</span></p><p class="b0004-yorum-vaka-metrik-setiket">average delivery</p></div><figure class="b0004-yorum-vaka-metrik-soz"><h3 class="b0004-yorum-vaka-metrik-kbaslik">Same-day in the city</h3><blockquote class="b0004-yorum-vaka-metrik-alinti"><p>Parcels handed over before noon reach the patient's door by evening; we follow them by SMS.</p></blockquote><figcaption class="b0004-yorum-vaka-metrik-yazar"><span class="b0004-yorum-vaka-metrik-avatar b0004-yorum-vaka-metrik-harf" aria-hidden="true">DB</span><span class="b0004-yorum-vaka-metrik-kisi"><strong class="b0004-yorum-vaka-metrik-ad">Derya B.</strong><span class="b0004-yorum-vaka-metrik-unvan">Pharmacist · Kale Pharmacy</span></span></figcaption><p class="b0004-yorum-vaka-metrik-puan" role="img" aria-label="4/5"><span class="material-symbols-outlined" aria-hidden="true">star</span><span class="material-symbols-outlined" aria-hidden="true">star</span><span class="material-symbols-outlined" aria-hidden="true">star</span><span class="material-symbols-outlined" aria-hidden="true">star</span><span class="material-symbols-outlined b0004-yorum-vaka-metrik-yildiz--bos" aria-hidden="true">star</span></p></figure></li></ul>
+  </div>
+</section>
+
+
+<script>
+  (() => {
+    const P = "b0004-yorum-vaka-metrik";
+    const az = !!(window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches);
+    const gozlem = (s, P, az) => {
+        const gor = () => s.classList.add(P + "--gor");
+        s.classList.add(P + "--hazir");
+        if (az || !("IntersectionObserver" in window)) { gor(); return; }
+        const io = new IntersectionObserver((gs) => {
+          gs.forEach((g) => { if (g.isIntersecting) { gor(); io.disconnect(); } });
+        }, { threshold: 0.15 });
+        io.observe(s);
+      };
+    const sayac = (s, P, az) => {
+        const el = [...s.querySelectorAll("[data-hedef]")];
+        if (!el.length || az || !("IntersectionObserver" in window)) return;
+        const dl = document.documentElement.lang || undefined;
+        const oynat = () => el.forEach((e) => {
+          const h = Number(e.dataset.hedef);
+          const od = Number(e.dataset.ondalik) || 0;
+          const son = e.textContent;
+          if (!Number.isFinite(h)) return;
+          let f;
+          try { f = new Intl.NumberFormat(dl, { minimumFractionDigits: od, maximumFractionDigits: od }); } catch (x) { return; }
+          const t0 = performance.now();
+          const adim = (t) => {
+            const p = Math.min(1, (t - t0) / 1300);
+            e.textContent = p < 1 ? f.format(h * (1 - Math.pow(1 - p, 3))) : son;
+            if (p < 1) requestAnimationFrame(adim);
+          };
+          requestAnimationFrame(adim);
+        });
+        const io = new IntersectionObserver((gs) => {
+          gs.forEach((g) => { if (g.isIntersecting) { oynat(); io.disconnect(); } });
+        }, { threshold: 0.3 });
+        io.observe(s);
+      };
+    document.querySelectorAll("." + P).forEach((s) => {
+      if (s.dataset.fbHazir) return;
+      s.dataset.fbHazir = "1";
+      gozlem(s, P, az);
+      sayac(s, P, az);
+    });
+  })();
+</script>
+<section class="b0005-sss-karar-agaci" aria-labelledby="b0005-sss-karar-agaci-rktdzp-b">
+  <div class="b0005-sss-karar-agaci-ic">
+    <header class="b0005-sss-karar-agaci-bas"><p class="b0005-sss-karar-agaci-ust">Shipment help</p><h2 class="b0005-sss-karar-agaci-baslik" id="b0005-sss-karar-agaci-rktdzp-b">What happened? Pick it and we will solve it</h2><p class="b0005-sss-karar-agaci-metin">A step-by-step path for the six most common situations.</p></header>
+    <div class="b0005-sss-karar-agaci-agac"><div class="b0005-sss-karar-agaci-secim" data-agac-izgara><p class="b0005-sss-karar-agaci-sec-bas"><span class="b0005-sss-karar-agaci-sec-ikon material-symbols-outlined" aria-hidden="true">touch_app</span><span>Choose the situation</span></p><ul class="b0005-sss-karar-agaci-sorunlar"><li><a class="b0005-sss-karar-agaci-sorun" href="#b0005-sss-karar-agaci-rktdzp-c0" data-agac="0"><span class="b0005-sss-karar-agaci-sikon material-symbols-outlined" aria-hidden="true">search_off</span><span class="b0005-sss-karar-agaci-soru">My tracking number shows nothing</span><span class="b0005-sss-karar-agaci-git material-symbols-outlined mx-flip" aria-hidden="true">arrow_forward</span></a></li><li><a class="b0005-sss-karar-agaci-sorun" href="#b0005-sss-karar-agaci-rktdzp-c1" data-agac="1"><span class="b0005-sss-karar-agaci-sikon material-symbols-outlined" aria-hidden="true">door_front</span><span class="b0005-sss-karar-agaci-soru">&quot;Recipient not at address&quot; note</span><span class="b0005-sss-karar-agaci-git material-symbols-outlined mx-flip" aria-hidden="true">arrow_forward</span></a></li><li><a class="b0005-sss-karar-agaci-sorun" href="#b0005-sss-karar-agaci-rktdzp-c2" data-agac="2"><span class="b0005-sss-karar-agaci-sikon material-symbols-outlined" aria-hidden="true">broken_image</span><span class="b0005-sss-karar-agaci-soru">The parcel arrived damaged</span><span class="b0005-sss-karar-agaci-git material-symbols-outlined mx-flip" aria-hidden="true">arrow_forward</span></a></li><li><a class="b0005-sss-karar-agaci-sorun" href="#b0005-sss-karar-agaci-rktdzp-c3" data-agac="3"><span class="b0005-sss-karar-agaci-sikon material-symbols-outlined" aria-hidden="true">edit_location_alt</span><span class="b0005-sss-karar-agaci-soru">I need to change the address</span><span class="b0005-sss-karar-agaci-git material-symbols-outlined mx-flip" aria-hidden="true">arrow_forward</span></a></li><li><a class="b0005-sss-karar-agaci-sorun" href="#b0005-sss-karar-agaci-rktdzp-c4" data-agac="4"><span class="b0005-sss-karar-agaci-sikon material-symbols-outlined" aria-hidden="true">assignment_return</span><span class="b0005-sss-karar-agaci-soru">I want to send a return</span><span class="b0005-sss-karar-agaci-git material-symbols-outlined mx-flip" aria-hidden="true">arrow_forward</span></a></li><li><a class="b0005-sss-karar-agaci-sorun" href="#b0005-sss-karar-agaci-rktdzp-c5" data-agac="5"><span class="b0005-sss-karar-agaci-sikon material-symbols-outlined" aria-hidden="true">calculate</span><span class="b0005-sss-karar-agaci-soru">How is volumetric weight calculated?</span><span class="b0005-sss-karar-agaci-git material-symbols-outlined mx-flip" aria-hidden="true">arrow_forward</span></a></li></ul></div><div class="b0005-sss-karar-agaci-cozumler"><div class="b0005-sss-karar-agaci-cozum" id="b0005-sss-karar-agaci-rktdzp-c0" data-agac-panel="0" role="region" aria-labelledby="b0005-sss-karar-agaci-rktdzp-h0" tabindex="-1"><div class="b0005-sss-karar-agaci-cust"><button type="button" class="b0005-sss-karar-agaci-geri" data-agac-geri hidden><span class="material-symbols-outlined mx-flip" aria-hidden="true">arrow_back</span><span>All situations</span></button><h3 class="b0005-sss-karar-agaci-cbas" id="b0005-sss-karar-agaci-rktdzp-h0"><span class="b0005-sss-karar-agaci-cikon material-symbols-outlined" aria-hidden="true">search_off</span><span>My tracking number shows nothing</span></h3></div><ol class="b0005-sss-karar-agaci-adimlar"><li class="b0005-sss-karar-agaci-adim" style="--j: 0"><span class="b0005-sss-karar-agaci-ano" aria-hidden="true">1</span><p class="b0005-sss-karar-agaci-cevap">Make sure you typed the number without spaces.</p></li><li class="b0005-sss-karar-agaci-adim" style="--j: 1"><span class="b0005-sss-karar-agaci-ano" aria-hidden="true">2</span><p class="b0005-sss-karar-agaci-cevap">It may take 30 minutes for the record to appear after acceptance.</p></li><li class="b0005-sss-karar-agaci-adim" style="--j: 2"><span class="b0005-sss-karar-agaci-ano" aria-hidden="true">3</span><p class="b0005-sss-karar-agaci-cevap">If it is still missing, send a photo of the receipt to the customer line.</p></li></ol><div class="b0005-sss-karar-agaci-yardim"><p class="b0005-sss-karar-agaci-ymetin"><span class="b0005-sss-karar-agaci-yikon material-symbols-outlined" aria-hidden="true">support_agent</span><span>Still not solved? Message the customer line.</span></p><div class="b0005-sss-karar-agaci-cta"><a class="b0005-sss-karar-agaci-dugme" href="/en/iletisim/">Customer line<span class="material-symbols-outlined mx-flip" aria-hidden="true">arrow_forward</span></a></div></div></div><div class="b0005-sss-karar-agaci-cozum" id="b0005-sss-karar-agaci-rktdzp-c1" data-agac-panel="1" role="region" aria-labelledby="b0005-sss-karar-agaci-rktdzp-h1" tabindex="-1"><div class="b0005-sss-karar-agaci-cust"><button type="button" class="b0005-sss-karar-agaci-geri" data-agac-geri hidden><span class="material-symbols-outlined mx-flip" aria-hidden="true">arrow_back</span><span>All situations</span></button><h3 class="b0005-sss-karar-agaci-cbas" id="b0005-sss-karar-agaci-rktdzp-h1"><span class="b0005-sss-karar-agaci-cikon material-symbols-outlined" aria-hidden="true">door_front</span><span>&quot;Recipient not at address&quot; note</span></h3></div><ol class="b0005-sss-karar-agaci-adimlar"><li class="b0005-sss-karar-agaci-adim" style="--j: 0"><span class="b0005-sss-karar-agaci-ano" aria-hidden="true">1</span><p class="b0005-sss-karar-agaci-cevap">The parcel waits at the delivery branch for two days.</p></li><li class="b0005-sss-karar-agaci-adim" style="--j: 1"><span class="b0005-sss-karar-agaci-ano" aria-hidden="true">2</span><p class="b0005-sss-karar-agaci-cevap">Pick a new delivery day from the link in the SMS.</p></li><li class="b0005-sss-karar-agaci-adim" style="--j: 2"><span class="b0005-sss-karar-agaci-ano" aria-hidden="true">3</span><p class="b0005-sss-karar-agaci-cevap">Or collect it at the branch with ID.</p></li></ol><div class="b0005-sss-karar-agaci-yardim"><p class="b0005-sss-karar-agaci-ymetin"><span class="b0005-sss-karar-agaci-yikon material-symbols-outlined" aria-hidden="true">support_agent</span><span>Still not solved? Message the customer line.</span></p><div class="b0005-sss-karar-agaci-cta"><a class="b0005-sss-karar-agaci-dugme" href="/en/iletisim/">Customer line<span class="material-symbols-outlined mx-flip" aria-hidden="true">arrow_forward</span></a></div></div></div><div class="b0005-sss-karar-agaci-cozum" id="b0005-sss-karar-agaci-rktdzp-c2" data-agac-panel="2" role="region" aria-labelledby="b0005-sss-karar-agaci-rktdzp-h2" tabindex="-1"><div class="b0005-sss-karar-agaci-cust"><button type="button" class="b0005-sss-karar-agaci-geri" data-agac-geri hidden><span class="material-symbols-outlined mx-flip" aria-hidden="true">arrow_back</span><span>All situations</span></button><h3 class="b0005-sss-karar-agaci-cbas" id="b0005-sss-karar-agaci-rktdzp-h2"><span class="b0005-sss-karar-agaci-cikon material-symbols-outlined" aria-hidden="true">broken_image</span><span>The parcel arrived damaged</span></h3></div><ol class="b0005-sss-karar-agaci-adimlar"><li class="b0005-sss-karar-agaci-adim" style="--j: 0"><span class="b0005-sss-karar-agaci-ano" aria-hidden="true">1</span><p class="b0005-sss-karar-agaci-cevap">Show the parcel to the courier before accepting it.</p></li><li class="b0005-sss-karar-agaci-adim" style="--j: 1"><span class="b0005-sss-karar-agaci-ano" aria-hidden="true">2</span><p class="b0005-sss-karar-agaci-cevap">The courier fills in the damage report with you.</p></li><li class="b0005-sss-karar-agaci-adim" style="--j: 2"><span class="b0005-sss-karar-agaci-ano" aria-hidden="true">3</span><p class="b0005-sss-karar-agaci-cevap">Your claim is opened the same day with the report number.</p></li></ol><div class="b0005-sss-karar-agaci-yardim"><p class="b0005-sss-karar-agaci-ymetin"><span class="b0005-sss-karar-agaci-yikon material-symbols-outlined" aria-hidden="true">support_agent</span><span>Still not solved? Message the customer line.</span></p><div class="b0005-sss-karar-agaci-cta"><a class="b0005-sss-karar-agaci-dugme" href="/en/iletisim/">Customer line<span class="material-symbols-outlined mx-flip" aria-hidden="true">arrow_forward</span></a></div></div></div><div class="b0005-sss-karar-agaci-cozum" id="b0005-sss-karar-agaci-rktdzp-c3" data-agac-panel="3" role="region" aria-labelledby="b0005-sss-karar-agaci-rktdzp-h3" tabindex="-1"><div class="b0005-sss-karar-agaci-cust"><button type="button" class="b0005-sss-karar-agaci-geri" data-agac-geri hidden><span class="material-symbols-outlined mx-flip" aria-hidden="true">arrow_back</span><span>All situations</span></button><h3 class="b0005-sss-karar-agaci-cbas" id="b0005-sss-karar-agaci-rktdzp-h3"><span class="b0005-sss-karar-agaci-cikon material-symbols-outlined" aria-hidden="true">edit_location_alt</span><span>I need to change the address</span></h3></div><ol class="b0005-sss-karar-agaci-adimlar"><li class="b0005-sss-karar-agaci-adim" style="--j: 0"><span class="b0005-sss-karar-agaci-ano" aria-hidden="true">1</span><p class="b0005-sss-karar-agaci-cevap">If the parcel is not yet out for delivery, the change is free.</p></li><li class="b0005-sss-karar-agaci-adim" style="--j: 1"><span class="b0005-sss-karar-agaci-ano" aria-hidden="true">2</span><p class="b0005-sss-karar-agaci-cevap">Send the tracking number and new address to the customer line.</p></li><li class="b0005-sss-karar-agaci-adim" style="--j: 2"><span class="b0005-sss-karar-agaci-ano" aria-hidden="true">3</span><p class="b0005-sss-karar-agaci-cevap">If it is already out, it is redirected the next day.</p></li></ol><div class="b0005-sss-karar-agaci-yardim"><p class="b0005-sss-karar-agaci-ymetin"><span class="b0005-sss-karar-agaci-yikon material-symbols-outlined" aria-hidden="true">support_agent</span><span>Still not solved? Message the customer line.</span></p><div class="b0005-sss-karar-agaci-cta"><a class="b0005-sss-karar-agaci-dugme" href="/en/iletisim/">Customer line<span class="material-symbols-outlined mx-flip" aria-hidden="true">arrow_forward</span></a></div></div></div><div class="b0005-sss-karar-agaci-cozum" id="b0005-sss-karar-agaci-rktdzp-c4" data-agac-panel="4" role="region" aria-labelledby="b0005-sss-karar-agaci-rktdzp-h4" tabindex="-1"><div class="b0005-sss-karar-agaci-cust"><button type="button" class="b0005-sss-karar-agaci-geri" data-agac-geri hidden><span class="material-symbols-outlined mx-flip" aria-hidden="true">arrow_back</span><span>All situations</span></button><h3 class="b0005-sss-karar-agaci-cbas" id="b0005-sss-karar-agaci-rktdzp-h4"><span class="b0005-sss-karar-agaci-cikon material-symbols-outlined" aria-hidden="true">assignment_return</span><span>I want to send a return</span></h3></div><ol class="b0005-sss-karar-agaci-adimlar"><li class="b0005-sss-karar-agaci-adim" style="--j: 0"><span class="b0005-sss-karar-agaci-ano" aria-hidden="true">1</span><p class="b0005-sss-karar-agaci-cevap">Get the return code from the shop.</p></li><li class="b0005-sss-karar-agaci-adim" style="--j: 1"><span class="b0005-sss-karar-agaci-ano" aria-hidden="true">2</span><p class="b0005-sss-karar-agaci-cevap">Seal the box and drop it at the nearest branch.</p></li><li class="b0005-sss-karar-agaci-adim" style="--j: 2"><span class="b0005-sss-karar-agaci-ano" aria-hidden="true">3</span><p class="b0005-sss-karar-agaci-cevap">Quote the code; the fee is charged to the shop.</p></li></ol><div class="b0005-sss-karar-agaci-yardim"><p class="b0005-sss-karar-agaci-ymetin"><span class="b0005-sss-karar-agaci-yikon material-symbols-outlined" aria-hidden="true">support_agent</span><span>Still not solved? Message the customer line.</span></p><div class="b0005-sss-karar-agaci-cta"><a class="b0005-sss-karar-agaci-dugme" href="/en/iletisim/">Customer line<span class="material-symbols-outlined mx-flip" aria-hidden="true">arrow_forward</span></a></div></div></div><div class="b0005-sss-karar-agaci-cozum" id="b0005-sss-karar-agaci-rktdzp-c5" data-agac-panel="5" role="region" aria-labelledby="b0005-sss-karar-agaci-rktdzp-h5" tabindex="-1"><div class="b0005-sss-karar-agaci-cust"><button type="button" class="b0005-sss-karar-agaci-geri" data-agac-geri hidden><span class="material-symbols-outlined mx-flip" aria-hidden="true">arrow_back</span><span>All situations</span></button><h3 class="b0005-sss-karar-agaci-cbas" id="b0005-sss-karar-agaci-rktdzp-h5"><span class="b0005-sss-karar-agaci-cikon material-symbols-outlined" aria-hidden="true">calculate</span><span>How is volumetric weight calculated?</span></h3></div><ol class="b0005-sss-karar-agaci-adimlar"><li class="b0005-sss-karar-agaci-adim" style="--j: 0"><span class="b0005-sss-karar-agaci-ano" aria-hidden="true">1</span><p class="b0005-sss-karar-agaci-cevap">Multiply length, width and height in centimetres.</p></li><li class="b0005-sss-karar-agaci-adim" style="--j: 1"><span class="b0005-sss-karar-agaci-ano" aria-hidden="true">2</span><p class="b0005-sss-karar-agaci-cevap">Divide the result by 3000; that is the volumetric weight.</p></li><li class="b0005-sss-karar-agaci-adim" style="--j: 2"><span class="b0005-sss-karar-agaci-ano" aria-hidden="true">3</span><p class="b0005-sss-karar-agaci-cevap">The greater of volumetric weight and kilograms is charged.</p></li></ol><a class="b0005-sss-karar-agaci-bag" href="/en/teklif-al/">Read more<span class="material-symbols-outlined mx-flip" aria-hidden="true">arrow_forward</span></a><div class="b0005-sss-karar-agaci-yardim"><p class="b0005-sss-karar-agaci-ymetin"><span class="b0005-sss-karar-agaci-yikon material-symbols-outlined" aria-hidden="true">support_agent</span><span>Still not solved? Message the customer line.</span></p><div class="b0005-sss-karar-agaci-cta"><a class="b0005-sss-karar-agaci-dugme" href="/en/iletisim/">Customer line<span class="material-symbols-outlined mx-flip" aria-hidden="true">arrow_forward</span></a></div></div></div></div></div>
+  </div>
+</section>
+
+
+<script>
+  (() => {
+    const P = "b0005-sss-karar-agaci";
+    const az = !!(window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches);
+    const kararAgaci = (s, P, az) => {
+        const bag = [...s.querySelectorAll("[data-agac]")];
+        const pan = [...s.querySelectorAll("[data-agac-panel]")];
+        const izgara = s.querySelector("[data-agac-izgara]");
+        if (!bag.length || !pan.length) return;
+        s.classList.add(P + "--kjs");
+        let son = "";
+        const git = (el) => { if (!el) return; el.focus({ preventScroll: true }); el.scrollIntoView({ behavior: az ? "auto" : "smooth", block: "nearest" }); };
+        const goster = (n, odak) => {
+          pan.forEach((x) => { x.hidden = x.dataset.agacPanel !== n; });
+          if (izgara) izgara.hidden = n !== "";
+          s.classList.toggle(P + "--cozumde", n !== "");
+          if (odak) git(n === "" ? bag.find((a) => a.dataset.agac === son) : pan.find((x) => x.dataset.agacPanel === n));
+        };
+        bag.forEach((a) => a.addEventListener("click", (e) => { e.preventDefault(); son = a.dataset.agac; goster(son, true); }));
+        s.querySelectorAll("[data-agac-geri]").forEach((b) => { b.hidden = false; b.addEventListener("click", () => goster("", true)); });
+        goster("", false);
+      };
+    document.querySelectorAll("." + P).forEach((s) => {
+      if (s.dataset.fbHazir) return;
+      s.dataset.fbHazir = "1";
+      kararAgaci(s, P, az);
+    });
+  })();
+</script>
+<section class="b0006-cagri-takip-no" aria-labelledby="b0006-cagri-takip-no-f7u294-b">
+  <div class="b0006-cagri-takip-no-ic">
+    
+    <div class="b0006-cagri-takip-no-etiket-kart"><div class="b0006-cagri-takip-no-ust-serit"><span class="b0006-cagri-takip-no-barkod" aria-hidden="true"></span><p class="b0006-cagri-takip-no-ust">Shipping label</p></div><div class="b0006-cagri-takip-no-govde"><h2 class="b0006-cagri-takip-no-baslik" id="b0006-cagri-takip-no-f7u294-b">Have your tracking number?</h2><p class="b0006-cagri-takip-no-metin">Enter the number to see which stage your parcel is at. No number yet? Calculate the price and create a new shipment.</p><form class="b0006-cagri-takip-no-sorgu" action="/en/iletisim/" method="get" role="search" data-takip="iletisim?takip={no}"><label class="b0006-cagri-takip-no-setiket" for="b0006-cagri-takip-no-f7u294-n">Tracking number</label><div class="b0006-cagri-takip-no-skutu"><span class="material-symbols-outlined b0006-cagri-takip-no-sikon" aria-hidden="true">qr_code_scanner</span><input class="b0006-cagri-takip-no-sgirdi" id="b0006-cagri-takip-no-f7u294-n" type="text" name="takip" required autocomplete="off" spellcheck="false" placeholder="MZ2026 …" /><button class="b0006-cagri-takip-no-sdugme" type="submit"><span>Track</span><span class="material-symbols-outlined mx-flip" aria-hidden="true">arrow_forward</span></button></div></form></div><div class="b0006-cagri-takip-no-hat"><span class="b0006-cagri-takip-no-kamyon material-symbols-outlined mx-flip" aria-hidden="true">local_shipping</span><ol class="b0006-cagri-takip-no-duraklar"><li class="b0006-cagri-takip-no-durak"><span class="b0006-cagri-takip-no-dikon material-symbols-outlined" aria-hidden="true">inventory_2</span><span>Accepted</span></li><li class="b0006-cagri-takip-no-durak"><span class="b0006-cagri-takip-no-dikon material-symbols-outlined" aria-hidden="true">warehouse</span><span>Transfer</span></li><li class="b0006-cagri-takip-no-durak"><span class="b0006-cagri-takip-no-dikon material-symbols-outlined" aria-hidden="true">local_shipping</span><span>Out for delivery</span></li><li class="b0006-cagri-takip-no-durak"><span class="b0006-cagri-takip-no-dikon material-symbols-outlined" aria-hidden="true">where_to_vote</span><span>Delivered</span></li></ol></div><div class="b0006-cagri-takip-no-alt"><div class="b0006-cagri-takip-no-cta"><a class="b0006-cagri-takip-no-dugme" href="/en/teklif-al/">Calculate price<span class="material-symbols-outlined mx-flip" aria-hidden="true">arrow_forward</span></a><a class="b0006-cagri-takip-no-dugme b0006-cagri-takip-no-dugme--ikincil" href="/en/iletisim/">Find a branch</a></div><p class="b0006-cagri-takip-no-not">The tracking number is printed on the receipt and sent by SMS.</p></div></div>
+  </div>
+</section>
+
+
+<script>
+  (() => {
+    const P = "b0006-cagri-takip-no";
+    const az = !!(window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches);
+    const takip = (s) => {
+        s.querySelectorAll("form[data-takip]").forEach((f) => {
+          const g = f.querySelector("input:not([type=hidden])");
+          f.addEventListener("submit", (e) => {
+            if (!g) return;
+            g.value = g.value.replace(/\s+/g, "");
+            if (!g.value) { e.preventDefault(); g.reportValidity(); return; }
+            const sb = f.dataset.takip || "";
+            if (sb.includes("{no}")) { e.preventDefault(); location.href = sb.split("{no}").join(encodeURIComponent(g.value)); }
+          });
+        });
+      };
+    document.querySelectorAll("." + P).forEach((s) => {
+      if (s.dataset.fbHazir) return;
+      s.dataset.fbHazir = "1";
+      takip(s, P, az);
+    });
+  })();
+</script>
+</div>
+  <div id="footer"><section class="f0000-iletisim-kapsama-kontrol" aria-labelledby="f0000-iletisim-kapsama-kontrol-01dy8o-b">
+  <div class="f0000-iletisim-kapsama-kontrol-ic">
+    
+    <div class="f0000-iletisim-kapsama-kontrol-acil"><span class="f0000-iletisim-kapsama-kontrol-sinyal" aria-hidden="true"><span class="material-symbols-outlined">e911_emergency</span></span><div class="f0000-iletisim-kapsama-kontrol-acilyazi"><p class="f0000-iletisim-kapsama-kontrol-aciletk">Customer line · pick-up request</p><a class="f0000-iletisim-kapsama-kontrol-acilno" href="tel:+903420520505"><bdi dir="ltr">+90 342 052 05 05</bdi></a></div><a class="f0000-iletisim-kapsama-kontrol-aciara" href="tel:+903420520505"><span class=" material-symbols-outlined" aria-hidden="true">call</span>Phone</a></div><div class="f0000-iletisim-kapsama-kontrol-govde"><div class="f0000-iletisim-kapsama-kontrol-sol"><p class="f0000-iletisim-kapsama-kontrol-ust">Address pick-up</p><h2 class="f0000-iletisim-kapsama-kontrol-baslik" id="f0000-iletisim-kapsama-kontrol-01dy8o-b">Will a courier come to your address?</h2><p class="f0000-iletisim-kapsama-kontrol-metin">Type your postcode or district to see the same-day pick-up cut-off.</p><ul class="f0000-iletisim-kapsama-kontrol-kanallar" role="list"><li class="f0000-iletisim-kapsama-kontrol-ksat"><span class="f0000-iletisim-kapsama-kontrol-kikon material-symbols-outlined" aria-hidden="true">location_on</span><span class="f0000-iletisim-kapsama-kontrol-kgovde"><span class="f0000-iletisim-kapsama-kontrol-ketiket">Address</span><a class="f0000-iletisim-kapsama-kontrol-deger" href="https://www.google.com/maps/search/?api=1&amp;query=3rd%20Avenue%20No%3A%2014%2C%20Baspinar%20Industrial%20Zone%2C%20Sehitkamil%2C%20Gaziantep%20(fictional%20address)" target="_blank" rel="noopener noreferrer">3rd Avenue No: 14, Baspinar Industrial Zone, Sehitkamil, Gaziantep (fictional address)</a></span></li><li class="f0000-iletisim-kapsama-kontrol-ksat"><span class="f0000-iletisim-kapsama-kontrol-kikon material-symbols-outlined" aria-hidden="true">chat</span><span class="f0000-iletisim-kapsama-kontrol-kgovde"><span class="f0000-iletisim-kapsama-kontrol-ketiket">WhatsApp</span><a class="f0000-iletisim-kapsama-kontrol-deger" href="https://wa.me/903420520505?text=Hello%20Menzil%20Cargo%2C%20I%20would%20like%20a%20pick-up%20from%20my%20address." target="_blank" rel="noopener noreferrer"><bdi dir="ltr">+903420520505</bdi></a></span></li><li class="f0000-iletisim-kapsama-kontrol-ksat"><span class="f0000-iletisim-kapsama-kontrol-kikon material-symbols-outlined" aria-hidden="true">mail</span><span class="f0000-iletisim-kapsama-kontrol-kgovde"><span class="f0000-iletisim-kapsama-kontrol-ketiket">E-mail</span><a class="f0000-iletisim-kapsama-kontrol-deger" href="mailto:gonderi@menzilkargo.example"><bdi dir="ltr">gonderi@menzilkargo.example</bdi></a></span></li><li class="f0000-iletisim-kapsama-kontrol-ksat"><span class="f0000-iletisim-kapsama-kontrol-kikon material-symbols-outlined" aria-hidden="true">schedule</span><span class="f0000-iletisim-kapsama-kontrol-kgovde"><span class="f0000-iletisim-kapsama-kontrol-ketiket">Opening hours</span><span class="f0000-iletisim-kapsama-kontrol-deger">Branches Mon–Sat 08:30 – 20:00 · Sun 10:00 – 16:00</span></span></li></ul></div><div class="f0000-iletisim-kapsama-kontrol-kapsam"><h3 class="f0000-iletisim-kapsama-kontrol-kbaslik">Pick-up area check</h3><form class="f0000-iletisim-kapsama-kontrol-sorgu" data-kapsam data-var="We pick up from {bolge}; same-day pick-up cut-off is {sure}." data-yok="No address pick-up for &quot;{bolge}&quot;; you can drop off at the nearest branch." role="search"><label class="f0000-iletisim-kapsama-kontrol-setk" for="f0000-iletisim-kapsama-kontrol-01dy8o-q">Postcode or district</label><div class="f0000-iletisim-kapsama-kontrol-ssatir"><input class="f0000-iletisim-kapsama-kontrol-sgirdi" id="f0000-iletisim-kapsama-kontrol-01dy8o-q" type="search" name="kapsam" autocomplete="postal-code" /><button type="submit" class="f0000-iletisim-kapsama-kontrol-sdugme"><span class="material-symbols-outlined" aria-hidden="true">travel_explore</span><span>Check</span></button></div><p class="f0000-iletisim-kapsama-kontrol-sonuc" role="status" aria-live="polite"></p></form><ul class="f0000-iletisim-kapsama-kontrol-bolgeler" role="list"><li class="f0000-iletisim-kapsama-kontrol-bolge" data-bolge="Sahinbey" data-kod="27090" data-sure="16:00"><span class="material-symbols-outlined" aria-hidden="true">location_on</span><span class="f0000-iletisim-kapsama-kontrol-bad">Sahinbey</span><bdi class="f0000-iletisim-kapsama-kontrol-bkod" dir="ltr">27090</bdi><span class="f0000-iletisim-kapsama-kontrol-bsure">16:00</span></li><li class="f0000-iletisim-kapsama-kontrol-bolge" data-bolge="Sehitkamil" data-kod="27560" data-sure="16:00"><span class="material-symbols-outlined" aria-hidden="true">location_on</span><span class="f0000-iletisim-kapsama-kontrol-bad">Sehitkamil</span><bdi class="f0000-iletisim-kapsama-kontrol-bkod" dir="ltr">27560</bdi><span class="f0000-iletisim-kapsama-kontrol-bsure">16:00</span></li><li class="f0000-iletisim-kapsama-kontrol-bolge" data-bolge="Oguzeli" data-kod="27900" data-sure="14:00"><span class="material-symbols-outlined" aria-hidden="true">location_on</span><span class="f0000-iletisim-kapsama-kontrol-bad">Oguzeli</span><bdi class="f0000-iletisim-kapsama-kontrol-bkod" dir="ltr">27900</bdi><span class="f0000-iletisim-kapsama-kontrol-bsure">14:00</span></li><li class="f0000-iletisim-kapsama-kontrol-bolge" data-bolge="Nizip" data-kod="27700" data-sure="13:00"><span class="material-symbols-outlined" aria-hidden="true">location_on</span><span class="f0000-iletisim-kapsama-kontrol-bad">Nizip</span><bdi class="f0000-iletisim-kapsama-kontrol-bkod" dir="ltr">27700</bdi><span class="f0000-iletisim-kapsama-kontrol-bsure">13:00</span></li><li class="f0000-iletisim-kapsama-kontrol-bolge" data-bolge="Islahiye" data-kod="27800" data-sure="12:00"><span class="material-symbols-outlined" aria-hidden="true">location_on</span><span class="f0000-iletisim-kapsama-kontrol-bad">Islahiye</span><bdi class="f0000-iletisim-kapsama-kontrol-bkod" dir="ltr">27800</bdi><span class="f0000-iletisim-kapsama-kontrol-bsure">12:00</span></li><li class="f0000-iletisim-kapsama-kontrol-bolge" data-bolge="Kilis" data-kod="79000" data-sure="11:00"><span class="material-symbols-outlined" aria-hidden="true">location_on</span><span class="f0000-iletisim-kapsama-kontrol-bad">Kilis</span><bdi class="f0000-iletisim-kapsama-kontrol-bkod" dir="ltr">79000</bdi><span class="f0000-iletisim-kapsama-kontrol-bsure">11:00</span></li><li class="f0000-iletisim-kapsama-kontrol-bolge" data-bolge="Osmaniye" data-kod="80000" data-sure="11:00"><span class="material-symbols-outlined" aria-hidden="true">location_on</span><span class="f0000-iletisim-kapsama-kontrol-bad">Osmaniye</span><bdi class="f0000-iletisim-kapsama-kontrol-bkod" dir="ltr">80000</bdi><span class="f0000-iletisim-kapsama-kontrol-bsure">11:00</span></li></ul></div></div>
+  </div>
+</section>
+
+
+<script>
+  (() => {
+    const P = "f0000-iletisim-kapsama-kontrol";
+    const az = !!(window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches);
+    const kapsam = (s, P) => {
+        const f = s.querySelector("form[data-kapsam]");
+        if (!f) return;
+        s.classList.add(P + "--ajs");
+        const dl = document.documentElement.lang || undefined;
+        const nz = (v) => String(v || "").normalize("NFD").replace(/[̀-ͯ]/g, "").toLocaleLowerCase(dl).replace(/ı/g, "i").replace(/\s+/g, " ").trim();
+        const B = [...s.querySelectorAll("[data-bolge]")];
+        const g = f.querySelector("input");
+        const sonuc = f.querySelector("[role=status]");
+        const bak = (e) => {
+          if (e) e.preventDefault();
+          const q = nz(g.value);
+          B.forEach((x) => x.classList.remove(P + "--eslesti"));
+          s.classList.remove(P + "--var", P + "--yok");
+          if (q.length < 2) { if (sonuc) sonuc.textContent = ""; return; }
+          const es = B.filter((x) => {
+            const ad = nz(x.dataset.bolge);
+            const kod = String(x.dataset.kod || "").split(/[\s,;]+/).filter(Boolean).map(nz);
+            return kod.some((k) => k === q || (q.length >= 3 && k.startsWith(q))) || ad === q || ad.includes(q) || (ad.length >= 3 && q.includes(ad));
+          });
+          es.forEach((x) => x.classList.add(P + "--eslesti"));
+          const adlar = es.map((x) => x.dataset.bolge).join(", ");
+          const sure = (es.find((x) => x.dataset.sure) || { dataset: {} }).dataset.sure || "";
+          const m = (es.length ? f.dataset.var : f.dataset.yok) || (es.length ? adlar : "");
+          if (sonuc) sonuc.textContent = m.split("{bolge}").join(adlar || g.value.trim()).split("{sure}").join(sure);
+          s.classList.add(es.length ? P + "--var" : P + "--yok");
+        };
+        f.addEventListener("submit", bak);
+        g.addEventListener("input", () => { if (!g.value.trim()) bak(); });
+      };
+    document.querySelectorAll("." + P).forEach((s) => {
+      if (s.dataset.fbHazir) return;
+      s.dataset.fbHazir = "1";
+      kapsam(s, P, az);
+    });
+  })();
+</script>
+<footer class="footer">
+  <div class="waves">
+    <div class="wave" id="wave1"></div>
+    <div class="wave" id="wave2"></div>
+    <div class="wave" id="wave3"></div>
+    <div class="wave" id="wave4"></div>
+  </div>
+  
+  <ul class="menu">
+    <li class="menu__item"><a class="menu__link" href="/en/">Home</a></li><li class="menu__item"><a class="menu__link" href="/en/hizmetler">Services</a></li><li class="menu__item"><a class="menu__link" href="/en/hakkimizda">Branch network</a></li><li class="menu__item"><a class="menu__link" href="/en/sorular">Shipment help</a></li><li class="menu__item"><a class="menu__link" href="/en/referanslar">Partners</a></li><li class="menu__item"><a class="menu__link" href="/en/teklif-al">Calculate price</a></li><li class="menu__item"><a class="menu__link" href="/en/iletisim">Tracking & branches</a></li>
+  </ul>
+  <nav class="wm-langbar" aria-label="Language Selector"><ul><li class="wm-lang-item"><a href="/tr/" hreflang="tr" lang="tr">TR</a></li><li class="wm-lang-item wm-lang-active"><a href="/en/" hreflang="en" lang="en" aria-current="true">EN</a></li><li class="wm-lang-item"><a href="/ar/" hreflang="ar" lang="ar">AR</a></li></ul></nav>
+  <p>&copy; 2024 Menzil Kargo. All rights reserved.</p>
+</footer>
+
+<div class="f0002-dk" role="contentinfo" aria-label="Demo credit">
+  <p class="f0002-dk-text">This demo was prepared by <bdi class="f0002-dk-brand" dir="ltr">Webyapar</bdi> — <a class="f0002-dk-cta" href="https://webyapar.com/temalar#kargo-2" target="_blank" rel="noopener noreferrer"><span>Get this theme</span><span class="mx-visually-hidden"> (opens in a new tab)</span><span class="material-symbols-outlined mx-flip f0002-dk-arrow" aria-hidden="true">arrow_forward</span></a></p>
+</div>
+
+<nav class="wm-yasal" aria-label="Company &amp; Legal" style="box-sizing:border-box;width:100%;max-width:100%;padding:12px 16px;background:#0F766E;color:#ffffff;display:flex;flex-wrap:wrap;gap:4px 16px;align-items:center;justify-content:center;text-align:center;overflow-wrap:anywhere"><strong style="color:#ffffff">Company &amp; Legal</strong><a href="/en/misyon/" style="color:#ffffff;padding:6px 0;text-decoration:underline;min-width:0">Mission</a><a href="/en/vizyon/" style="color:#ffffff;padding:6px 0;text-decoration:underline;min-width:0">Vision</a><a href="/en/kalitepolitikamiz/" style="color:#ffffff;padding:6px 0;text-decoration:underline;min-width:0">Quality Policy</a><a href="/en/gizlilikpolitikasi/" style="color:#ffffff;padding:6px 0;text-decoration:underline;min-width:0">Privacy Policy</a><a href="/en/kisiselveriler/" style="color:#ffffff;padding:6px 0;text-decoration:underline;min-width:0">Personal Data</a><a href="/en/kullanicahaklari/" style="color:#ffffff;padding:6px 0;text-decoration:underline;min-width:0">User Rights</a><a href="/en/yasaluyari/" style="color:#ffffff;padding:6px 0;text-decoration:underline;min-width:0">Legal Notice</a></nav></div>
+
+  
+
+  <script defer src="/src/swiper-bundle.min.js"></script>
+  <script defer src="/src/mx-ui.js?v=c2jr5"></script>
+  <script defer src="/src/mx-store.js?v=c2jr5"></script>
+  <script defer type="text/javascript" src="/src/js.js?v=c2jr5"></script>
+  <script defer src="/src/cookie.js?v=c2jr5"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+{
+  "id": "yhbdguayn0",
+  "name": {
+    "tr": "İş ortakları",
+    "en": "Partners",
+    "ar": "الشركاء"
+  },
+  "description": {
+    "tr": "İş ortaklarımız ve müşteri yorumlarımız (kurgusal).",
+    "en": "Our partners and customer reviews (fictional).",
+    "ar": "شركاؤنا وتقييمات عملائنا (افتراضية)."
+  },
+  "keyword": {
+    "tr": "referans, müşteri yorumu",
+    "en": "reference, review",
+    "ar": "مرجع، تقييم"
+  },
+  "path": "referanslar",
+  "icon": "stars",
+  "category": "",
+  "status": "play",
+  "desing": {
+    "header": [],
+    "body": [
+      "gzyfl8",
+      "wu3h4c"
+    ],
+    "footer": []
+  },
+  "index": 3,
+  "url": "",
+  "text": {},
+  "title": {
+    "tr": "İş ortakları",
+    "en": "Partners",
+    "ar": "الشركاء"
+  },
+  "date": "2026-11-16T11:32:31.595Z",
+  "update": "2026-11-16T12:24:13.519Z"
+}
