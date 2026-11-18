@@ -3,17 +3,23 @@
   "name": {
     "tr": "Gönderi yardımı",
     "en": "Shipment help",
-    "ar": "مساعدة الشحن"
+    "ar": "مساعدة الشحن",
+    "de": "Versandhilfe",
+    "ru": "Помощь с отправкой"
   },
   "description": {
     "tr": "Takip, iade, hasar ve adres değişikliği için adım adım yardım.",
     "en": "Step-by-step help for tracking, returns, damage and address changes.",
-    "ar": "مساعدة خطوة بخطوة للتتبع والإرجاع والضرر وتغيير العنوان."
+    "ar": "مساعدة خطوة بخطوة للتتبع والإرجاع والضرر وتغيير العنوان.",
+    "de": "Schritt-für-Schritt-Hilfe zu Sendungsverfolgung, Rückgabe, Schäden und Adressänderung.",
+    "ru": "Пошаговая помощь по отслеживанию, возврату, повреждениям и смене адреса."
   },
   "keyword": {
     "tr": "sss, soru cevap",
     "en": "faq, questions",
-    "ar": "أسئلة وأجوبة"
+    "ar": "أسئلة وأجوبة",
+    "de": "FAQ, Fragen und Antworten",
+    "ru": "FAQ, вопросы и ответы"
   },
   "path": "sorular",
   "icon": "help",
@@ -33,7 +39,9 @@
   "title": {
     "tr": "Gönderi yardımı",
     "en": "Shipment help",
-    "ar": "مساعدة الشحن"
+    "ar": "مساعدة الشحن",
+    "de": "Versandhilfe",
+    "ru": "Помощь с отправкой"
   },
   "date": "2026-11-16T11:32:31.591Z",
   "update": "2026-11-16T12:24:13.516Z"

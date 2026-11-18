@@ -3,17 +3,23 @@
   "name": {
     "tr": "Ücret hesapla",
     "en": "Calculate price",
-    "ar": "احسب السعر"
+    "ar": "احسب السعر",
+    "de": "Preis berechnen",
+    "ru": "Рассчитать стоимость"
   },
   "description": {
     "tr": "Desi ve bölgeye göre kurgusal kargo ücreti.",
     "en": "Fictional shipping price by volume and zone.",
-    "ar": "سعر شحن افتراضي حسب الحجم والمنطقة."
+    "ar": "سعر شحن افتراضي حسب الحجم والمنطقة.",
+    "de": "Fiktive Versandkosten nach Desi und Region.",
+    "ru": "Условная стоимость доставки по деси и региону."
   },
   "keyword": {
     "tr": "teklif",
     "en": "quote",
-    "ar": "عرض سعر"
+    "ar": "عرض سعر",
+    "de": "Angebot",
+    "ru": "оценка"
   },
   "path": "teklif-al",
   "icon": "request_quote",
@@ -33,7 +39,9 @@
   "title": {
     "tr": "Ücret hesapla",
     "en": "Calculate price",
-    "ar": "احسب السعر"
+    "ar": "احسب السعر",
+    "de": "Preis berechnen",
+    "ru": "Рассчитать стоимость"
   },
   "date": "2026-11-16T11:32:31.600Z",
   "update": "2026-11-16T12:24:13.523Z"

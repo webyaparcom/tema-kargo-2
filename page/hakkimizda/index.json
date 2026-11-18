@@ -2,7 +2,9 @@
   "name": {
     "tr": "Şube ağı",
     "en": "Branch network",
-    "ar": "شبكة الفروع"
+    "ar": "شبكة الفروع",
+    "de": "Filialnetz",
+    "ru": "Сеть филиалов"
   },
   "status": "play",
   "category": "",
@@ -23,7 +25,9 @@
   "description": {
     "tr": "Gaziantep merkezli kurgusal kargo ağı: şubeler ve iş ortakları.",
     "en": "A fictional Gaziantep-based parcel network: branches and partners.",
-    "ar": "شبكة شحن افتراضية مقرها غازي عنتاب: الفروع والشركاء."
+    "ar": "شبكة شحن افتراضية مقرها غازي عنتاب: الفروع والشركاء.",
+    "de": "Fiktives Paketnetzwerk mit Sitz in Gaziantep: Filialen und Partner.",
+    "ru": "Вымышленная курьерская сеть с базой в Газиантепе: филиалы и партнёры."
   },
   "spot": {
     "tr": "",
@@ -34,12 +38,16 @@
   "title": {
     "tr": "Şube ağı",
     "en": "Branch network",
-    "ar": "شبكة الفروع"
+    "ar": "شبكة الفروع",
+    "de": "Filialnetz",
+    "ru": "Сеть филиалов"
   },
   "keyword": {
     "tr": "hakkımızda",
     "en": "about",
-    "ar": "من نحن"
+    "ar": "من نحن",
+    "de": "Über uns",
+    "ru": "О нас"
   },
   "text": {},
   "update": "2026-11-16T12:24:13.512Z",

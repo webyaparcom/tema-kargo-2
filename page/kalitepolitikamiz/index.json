@@ -3,17 +3,23 @@
   "name": {
     "tr": "Kalite Politikamız",
     "en": "Quality Policy",
-    "ar": "سياسة الجودة"
+    "ar": "سياسة الجودة",
+    "de": "Qualitätspolitik",
+    "ru": "Политика качества"
   },
   "description": {
     "tr": "Kalite politikamız",
     "en": "Our quality policy",
-    "ar": "سياسة الجودة لدينا"
+    "ar": "سياسة الجودة لدينا",
+    "de": "Unsere Qualitätspolitik",
+    "ru": "Наша политика качества"
   },
   "keyword": {
     "tr": "Kalite Politikamız",
     "en": "quality policy, quality, continuous improvement",
-    "ar": "سياسة الجودة, الجودة, التحسين المستمر"
+    "ar": "سياسة الجودة, الجودة, التحسين المستمر",
+    "de": "Qualitätspolitik",
+    "ru": "Политика качества"
   },
   "path": "kalitepolitikamiz",
   "icon": "verified",
@@ -29,12 +35,16 @@
   "text": {
     "tr": "<h2>Kalite Politikamız</h2>\n<p>Desi ölçümü kabulde yapılır, fiş üzerinde yazılır; hasar tutanağı teslimde tutulur.</p>",
     "en": "<h2>Our quality policy</h2>\n<p>Volumetric weight is measured at acceptance and printed on the receipt; damage reports are made on delivery.</p>",
-    "ar": "<h2>سياسة الجودة لدينا</h2>\n<p>يُقاس الوزن الحجمي عند الاستلام ويُطبع على الإيصال، ويُحرَّر محضر الضرر عند التسليم.</p>"
+    "ar": "<h2>سياسة الجودة لدينا</h2>\n<p>يُقاس الوزن الحجمي عند الاستلام ويُطبع على الإيصال، ويُحرَّر محضر الضرر عند التسليم.</p>",
+    "de": "<h2>Unsere Qualitätspolitik</h2>\n<p>Das Volumengewicht wird bei der Annahme gemessen und auf dem Beleg vermerkt; bei der Übergabe wird ein Schadensprotokoll geführt.</p>",
+    "ru": "<h2>Наша политика качества</h2>\n<p>Объёмный вес измеряется при приёме и указывается в квитанции; акт о повреждениях составляется при выдаче.</p>"
   },
   "title": {
     "tr": "Kalite Politikamız",
     "en": "Quality Policy",
-    "ar": "سياسة الجودة"
+    "ar": "سياسة الجودة",
+    "de": "Qualitätspolitik",
+    "ru": "Политика качества"
   },
   "date": "2026-11-16T11:32:31.448Z",
   "update": "2026-11-16T12:24:13.534Z",
