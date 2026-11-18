@@ -4,12 +4,16 @@
   "description": {
     "tr": "Menzil Kargo: takip numarasıyla anlık durum, desi ile ücret hesabı ve adresten alım. Demo site; içerik kurgusaldır.",
     "en": "Menzil Cargo: live status by tracking number, price by volumetric weight and pick-up from your address. Demo site; content is fictional.",
-    "ar": "منزل للشحن: حالة فورية برقم التتبع، وحساب السعر بالوزن الحجمي، واستلام من عنوانك. موقع تجريبي؛ المحتوى افتراضي."
+    "ar": "منزل للشحن: حالة فورية برقم التتبع، وحساب السعر بالوزن الحجمي، واستلام من عنوانك. موقع تجريبي؛ المحتوى افتراضي.",
+    "de": "Menzil Kargo: Echtzeit-Status per Sendungsnummer, Preis nach Volumengewicht und Abholung von Ihrer Adresse. Demoseite; Inhalte sind fiktiv.",
+    "ru": "Menzil Kargo: статус в реальном времени по номеру отслеживания, расчет стоимости по объемному весу и забор с вашего адреса. Демо-сайт; контент вымышленный."
   },
   "keyword": {
     "tr": "kargo takip, desi hesaplama, kargo ücreti, adresten alım, kurye",
     "en": "parcel tracking, volumetric weight, shipping price, address pick-up, courier",
-    "ar": "تتبع الشحنات، الوزن الحجمي، سعر الشحن، الاستلام من العنوان، مندوب توصيل"
+    "ar": "تتبع الشحنات، الوزن الحجمي، سعر الشحن، الاستلام من العنوان، مندوب توصيل",
+    "de": "Sendungsverfolgung, Volumengewicht, Versandkosten, Abholung von der Adresse, Kurier",
+    "ru": "отслеживание посылки, расчет объёмного веса, стоимость доставки, забор по адресу, курьер"
   },
   "category": "Kurumsal",
   "name": "Menzil Kargo",
@@ -18,15 +22,27 @@
     "tr": true,
     "en": true,
     "ar": true,
-    "de": false,
-    "ru": false,
+    "de": true,
+    "ru": true,
     "es": false,
     "fr": false,
     "it": false,
     "ja": false,
     "zh": false,
     "ko": false,
-    "pt": false
+    "pt": false,
+    "fa": false,
+    "he": false,
+    "ur": false,
+    "nl": false,
+    "pl": false,
+    "uk": false,
+    "az": false,
+    "ka": false,
+    "el": false,
+    "bg": false,
+    "ro": false,
+    "hi": false
   },
   "logo": "logo.png",
   "multi": false,

@@ -2,7 +2,9 @@
   "name": {
     "tr": "Takip ve şubeler",
     "en": "Tracking & branches",
-    "ar": "التتبع والفروع"
+    "ar": "التتبع والفروع",
+    "de": "Tracking & Filialen",
+    "ru": "Отслеживание и филиалы"
   },
   "status": "play",
   "category": "",
@@ -23,7 +25,9 @@
   "description": {
     "tr": "Adres, telefon ve çalışma saatleri.",
     "en": "Address, phone and opening hours.",
-    "ar": "العنوان والهاتف وساعات العمل."
+    "ar": "العنوان والهاتف وساعات العمل.",
+    "de": "Adresse, Telefon und Öffnungszeiten.",
+    "ru": "Адрес, телефон и часы работы."
   },
   "spot": {
     "tr": "",
@@ -34,12 +38,16 @@
   "title": {
     "tr": "Takip ve şubeler",
     "en": "Tracking & branches",
-    "ar": "التتبع والفروع"
+    "ar": "التتبع والفروع",
+    "de": "Tracking & Filialen",
+    "ru": "Отслеживание и филиалы"
   },
   "keyword": {
     "tr": "iletişim",
     "en": "contact",
-    "ar": "اتصال"
+    "ar": "اتصال",
+    "de": "Kontakt",
+    "ru": "контакты"
   },
   "text": {},
   "update": "2026-11-16T12:24:13.526Z",

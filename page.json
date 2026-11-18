@@ -5,12 +5,16 @@
       "name": {
         "tr": "Hizmetler",
         "en": "Services",
-        "ar": "الخدمات"
+        "ar": "الخدمات",
+        "de": "Leistungen",
+        "ru": "Услуги"
       },
       "description": {
         "tr": "Kabulden teslime kadar ne yaptığımızı açıkça yazıyoruz.",
         "en": "We spell out what we do from acceptance to delivery.",
-        "ar": "نكتب بوضوح ما نفعله من الاستلام حتى التسليم."
+        "ar": "نكتب بوضوح ما نفعله من الاستلام حتى التسليم.",
+        "de": "Wir schreiben offen auf, was wir von der Annahme bis zur Übergabe tun.",
+        "ru": "Мы открыто описываем, что делаем от приёмки до сдачи."
       },
       "path": "hizmetler",
       "icon": "work",
@@ -31,7 +35,9 @@
       "name": {
         "tr": "Şube ağı",
         "en": "Branch network",
-        "ar": "شبكة الفروع"
+        "ar": "شبكة الفروع",
+        "de": "Filialnetz",
+        "ru": "Сеть филиалов"
       },
       "status": "play",
       "id": "hakkimizda",
@@ -52,7 +58,9 @@
       "description": {
         "tr": "Gaziantep merkezli kurgusal kargo ağı: şubeler ve iş ortakları.",
         "en": "A fictional Gaziantep-based parcel network: branches and partners.",
-        "ar": "شبكة شحن افتراضية مقرها غازي عنتاب: الفروع والشركاء."
+        "ar": "شبكة شحن افتراضية مقرها غازي عنتاب: الفروع والشركاء.",
+        "de": "Fiktives Paketnetzwerk mit Sitz in Gaziantep: Filialen und Partner.",
+        "ru": "Вымышленная курьерская сеть с базой в Газиантепе: филиалы и партнёры."
       }
     },
     {
@@ -60,12 +68,16 @@
       "name": {
         "tr": "Gönderi yardımı",
         "en": "Shipment help",
-        "ar": "مساعدة الشحن"
+        "ar": "مساعدة الشحن",
+        "de": "Versandhilfe",
+        "ru": "Помощь с отправкой"
       },
       "description": {
         "tr": "Takip, iade, hasar ve adres değişikliği için adım adım yardım.",
         "en": "Step-by-step help for tracking, returns, damage and address changes.",
-        "ar": "مساعدة خطوة بخطوة للتتبع والإرجاع والضرر وتغيير العنوان."
+        "ar": "مساعدة خطوة بخطوة للتتبع والإرجاع والضرر وتغيير العنوان.",
+        "de": "Schritt-für-Schritt-Hilfe zu Sendungsverfolgung, Rückgabe, Schäden und Adressänderung.",
+        "ru": "Пошаговая помощь по отслеживанию, возврату, повреждениям и смене адреса."
       },
       "path": "sorular",
       "icon": "help",
@@ -86,12 +98,16 @@
       "name": {
         "tr": "İş ortakları",
         "en": "Partners",
-        "ar": "الشركاء"
+        "ar": "الشركاء",
+        "de": "Partner",
+        "ru": "Партнеры"
       },
       "description": {
         "tr": "İş ortaklarımız ve müşteri yorumlarımız (kurgusal).",
         "en": "Our partners and customer reviews (fictional).",
-        "ar": "شركاؤنا وتقييمات عملائنا (افتراضية)."
+        "ar": "شركاؤنا وتقييمات عملائنا (افتراضية).",
+        "de": "Unsere Geschäftspartner und Kundenstimmen (fiktiv).",
+        "ru": "Наши деловые партнёры и отзывы клиентов (вымышленные)."
       },
       "path": "referanslar",
       "icon": "stars",
@@ -112,12 +128,16 @@
       "name": {
         "tr": "Ücret hesapla",
         "en": "Calculate price",
-        "ar": "احسب السعر"
+        "ar": "احسب السعر",
+        "de": "Preis berechnen",
+        "ru": "Рассчитать стоимость"
       },
       "description": {
         "tr": "Desi ve bölgeye göre kurgusal kargo ücreti.",
         "en": "Fictional shipping price by volume and zone.",
-        "ar": "سعر شحن افتراضي حسب الحجم والمنطقة."
+        "ar": "سعر شحن افتراضي حسب الحجم والمنطقة.",
+        "de": "Fiktive Versandkosten nach Desi und Region.",
+        "ru": "Условная стоимость доставки по деси и региону."
       },
       "path": "teklif-al",
       "icon": "request_quote",
@@ -137,7 +157,9 @@
       "name": {
         "tr": "Takip ve şubeler",
         "en": "Tracking & branches",
-        "ar": "التتبع والفروع"
+        "ar": "التتبع والفروع",
+        "de": "Tracking & Filialen",
+        "ru": "Отслеживание и филиалы"
       },
       "status": "play",
       "id": "iletisim",
@@ -158,7 +180,9 @@
       "description": {
         "tr": "Adres, telefon ve çalışma saatleri.",
         "en": "Address, phone and opening hours.",
-        "ar": "العنوان والهاتف وساعات العمل."
+        "ar": "العنوان والهاتف وساعات العمل.",
+        "de": "Adresse, Telefon und Öffnungszeiten.",
+        "ru": "Адрес, телефон и часы работы."
       }
     }
   ],
